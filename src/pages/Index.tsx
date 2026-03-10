@@ -49,6 +49,13 @@ const MODULES = [
     desc: "SOPs, PDFs und externe Referenzen.",
     color: "bg-muted text-navy-light",
   },
+  {
+    to: "/studies",
+    icon: FlaskConical,
+    title: "Studienportal",
+    desc: "Aktuelle klinische Studien mit Zielpopulation & Details.",
+    color: "bg-primary/10 text-primary",
+  },
 ];
 
 export default function Index() {
