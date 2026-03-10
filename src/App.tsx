@@ -10,6 +10,7 @@ import Support from "./pages/Support";
 import Directory from "./pages/Directory";
 import Snippets from "./pages/Snippets";
 import Docs from "./pages/Docs";
+import Studies from "./pages/Studies";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -28,6 +29,7 @@ const App = () => (
             <Route path="/directory" element={<Directory />} />
             <Route path="/snippets" element={<Snippets />} />
             <Route path="/docs" element={<Docs />} />
+            <Route path="/studies" element={<Studies />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Layout>
