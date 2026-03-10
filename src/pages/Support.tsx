@@ -249,8 +249,47 @@ export default function Support() {
           {/* Rezeptblock Preview */}
           {selected.length > 0 && (
             <div className="bg-card border rounded-xl p-5 no-print">
-              <h2 className="font-semibold text-lg mb-3">Rezeptblock-Vorschau</h2>
+              <div className="flex items-center justify-between mb-3">
+                <h2 className="font-semibold text-lg">Rezeptblock-Vorschau</h2>
+                <Button
+                  variant="outline"
+                  size="sm"
+                  onClick={() => {
+                    const text = selected.map(x => {
+                      const substance = x.substance || x.name;
+                      const pack = getPackSize(x.id);
+                      const scheme = getDosingScheme(x.id, x.dosing);
+                      return `${substance} ${pack}${scheme ? ` ${scheme}` : ""}`;
+                    }).join("\n");
+                    navigator.clipboard.writeText(text);
+                    import("sonner").then(({ toast }) => toast.success("In Zwischenablage kopiert"));
+                  }}
+                  className="gap-1.5"
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                  Kopieren
+                </Button>
+              </div>
               <p className="text-xs text-muted-foreground mb-3">Packungsgröße und Einnahmeschema können pro Medikament angepasst werden.</p>
+              {/* Copyable text block */}
+              <div
+                className="bg-muted/50 border rounded-lg p-4 font-mono text-sm whitespace-pre-wrap select-all cursor-text mb-4"
+                onClick={(e) => {
+                  const range = document.createRange();
+                  range.selectNodeContents(e.currentTarget);
+                  const sel = window.getSelection();
+                  sel?.removeAllRanges();
+                  sel?.addRange(range);
+                }}
+              >
+                {selected.map(x => {
+                  const substance = x.substance || x.name;
+                  const pack = getPackSize(x.id);
+                  const scheme = getDosingScheme(x.id, x.dosing);
+                  return `${substance} ${pack}${scheme ? ` ${scheme}` : ""}`;
+                }).join("\n")}
+              </div>
+              {/* Per-item controls */}
               <div className="space-y-2">
                 {selected.map(x => {
                   const scheme = getDosingScheme(x.id, x.dosing);
@@ -261,9 +300,6 @@ export default function Support() {
                         <div className="min-w-0 flex-1">
                           <div className="font-mono font-semibold text-sm">
                             {x.substance || x.name}
-                          </div>
-                          <div className="font-mono text-xs text-muted-foreground mt-0.5">
-                            {packSize}{scheme ? ` · ${scheme}` : ""}
                           </div>
                         </div>
                         <div className="flex gap-2 items-center shrink-0">
