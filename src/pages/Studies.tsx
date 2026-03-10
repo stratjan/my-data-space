@@ -1,7 +1,12 @@
 import { useState, useEffect } from "react";
 import { Badge } from "@/components/ui/badge";
 import { Checkbox } from "@/components/ui/checkbox";
-import { FlaskConical, ChevronDown, ChevronUp, CheckCircle2, XCircle } from "lucide-react";
+import { FlaskConical, ChevronDown, ChevronUp, CheckCircle2, XCircle, FileDown } from "lucide-react";
+
+interface StudyDocument {
+  label: string;
+  url: string;
+}
 
 interface Study {
   id: string;
@@ -10,6 +15,7 @@ interface Study {
   status: string;
   population: string;
   nctId?: string;
+  documents?: StudyDocument[];
   inclusion?: string[];
   exclusion?: string[];
 }
