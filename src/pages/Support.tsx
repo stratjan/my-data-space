@@ -267,7 +267,7 @@ export default function Support() {
                       const substance = x.substance || x.name;
                       const pack = getPackSize(x.id);
                       const scheme = getDosingScheme(x.id, x.dosing);
-                      return `${substance} ${pack}${scheme ? ` ${scheme}` : ""}`;
+                      return `${substance} ${pack} ${scheme || "___-___-___"}`;
                     }).join("\n");
                     navigator.clipboard.writeText(text);
                     import("sonner").then(({ toast }) => toast.success("In Zwischenablage kopiert"));
@@ -294,7 +294,7 @@ export default function Support() {
                   const substance = x.substance || x.name;
                   const pack = getPackSize(x.id);
                   const scheme = getDosingScheme(x.id, x.dosing);
-                  return `${substance} ${pack}${scheme ? ` ${scheme}` : ""}`;
+                  return `${substance} ${pack} ${scheme || "___-___-___"}`;
                 }).join("\n")}
               </div>
               {/* Per-item controls */}
