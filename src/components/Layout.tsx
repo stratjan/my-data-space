@@ -10,6 +10,7 @@ const NAV_ITEMS = [
   { to: "/directory", label: "Telefonverzeichnis" },
   { to: "/snippets", label: "Textbausteine" },
   { to: "/docs", label: "Dokumente" },
+  { to: "/studies", label: "Studien" },
 ];
 
 export default function Layout({ children }: { children: React.ReactNode }) {
