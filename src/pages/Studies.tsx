@@ -1,7 +1,12 @@
 import { useState, useEffect } from "react";
 import { Badge } from "@/components/ui/badge";
 import { Checkbox } from "@/components/ui/checkbox";
-import { FlaskConical, ChevronDown, ChevronUp, CheckCircle2, XCircle } from "lucide-react";
+import { FlaskConical, ChevronDown, ChevronUp, CheckCircle2, XCircle, FileDown } from "lucide-react";
+
+interface StudyDocument {
+  label: string;
+  url: string;
+}
 
 interface Study {
   id: string;
@@ -10,6 +15,7 @@ interface Study {
   status: string;
   population: string;
   nctId?: string;
+  documents?: StudyDocument[];
   inclusion?: string[];
   exclusion?: string[];
 }
@@ -49,18 +55,36 @@ function StudyCard({ study }: { study: Study }) {
             )}
           </div>
           <p className="text-sm text-muted-foreground mt-1.5 leading-relaxed">{study.population}</p>
-          {study.nctId && (
-            <a
-              href={`https://clinicaltrials.gov/study/${study.nctId}`}
-              target="_blank"
-              rel="noopener"
-              onClick={(e) => e.stopPropagation()}
-              className="text-xs text-primary hover:underline mt-1 inline-block"
-            >
-              {study.nctId} → ClinicalTrials.gov
-            </a>
-          )}
-        </div>
+            {study.nctId && (
+              <a
+                href={`https://clinicaltrials.gov/study/${study.nctId}`}
+                target="_blank"
+                rel="noopener"
+                onClick={(e) => e.stopPropagation()}
+                className="text-xs text-primary hover:underline mt-1 inline-block"
+              >
+                {study.nctId} → ClinicalTrials.gov
+              </a>
+            )}
+            {study.documents && study.documents.length > 0 && (
+              <div className="flex flex-wrap gap-2 mt-2">
+                {study.documents.map((doc, i) => (
+                  <a
+                    key={i}
+                    href={doc.url}
+                    target="_blank"
+                    rel="noopener"
+                    download
+                    onClick={(e) => e.stopPropagation()}
+                    className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-primary/10 text-primary text-xs font-medium hover:bg-primary/20 transition-colors"
+                  >
+                    <FileDown className="h-3.5 w-3.5" />
+                    {doc.label}
+                  </a>
+                ))}
+              </div>
+            )}
+          </div>
         <div className="shrink-0 text-muted-foreground mt-1">
           {open ? <ChevronUp className="h-5 w-5" /> : <ChevronDown className="h-5 w-5" />}
         </div>

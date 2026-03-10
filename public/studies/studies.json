@@ -178,6 +178,9 @@
     "status": "Rekrutierung",
     "population": "Blindstudie zur Ausbildung von Tumorschnüffelhunden zum Screening und zur Differenzialdiagnostik von Lungentumoren auf Basis von Atemproben",
     "nctId": "",
+    "documents": [
+      { "label": "Aufklärungsbogen", "url": "/studies/Schnueffelhunde_Aufklaerung.pdf" }
+    ],
     "inclusion": [
       "Signed Informed Consent – Aufklärungsbogen (1) aushändigen, Zustimmung einholen",
       "Zwei Exemplare der Einwilligungserklärung (2) unterschreiben lassen – ein Exemplar für den Probanden, eines im Ordner abheften",
