@@ -1,0 +1,286 @@
+{
+  "generated": "2026-01-14T05:21:51.841649Z",
+  "items": [
+    {
+      "pmid": "41507539",
+      "doi": "10.1038/s43018-025-01104-z",
+      "title": "Clinical outcomes with perioperative nivolumab by nodal status in patients with stage III resectable NSCLC: phase 3 CheckMate 77T exploratory analysis.",
+      "journal": "Nature cancer",
+      "pubdate": "2026-01-08T00:00:00+00:00",
+      "pubtypes": [
+        "Journal Article"
+      ],
+      "entity": "NSCLC",
+      "trial_type": null,
+      "study_class": "Preclinical",
+      "is_oa": true,
+      "oa_url": "https://www.nature.com/articles/s43018-025-01104-z.pdf",
+      "metric_name": "SJR",
+      "metric_value": 11.941,
+      "url_pubmed": "https://pubmed.ncbi.nlm.nih.gov/41507539/",
+      "url_doi": "https://doi.org/10.1038/s43018-025-01104-z",
+      "abstract": "Individuals with non-small-cell lung cancer (NSCLC) with metastases to the ipsilateral mediastinum or subcarinal lymph nodes (N2 disease) have poor long-term survival. This exploratory analysis from the randomized phase 3 CheckMate 77T study assessed clinical outcomes by nodal status in individuals with stage III NSCLC who received neoadjuvant nivolumab plus chemotherapy followed by surgery and adjuvant nivolumab (nivolumab) versus neoadjuvant chemotherapy followed by surgery and adjuvant placebo (placebo). Here we show that among patients with N2 disease, nivolumab versus placebo improved event-free survival (1-year rate, 70% versus 45%; hazard ratio, 0.46 (95% confidence interval, 0.30-0.70)) and pathological complete response rate (22.0% versus 5.6%); 77% versus 73% had definitive surgery, of whom 84% versus 74% received a simple lobectomy. Furthermore, nivolumab improved outcomes versus placebo in patients with multistation N2 NSCLC (1-year event-free survival rate: 71% versus 46%; hazard ratio, 0.43 (0.21-0.88); pathological complete response rate, 29.0% versus 2.7%). In the N2 subgroup with definitive surgery, 67% and 59% of patients had nodal downstaging after surgery (57% versus 44% downstaged to node-negative disease). Median EFS in randomized patients with stage III non-N2 NSCLC was not reached with nivolumab and 17.0 months with placebo (1-year EFS rate, 74% versus 62%; hazard ratio, 0.60 (0.33-1.08)). No new safety signals were identified. These findings support perioperative nivolumab plus neoadjuvant chemotherapy as an efficacious treatment for stage III N2 disease and suggest that N2 status may not predict poor prognosis in resectable NSCLC treated with perioperative immunotherapy. ClinicalTrials.gov identifier: NCT04025879 ."
+    },
+    {
+      "pmid": "41525686",
+      "doi": "10.1158/2159-8290.CD-25-1222",
+      "title": "PD1 blockade-induced DKK1 expression by CD8+ T cells promotes blood-brain barrier permeabilization.",
+      "journal": "Cancer discovery",
+      "pubdate": "2026-01-13T00:00:00+00:00",
+      "pubtypes": [
+        "Journal Article"
+      ],
+      "entity": "Other",
+      "trial_type": null,
+      "study_class": "Other",
+      "is_oa": true,
+      "oa_url": "https://doi.org/10.1158/2159-8290.cd-25-1222",
+      "metric_name": "SJR",
+      "metric_value": 7.283,
+      "url_pubmed": "https://pubmed.ncbi.nlm.nih.gov/41525686/",
+      "url_doi": "https://doi.org/10.1158/2159-8290.CD-25-1222",
+      "abstract": "Anti-PD1 therapy benefits a subset of brain metastasis (BrM) patients; however, heterogeneous responses imply an incomplete understanding of the brain-immune ecosystem. To elucidate host-driven determinants of this variability, we performed single-cell RNA sequencing to characterize the brain microenvironment. While anti-PD1 induced robust anti-tumor immune activation, it uniquely, among all ICIs tested, compromised blood-brain barrier (BBB) integrity. This permeabilization was mediated by DKK1-expressing activated CD8⁺ T cells through the induction of β-catenin/TCF and FOXM1 pathways, contributing to endothelial cell destabilization. Depleting plasma-DKK1 restored BBB integrity and reduced experimental BrM formation. Clinically, lung cancer patients receiving anti-PD1 exhibited increased MRI contrast enhancement in the brain, suggestive of BBB perturbations, and increasing plasma DKK1 levels correlated with higher BrM incidence in non-responders. Sequencing anti-PD1 followed by cisplatin improved intracranial cisplatin delivery and therapeutic efficacy in ICI-resistant BrM. These findings identify anti-PD1-induced BBB modulation as a tractable vulnerability in BrM management."
+    },
+    {
+      "pmid": "41521774",
+      "doi": "10.1158/2159-8290.CD-25-1836",
+      "title": "Testing Nature's Defenses: Inducing Cancer in the Naked Mole Rat.",
+      "journal": "Cancer discovery",
+      "pubdate": "2026-01-12T00:00:00+00:00",
+      "pubtypes": [
+        "Journal Article"
+      ],
+      "entity": "Other",
+      "trial_type": null,
+      "study_class": "Preclinical",
+      "is_oa": false,
+      "oa_url": null,
+      "metric_name": "SJR",
+      "metric_value": 7.283,
+      "url_pubmed": "https://pubmed.ncbi.nlm.nih.gov/41521774/",
+      "url_doi": "https://doi.org/10.1158/2159-8290.CD-25-1836",
+      "abstract": "Although mice develop lung cancer from a single Eml4-Alk driver fusion, Shepard, Lester, and colleagues show that naked mole rats require three simultaneous oncogenic events: Eml4-Alk, Tp53 loss, and Rb1 loss, achieving only 30% tumor penetrance. This inducible cancer model in naked mole rats offers a unique platform for uncovering mechanisms of cancer resistance and modeling rare pleomorphic lung carcinomas. See related article by Shepard et al., p. 35."
+    },
+    {
+      "pmid": "41405207",
+      "doi": "10.1158/2159-8290.CD-NW2025-0107",
+      "title": "ADC for SCLC Clears Phase I.",
+      "journal": "Cancer discovery",
+      "pubdate": "2026-01-12T00:00:00+00:00",
+      "pubtypes": [
+        "Journal Article"
+      ],
+      "entity": "SCLC",
+      "trial_type": null,
+      "study_class": "Other",
+      "is_oa": false,
+      "oa_url": null,
+      "metric_name": "SJR",
+      "metric_value": 7.283,
+      "url_pubmed": "https://pubmed.ncbi.nlm.nih.gov/41405207/",
+      "url_doi": "https://doi.org/10.1158/2159-8290.CD-NW2025-0107",
+      "abstract": "ZL-1310, an antibody-drug conjugate that targets DLL3-expressing small cell lung cancer cells, led to responses in nearly half of patients in a phase I study. These results provide further evidence that targeting DLL3 may be a promising approach for treating this cancer."
+    },
+    {
+      "pmid": "41512290",
+      "doi": "10.1093/jnci/djag008",
+      "title": "Targeting common EGFR mutations in NSCLC-review of global phase III trials of third-generation inhibitors.",
+      "journal": "Journal of the National Cancer Institute",
+      "pubdate": "2026-01-09T00:00:00+00:00",
+      "pubtypes": [
+        "Journal Article"
+      ],
+      "entity": "NSCLC",
+      "trial_type": "Phase III",
+      "study_class": "Prospective",
+      "is_oa": false,
+      "oa_url": null,
+      "metric_name": "SJR",
+      "metric_value": 5.703,
+      "url_pubmed": "https://pubmed.ncbi.nlm.nih.gov/41512290/",
+      "url_doi": "https://doi.org/10.1093/jnci/djag008",
+      "abstract": "Mutations of the epidermal growth factor receptor (EGFR) are frequent oncogenic drivers in non-small cell lung cancer (NSCLC). Third-generation EGFR-tyrosine kinase inhibitors (EGFR-TKIs), which target common EGFR mutations and the acquired T790M resistance mutation, offer improved inhibitory potency and selectivity. Our review critically assesses the evolving role of these agents for management of NSCLC harboring common EGFR mutations. Multiple global phase III trials have recently evaluated third-generation EGFR-TKIs in NSCLC patients with common EGFR mutations. The addition of osimertinib to curative-intent strategies have demonstrated improvements in disease-free survival and overall survival (OS) as adjuvant therapy in resected stage IB-IIIa patients, major pathological responses compared to chemotherapy when used as neoadjuvant therapy, and progression-free survival (PFS) compared to placebo when used as consolidation therapy in unresectable stage III patients. Furthermore, third-generation EGFR-TKI monotherapy improved PFS compared to first-generation EGFR-TKIs in the first-line treatment of advanced disease. Intensification strategies, such as the addition of chemotherapy or a bi-specific antibody have further enhanced both PFS and OS outcomes. Several new therapeutic options are emerging for patients previously treated with third-generation EGFR-TKIs. Currently, subsequent treatment recommendations include chemotherapy or datopotamab deruxtecan following progression on a third-generation EGFR-TKI combination and amivantamab plus platinum-based chemotherapy following progression on monotherapy. The treatment landscape for NSCLC with common EGFR mutations is rapidly evolving and third-generation EGFR-TKIs play an integral role in both the curative-intent and palliative settings."
+    },
+    {
+      "pmid": "41526018",
+      "doi": "10.1136/bmjopen-2025-108080",
+      "title": "Telehealth-delivered exercise and nutrition intervention to improve outcomes in patients with early stage non-small cell lung cancer: protocol for the multicentre STARLighT phase II (neoadjuvant) and phase III (adjuvant) trial.",
+      "journal": "BMJ open",
+      "pubdate": "2026-01-12T00:00:00+00:00",
+      "pubtypes": [
+        "Journal Article"
+      ],
+      "entity": "NSCLC",
+      "trial_type": "Phase III",
+      "study_class": "Prospective",
+      "is_oa": true,
+      "oa_url": "https://doi.org/10.1136/bmjopen-2025-108080",
+      "metric_name": "SJR",
+      "metric_value": 1.016,
+      "url_pubmed": "https://pubmed.ncbi.nlm.nih.gov/41526018/",
+      "url_doi": "https://doi.org/10.1136/bmjopen-2025-108080",
+      "abstract": "INTRODUCTION: In early stage non-small cell lung cancer (NSCLC), recurrence is frequent despite surgery and systemic treatments. Observational studies suggest that physical exercise and nutrition could improve outcomes, such as survival and treatment tolerance; however, solid evidence is lacking. The STARLighT trial aims to assess the effects of a telehealth-delivered combined exercise and nutrition intervention on clinical, biological and patient-reported outcomes in early stage NSCLC.\n\nMETHODS AND ANALYSIS: STARLighT is a multicentre master protocol study conducted in Italy, comprising two cohorts of patients affected by early stage NSCLC (stages IB-IIIA)\n\nETHICS AND DISSEMINATION: The study is approved by the Ethics Committee of the University of Verona (Prot. No. 33979) and registered on ClinicalTrials.gov (NCT07042724). Findings will be disseminated through peer-reviewed journals, scientific meetings, public forums and guideline updates.\n\nTRIAL REGISTRATION NUMBER: Clinicaltrial.gov: NCT07042724."
+    },
+    {
+      "pmid": "41506892",
+      "doi": "10.1093/icvts/ivag012",
+      "title": "Patient Advocacy in transforming Surgical Lung Cancer Care in Europe.",
+      "journal": "Interdisciplinary cardiovascular and thoracic surgery",
+      "pubdate": "2026-01-08T00:00:00+00:00",
+      "pubtypes": [
+        "Journal Article"
+      ],
+      "entity": "Thoracic-other",
+      "trial_type": null,
+      "study_class": "Other",
+      "is_oa": true,
+      "oa_url": "https://doi.org/10.1093/icvts/ivag012",
+      "metric_name": "SJR",
+      "metric_value": 0.482,
+      "url_pubmed": "https://pubmed.ncbi.nlm.nih.gov/41506892/",
+      "url_doi": "https://doi.org/10.1093/icvts/ivag012",
+      "abstract": "OBJECTIVES: To provide a European-focused overview of the role of patient advocacy groups in shaping surgical lung cancer care, highlighting their contributions to multidisciplinary care, equitable access, psycho-social support, and patient-centred research.\n\nMETHODS: We conducted a narrative review of the major European and national lung cancer advocacy organisations, integrating perspectives from patient leaders and thoracic surgeons. The analysis focused on initiatives directly impacting thoracic surgery and perioperative care, with attention to education, prevention, survivorship, and research advocacy.\n\nRESULTS: Multiple advocacy organisations have significantly influenced lung cancer care with relevance to surgery. Oncogene Cancer Research (UK) promotes transparent information and shared decision-making around surgical options across all disease stages. Women Against Lung Cancer in Europe (WALCE) delivers large-scale initiatives such as EPROPA, expanding molecular testing and psycho-social support across several European countries. The Israeli Lung Cancer Foundation secured national low-dose CT screening and mandatory multidisciplinary team review for early-stage patients. In Greece, FairLife launched the BREATH program, providing structured psycho-social support integrated with surgical pathways. Longkanker Nederland advances shared decision-making through national decision aids, patient-reported outcomes, and guideline development. ALK Positive UK develops tailored education for patients and clinicians, addressing the impact of biomarker status on surgical pathways. At the European level, Lung Cancer Europe (LuCE) drives large-scale surveys, awareness campaigns, and collaborations with ESTS to embed patient perspectives into surgical discussions.\n\nCONCLUSIONS: Patient advocacy is increasingly shaping thoracic surgery in Europe, bridging gaps in communication, equity, and research. By collaborating with advocacy organisations, surgeons can deliver more integrated, communicative, and patient-centred care, ensuring that surgical innovation aligns with the lived experiences and priorities of patients."
+    },
+    {
+      "pmid": "41192526",
+      "doi": "10.1016/j.cellsig.2025.112211",
+      "title": "RIPK2/STAT3 signaling axis drives lung cancer metastasis through SNAIL activation: Molecular mechanisms and clinical implications.",
+      "journal": "Cellular signalling",
+      "pubdate": "2026-02-01T00:00:00+00:00",
+      "pubtypes": [
+        "Journal Article"
+      ],
+      "entity": "Thoracic-other",
+      "trial_type": null,
+      "study_class": "Other",
+      "is_oa": false,
+      "oa_url": null,
+      "metric_name": null,
+      "metric_value": null,
+      "url_pubmed": "https://pubmed.ncbi.nlm.nih.gov/41192526/",
+      "url_doi": "https://doi.org/10.1016/j.cellsig.2025.112211",
+      "abstract": "BACKGROUND: Lung adenocarcinoma is the most common histological subtype of lung cancer with high metastatic propensity. Epithelial-mesenchymal transition (EMT) plays a crucial role in tumor metastasis, but the molecular mechanisms remain incompletely elucidated. This study investigates the role of RIPK2 in EMT and metastasis of lung adenocarcinoma.\n\nMETHODS: TCGA database analysis determined RIPK2 expression and clinical significance. RNA interference, overexpression, qRT-PCR, Western blot, co-immunoprecipitation, and immunofluorescence were employed in A549 and PC-9 cell lines. Transwell, EdU, colony formation assays, and cytoskeletal staining assessed cell invasion, proliferation, and EMT changes. Nuclear localization signal (NLS) and nuclear export signal (NES) fusion proteins investigated subcellular localization effects. Tail vein injection in nude mice validated in vivo effects.\n\nRESULTS: RIPK2 was highly expressed in lung adenocarcinoma tissues and associated with poor prognosis. RIPK2 knockdown inhibited while overexpression promoted EMT, invasion, and metastasis. Co-immunoprecipitation and immunofluorescence confirmed direct RIPK2-STAT3 interaction. RIPK2 specifically upregulated EMT transcription factor SNAIL expression. Co-expression of RIPK2 and SNAIL correlated with shorter patient survival. STAT3 or SNAIL knockdown inhibited RIPK2-induced EMT and metastasis. Nuclear-localized RIPK2 completely restored cellular EMT, invasion, and metastatic capabilities while enhancing cisplatin resistance.\n\nCONCLUSION: RIPK2 translocates to the nucleus, interacts with STAT3, and synergistically upregulates SNAIL expression, promoting EMT, invasion, metastasis, and chemotherapy resistance in lung adenocarcinoma. The RIPK2-STAT3-SNAIL signaling axis represents a potential therapeutic target."
+    },
+    {
+      "pmid": "41389771",
+      "doi": "10.1016/j.ejca.2025.116165",
+      "title": "Long-term outcomes of preoperative nivolumab with or without relatlimab in patients with resectable non-small-cell lung cancer (NEOpredict-Lung).",
+      "journal": "European journal of cancer (Oxford, England : 1990)",
+      "pubdate": "2026-01-17T00:00:00+00:00",
+      "pubtypes": [
+        "Journal Article",
+        "Randomized Controlled Trial"
+      ],
+      "entity": "Thoracic-other",
+      "trial_type": "RCT",
+      "study_class": "Prospective",
+      "is_oa": true,
+      "oa_url": "https://www.ejcancer.com/article/S0959-8049(25)01051-2/pdf",
+      "metric_name": null,
+      "metric_value": null,
+      "url_pubmed": "https://pubmed.ncbi.nlm.nih.gov/41389771/",
+      "url_doi": "https://doi.org/10.1016/j.ejca.2025.116165",
+      "abstract": "BACKGROUND: Preoperative immunotherapy targeting PD-1/-L1 with chemotherapy induces histopathological responses and improves survival in patients with resectable non-small cell lung cancer (NSCLC). NEOpredict-Lung (NCT04205552) established the feasibility of dual blockade of PD-1 and LAG-3 immune checkpoints prior to curatively intended resection. Here we report extended follow-up, postoperative treatments and patterns of response and recurrence.\n\nPATIENTS AND METHODS: Patients with resectable NSCLC (stages IB-IIIA) were randomized to receive two doses nivolumab (240 mg, arm A) with or without relatlimab (80 mg, arm B) every 2 weeks. Overall and disease-free survival (OS, DFS) rates, response and recurrence patterns and subsequent therapies were evaluated.\n\nRESULTS: 60 patients were enrolled from March 2020 to July 2022. The present analysis was conducted per December 2024 with a median follow-up of 37.4 months. 45 patients were alive without disease recurrence,15 patients recurred (4 locoregional and 11 metastatic), and 7 patients died. The 3-year OS and DFS rates were 88.4 % and 73.3 % in arm A and 88.9 % and 60.3 % in arm B. Patients achieving major pathological response (≤10 % viable tumor cells in resected NSCLC) trended towards better DFS (HR 0.35; 95 % CI, 0.1-1.19). Downstaging was confirmed in 53.3 % of patients in arm A and in 66.7 % of patients in arm B. Nodal downstaging occurred in 28.6 % of patients with nodal disease in arm A and in 66.7 % of patients in arm B.\n\nCONCLUSIONS: Short course preoperative nivolumab with or without relatlimab showed encouraging efficacy and survival outcomes, which compare favorably with chemo-immunotherapy-based perioperative treatment regimens."
+    },
+    {
+      "pmid": "41421886",
+      "doi": "10.1016/j.ejca.2025.116069",
+      "title": "Bridging the gap in lung cancer: A comprehensive global strategy for change.",
+      "journal": "European journal of cancer (Oxford, England : 1990)",
+      "pubdate": "2026-01-17T00:00:00+00:00",
+      "pubtypes": [
+        "Journal Article"
+      ],
+      "entity": "Thoracic-other",
+      "trial_type": null,
+      "study_class": "Preclinical",
+      "is_oa": false,
+      "oa_url": null,
+      "metric_name": null,
+      "metric_value": null,
+      "url_pubmed": "https://pubmed.ncbi.nlm.nih.gov/41421886/",
+      "url_doi": "https://doi.org/10.1016/j.ejca.2025.116069",
+      "abstract": "BACKGROUND: Unless greater awareness inspires action, lung cancer will become the next global public health emergency. Despite improvements in screening, diagnosis, and treatments, more must be done because global incidence continues to increase. Concerted action must address the burden both between and within countries. Inequalities result from the uneven distribution of resources while inequities result from differences in prevention, screening, diagnosis, and treatment.\n\nMETHOD: Participants in the 9th International Lung Cancer Network conference (Athens, June 2023) received an advanced draft of the declaration with a confidentiality notice by email upon completion of online registration. They were invited to provide comments and suggestions up to seven days before the meeting. All contributions were reviewed by the authors and incorporated into the final version circulated the day before the meeting began. Although not a formal Delphi-style process, this approach prioritized inclusivity, transparency, and broad endorsement. Outreach extended beyond onsite attendees, ensuring diverse perspectives and representation. This process complements methodological consensus approaches by uniting stakeholders around shared policy goals.\n\nRESULTS: At the 9th International Lung Cancer Network conference, participants were invited to sign the final declaration, and 785 did so. Since then, 20 organizations worldwide have formally endorsed the Consensus Statement, and support continues to grow. The inclusive design has fostered broad and sustained backing, underscoring the value of the Statement as a unifying policy declaration advancing shared principles.\n\nCONCLUSION: The Consensus Statement, Bridging the Gap in the Diagnosis and Management of Lung Cancer, reinforces five unifying principles: improve and expand prevention; focus on early detection; ensure equitable and sustainable access to treatment; build partnerships and promote investment; and, combat stigma, recognizing it as a social determinant of public health."
+    },
+    {
+      "pmid": "41529222",
+      "doi": "10.1200/JCO-25-01828",
+      "title": "Adjuvant Durvalumab in Completely Resected Early-Stage Non-Small Cell Lung Cancer.",
+      "journal": "Journal of clinical oncology : official journal of the American Society of Clinical Oncology",
+      "pubdate": "2026-01-13T00:00:00+00:00",
+      "pubtypes": [
+        "Journal Article"
+      ],
+      "entity": "NSCLC",
+      "trial_type": null,
+      "study_class": "Other",
+      "is_oa": false,
+      "oa_url": null,
+      "metric_name": null,
+      "metric_value": null,
+      "url_pubmed": "https://pubmed.ncbi.nlm.nih.gov/41529222/",
+      "url_doi": "https://doi.org/10.1200/JCO-25-01828",
+      "abstract": "PURPOSE: Adjuvant immunotherapy improved patient outcomes in two trials in completely resected non-small cell lung cancer (NSCLC), but with conflicting primary end point results. The Canadian Cancer Trials Group BR.31 trial evaluated adjuvant durvalumab in completely resected early-stage NSCLC.\n\nMETHODS: Following resection of stage IB (≥4 cm) to IIIA NSCLC (American Joint Committee on Cancer 7th Edition) and optional adjuvant chemotherapy, patients were randomly assigned 2:1 to durvalumab 20 mg/kg or placebo 20 mg/kg once every 4 weeks for 12 cycles. Random assignment was stratified by stage, extent of nodal dissection, tumor cell (TC) PD-L1 expression, adjuvant chemotherapy use, and center. The primary end point was investigator-assessed disease-free survival (DFS). Secondary outcomes included overall survival (OS), adverse events, and quality of life. The primary analysis was in the subgroup with cancers that had a PD-L1 TC expression ≥25%, no common activating\n\nRESULTS: Of 1,415 patients randomly assigned, 1,219 (86%) had\n\nCONCLUSION: Adjuvant durvalumab following complete resection was not associated with improvement in DFS compared with placebo in"
+    },
+    {
+      "pmid": "41529214",
+      "doi": "10.1200/JCO-25-01569",
+      "title": "Chemoradiation ± Atezolizumab in Limited-Stage Small Cell Lung Cancer: Results of NRG Oncology/Alliance LU005.",
+      "journal": "Journal of clinical oncology : official journal of the American Society of Clinical Oncology",
+      "pubdate": "2026-01-13T00:00:00+00:00",
+      "pubtypes": [
+        "Journal Article"
+      ],
+      "entity": "SCLC",
+      "trial_type": null,
+      "study_class": "Other",
+      "is_oa": false,
+      "oa_url": null,
+      "metric_name": null,
+      "metric_value": null,
+      "url_pubmed": "https://pubmed.ncbi.nlm.nih.gov/41529214/",
+      "url_doi": "https://doi.org/10.1200/JCO-25-01569",
+      "abstract": "PURPOSE: NRG Oncology/Alliance LU005 (ClinicalTrials.gov identifier: NCT03811002) tested the addition of atezolizumab to concurrent chemoradiation (CRT) in this open-label, phase III international trial.\n\nMETHODS: Patients with limited-stage small cell lung cancer (LS-SCLC), stage Tx-IV, N0-3, and M0 with Eastern Cooperative Group performance status (PS) 0-2 received one cycle of chemotherapy (platinum/etoposide) before study registration and were randomly assigned to CRT alone versus CRT plus concurrent and adjuvant atezolizumab, 1,200 mg once daily, every 3 weeks until investigator-assessed progression or intolerable side effects for a maximum of 17 cycles. Patients were stratified by choice of chemotherapy (cisplatin\n\nRESULTS: patients were randomly assigned from May 2019 to December 2023. The median OS was 36.1 months (95% CI, 28.1 to 42.5) for the CRT-alone arm and 31.1 months (95% CI, 28.5 to 44.7) for the CRT + atezolizumab arm, respectively (hazard ratio [HR], 1.03 [95% CI, 0.80 to 1.32]). The median PFS was 11.4 months (95% CI, 10.3 to 13.2) for the CRT-alone arm and 12.1 months (95% CI, 10.9 to 15.2) for the CRT + atezolizumab arm, respectively (HR, 0.98 [95% CI, 0.79 to 1.22]). The median DMFS was 13.0 months (95% CI, 11.3 to 18.2) for the CRT-alone arm and 16.8 months (95% CI, 12.1 to 21.6) for the CRT + atezolizumab arm (HR, 0.96 [95% CI, 0.76 to 1.21]). No unexpected safety signals with concurrent atezolizumab were observed.\n\nCONCLUSION: Concurrent and adjuvant atezolizumab with chemoradiation did not improve survival in patients with LS-SCLC."
+    },
+    {
+      "pmid": "41526205",
+      "doi": "10.1016/j.lungcan.2026.108909",
+      "title": "Corrigendum to \"Global trends in lung cancer incidence and mortality by age, gender and morphology and forecast: A bootstrap-based analysis\". [Lung Cancer 205 (2025) 108626].",
+      "journal": "Lung cancer (Amsterdam, Netherlands)",
+      "pubdate": "2026-01-11T00:00:00+00:00",
+      "pubtypes": [
+        "Published Erratum"
+      ],
+      "entity": "Thoracic-other",
+      "trial_type": null,
+      "study_class": "Other",
+      "is_oa": true,
+      "oa_url": "https://www.lungcancerjournal.info/article/S0169-5002(26)00004-8/pdf",
+      "metric_name": null,
+      "metric_value": null,
+      "url_pubmed": "https://pubmed.ncbi.nlm.nih.gov/41526205/",
+      "url_doi": "https://doi.org/10.1016/j.lungcan.2026.108909",
+      "abstract": null
+    },
+    {
+      "pmid": "41520595",
+      "doi": "10.1016/j.lungcan.2026.108914",
+      "title": "Comparative efficacy and safety of post-TKI treatments for advanced EGFR-mutant non-small-cell lung cancer: a systematic review and network meta-analysis.",
+      "journal": "Lung cancer (Amsterdam, Netherlands)",
+      "pubdate": "2026-01-08T00:00:00+00:00",
+      "pubtypes": [
+        "Journal Article"
+      ],
+      "entity": "Thoracic-other",
+      "trial_type": null,
+      "study_class": "Preclinical",
+      "is_oa": true,
+      "oa_url": "https://www.lungcancerjournal.info/article/S0169-5002(26)00009-7/pdf",
+      "metric_name": null,
+      "metric_value": null,
+      "url_pubmed": "https://pubmed.ncbi.nlm.nih.gov/41520595/",
+      "url_doi": "https://doi.org/10.1016/j.lungcan.2026.108914",
+      "abstract": "BACKGROUND: Despite the availability of several validated therapies, the optimal second-line regimen for EGFR-mutant non-small cell lung cancer (NSCLC) after tyrosine kinase inhibitor (TKI) failure remains uncertain.\n\nMETHODS: The protocol was registered in PROSPERO (CRD420251157131). We systematically searched MEDLINE, Embase, CENTRAL, and conference proceedings (to Oct 20, 2025) for phase III randomized controlled trials (RCTs). A Bayesian network meta-analysis was performed. The primary outcome was progression-free survival (PFS). Secondary outcomes included overall survival (OS) and the incidence of grade ≥3 treatment-related adverse events (TRAEs).\n\nRESULTS: Eleven RCTs (3,650 patients, seven regimens) were included. Compared to chemotherapy, sacituzumab tirumotecan (SacTMT), amivantamab plus chemotherapy (Chemo-Ami), and chemo-immunotherapy plus anti-angiogenic agent (Chemo-IO-anti-VEGF) demonstrated superior PFS (HR 0.49, 0.48, 0.53, respectively) and OS (HR 0.60, 0.73, 0.83, respectively). SacTMT also significantly improved OS over chemo-immunotherapy (HR 0.68, 95 % CrI 0.48 to 0.95). Regarding safety, Chemo-Ami carried higher grade ≥3 TRAEs risk (OR 2.83, 95 % CrI 1.01 to 7.90) versus chemotherapy, while SacTMT and Chemo-IO-anti-VEGF demonstrated toxicity comparable to chemotherapy.\n\nCONCLUSIONS: SacTMT, Chemo-Ami, and Chemo-IO-anti-VEGF offer superior efficacy over chemotherapy for EGFR-mutant NSCLC after TKI progression. SacTMT and Chemo-IO-anti-VEGF may have more favorable safety profiles than Chemo-Ami. This comparative evidence helps to inform clinical decision-making."
+    }
+  ]
+}

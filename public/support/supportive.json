@@ -1,0 +1,1914 @@
+{
+  "regimen_catalog": [
+    {
+      "id": "adagrasib",
+      "name": "Adagrasib (KRAS^G12C^-Inhibitor)",
+      "group": "Zielgerichtete Therapie",
+      "aliases": [
+        "Adagrasib (KRAS^G12C^-Inhibitor)"
+      ]
+    },
+    {
+      "id": "afatinib",
+      "name": "Afatinib (EGFR-TKI)",
+      "group": "Zielgerichtete Therapie",
+      "aliases": [
+        "Afatinib (EGFR-TKI)"
+      ]
+    },
+    {
+      "id": "alectinib",
+      "name": "Alectinib (ALK-TKI)",
+      "group": "Zielgerichtete Therapie",
+      "aliases": [
+        "Alectinib (ALK-TKI)"
+      ]
+    },
+    {
+      "id": "amivantamab",
+      "name": "Amivantamab (EGFR-Exon20-Antikörper)",
+      "group": "Zielgerichtete Therapie",
+      "aliases": [
+        "Amivantamab (EGFR-Exon20-Antikörper)"
+      ]
+    },
+    {
+      "id": "atezolizumab",
+      "name": "Atezolizumab (PD-L1-Inhibitor)",
+      "group": "Immuntherapie",
+      "aliases": [
+        "Atezolizumab (PD-L1-Inhibitor)"
+      ]
+    },
+    {
+      "id": "atezolizumab-bev-carbo-pac",
+      "name": "Atezolizumab + Bevacizumab + Carboplatin + Paclitaxel",
+      "group": "Chemotherapie",
+      "aliases": [
+        "Atezolizumab + Bevacizumab + Carboplatin + Paclitaxel"
+      ]
+    },
+    {
+      "id": "atezolizumab-carbo-etoposide",
+      "name": "Atezolizumab + Carboplatin + Etoposid (Ext. SCLC)",
+      "group": "Chemotherapie",
+      "aliases": [
+        "Atezolizumab + Carboplatin + Etoposid (Ext. SCLC)"
+      ]
+    },
+    {
+      "id": "atezolizumab-carbo-nab-pac",
+      "name": "Atezolizumab + Carboplatin + Nab-Paclitaxel",
+      "group": "Chemotherapie",
+      "aliases": [
+        "Atezolizumab + Carboplatin + Nab-Paclitaxel"
+      ]
+    },
+    {
+      "id": "brigatinib",
+      "name": "Brigatinib (ALK-TKI)",
+      "group": "Zielgerichtete Therapie",
+      "aliases": [
+        "Brigatinib (ALK-TKI)"
+      ]
+    },
+    {
+      "id": "capecitabine-temozolomide",
+      "name": "Capecitabin + Temozolomid (CAPTEM)",
+      "group": "Chemotherapie",
+      "aliases": [
+        "Capecitabin + Temozolomid (CAPTEM)"
+      ]
+    },
+    {
+      "id": "capmatinib",
+      "name": "Capmatinib (MET-Inhibitor)",
+      "group": "Zielgerichtete Therapie",
+      "aliases": [
+        "Capmatinib (MET-Inhibitor)"
+      ]
+    },
+    {
+      "id": "carboplatin-etoposide",
+      "name": "Carboplatin + Etoposid",
+      "group": "Chemotherapie",
+      "aliases": [
+        "Carboplatin + Etoposid"
+      ]
+    },
+    {
+      "id": "carboplatin-gemcitabine",
+      "name": "Carboplatin + Gemcitabin",
+      "group": "Chemotherapie",
+      "aliases": [
+        "Carboplatin + Gemcitabin"
+      ]
+    },
+    {
+      "id": "carboplatin-nab-paclitaxel",
+      "name": "Carboplatin + Nab-Paclitaxel",
+      "group": "Chemotherapie",
+      "aliases": [
+        "Carboplatin + Nab-Paclitaxel"
+      ]
+    },
+    {
+      "id": "carboplatin-paclitaxel",
+      "name": "Carboplatin + Paclitaxel",
+      "group": "Chemotherapie",
+      "aliases": [
+        "Carboplatin + Paclitaxel"
+      ]
+    },
+    {
+      "id": "carboplatin-paclitaxel-thymus",
+      "name": "Carboplatin + Paclitaxel (Thymus-Ca Erstlinie)",
+      "group": "Chemotherapie",
+      "aliases": [
+        "Carboplatin + Paclitaxel (Thymus-Ca Erstlinie)"
+      ]
+    },
+    {
+      "id": "carboplatin-pemetrexed",
+      "name": "Carboplatin + Pemetrexed",
+      "group": "Chemotherapie",
+      "aliases": [
+        "Carboplatin + Pemetrexed"
+      ]
+    },
+    {
+      "id": "carboplatin-vinorelbine",
+      "name": "Carboplatin + Vinorelbin",
+      "group": "Chemotherapie",
+      "aliases": [
+        "Carboplatin + Vinorelbin"
+      ]
+    },
+    {
+      "id": "cav",
+      "name": "CAV-Regime (Cyclophosphamid + Adriamycin + Vincristin)",
+      "group": "Chemotherapie",
+      "aliases": [
+        "CAV-Regime (Cyclophosphamid + Adriamycin + Vincristin)"
+      ]
+    },
+    {
+      "id": "cisplatin-docetaxel",
+      "name": "Cisplatin + Docetaxel",
+      "group": "Chemotherapie",
+      "aliases": [
+        "Cisplatin + Docetaxel"
+      ]
+    },
+    {
+      "id": "cisplatin-doxorubicin-cyclophosphamide",
+      "name": "Cisplatin + Doxorubicin + Cyclophosphamid (CAP)",
+      "group": "Chemotherapie",
+      "aliases": [
+        "Cisplatin + Doxorubicin + Cyclophosphamid (CAP)"
+      ]
+    },
+    {
+      "id": "cisplatin-etoposide",
+      "name": "Cisplatin + Etoposid",
+      "group": "Chemotherapie",
+      "aliases": [
+        "Cisplatin + Etoposid"
+      ]
+    },
+    {
+      "id": "cisplatin-gemcitabine",
+      "name": "Cisplatin + Gemcitabin",
+      "group": "Chemotherapie",
+      "aliases": [
+        "Cisplatin + Gemcitabin"
+      ]
+    },
+    {
+      "id": "cisplatin-ifosfamide-etoposide",
+      "name": "Cisplatin + Ifosfamid + Etoposid (VIP-Schema)",
+      "group": "Chemotherapie",
+      "aliases": [
+        "Cisplatin + Ifosfamid + Etoposid (VIP-Schema)"
+      ]
+    },
+    {
+      "id": "cisplatin-pemetrexed",
+      "name": "Cisplatin + Pemetrexed",
+      "group": "Chemotherapie",
+      "aliases": [
+        "Cisplatin + Pemetrexed"
+      ]
+    },
+    {
+      "id": "cisplatin-pemetrexed-bev",
+      "name": "Cisplatin + Pemetrexed + Bevacizumab (Mesotheliom)",
+      "group": "Chemotherapie",
+      "aliases": [
+        "Cisplatin + Pemetrexed + Bevacizumab (Mesotheliom)"
+      ]
+    },
+    {
+      "id": "cisplatin-vinorelbine",
+      "name": "Cisplatin + Vinorelbin",
+      "group": "Chemotherapie",
+      "aliases": [
+        "Cisplatin + Vinorelbin"
+      ]
+    },
+    {
+      "id": "crizotinib",
+      "name": "Crizotinib (ALK/ROS1-TKI)",
+      "group": "Zielgerichtete Therapie",
+      "aliases": [
+        "Crizotinib (ALK/ROS1-TKI)"
+      ]
+    },
+    {
+      "id": "docetaxel-monotherapy",
+      "name": "Docetaxel (Monotherapie)",
+      "group": "Chemotherapie",
+      "aliases": [
+        "Docetaxel (Monotherapie)"
+      ]
+    },
+    {
+      "id": "durvalumab",
+      "name": "Durvalumab (PD-L1-Inhibitor)",
+      "group": "Immuntherapie",
+      "aliases": [
+        "Durvalumab (PD-L1-Inhibitor)"
+      ]
+    },
+    {
+      "id": "durvalumab-carbo-etoposide",
+      "name": "Durvalumab + Carboplatin + Etoposid (Ext. SCLC)",
+      "group": "Chemotherapie",
+      "aliases": [
+        "Durvalumab + Carboplatin + Etoposid (Ext. SCLC)"
+      ]
+    },
+    {
+      "id": "durvalumab-consolidation",
+      "name": "Durvalumab (Konsolidierung nach Radiochemo, Stadium III NSCLC)",
+      "group": "Immuntherapie",
+      "aliases": [
+        "Durvalumab (Konsolidierung nach Radiochemo, Stadium III NSCLC)"
+      ]
+    },
+    {
+      "id": "durvalumab-tremelimumab-chemo",
+      "name": "Durvalumab + Tremelimumab + Chemotherapie (z.B. POSEIDON)",
+      "group": "Chemotherapie",
+      "aliases": [
+        "Durvalumab + Tremelimumab + Chemotherapie (z.B. POSEIDON)"
+      ]
+    },
+    {
+      "id": "entrectinib",
+      "name": "Entrectinib (ROS1/NTRK-Inhibitor)",
+      "group": "Zielgerichtete Therapie",
+      "aliases": [
+        "Entrectinib (ROS1/NTRK-Inhibitor)"
+      ]
+    },
+    {
+      "id": "erlotinib",
+      "name": "Erlotinib (EGFR-TKI)",
+      "group": "Zielgerichtete Therapie",
+      "aliases": [
+        "Erlotinib (EGFR-TKI)"
+      ]
+    },
+    {
+      "id": "everolimus",
+      "name": "Everolimus (mTOR-Inhibitor)",
+      "group": "Zielgerichtete Therapie",
+      "aliases": [
+        "Everolimus (mTOR-Inhibitor)"
+      ]
+    },
+    {
+      "id": "gefitinib",
+      "name": "Gefitinib (EGFR-TKI)",
+      "group": "Zielgerichtete Therapie",
+      "aliases": [
+        "Gefitinib (EGFR-TKI)"
+      ]
+    },
+    {
+      "id": "gemcitabine-monotherapy",
+      "name": "Gemcitabin (Monotherapie)",
+      "group": "Chemotherapie",
+      "aliases": [
+        "Gemcitabin (Monotherapie)"
+      ]
+    },
+    {
+      "id": "ipilimumab",
+      "name": "Ipilimumab (CTLA-4-Inhibitor)",
+      "group": "Immuntherapie",
+      "aliases": [
+        "Ipilimumab (CTLA-4-Inhibitor)"
+      ]
+    },
+    {
+      "id": "lorlatinib",
+      "name": "Lorlatinib (ALK-TKI)",
+      "group": "Zielgerichtete Therapie",
+      "aliases": [
+        "Lorlatinib (ALK-TKI)"
+      ]
+    },
+    {
+      "id": "lurbinectedin",
+      "name": "Lurbinectedin (2nd Line SCLC)",
+      "group": "Chemotherapie",
+      "aliases": [
+        "Lurbinectedin (2nd Line SCLC)"
+      ]
+    },
+    {
+      "id": "nivolumab",
+      "name": "Nivolumab (PD-1-Inhibitor)",
+      "group": "Immuntherapie",
+      "aliases": [
+        "Nivolumab (PD-1-Inhibitor)"
+      ]
+    },
+    {
+      "id": "nivolumab-ipi-chemo",
+      "name": "Nivolumab + Ipilimumab + 2× Chemotherapie (z.B. CheckMate 9LA)",
+      "group": "Chemotherapie",
+      "aliases": [
+        "Nivolumab + Ipilimumab + 2× Chemotherapie (z.B. CheckMate 9LA)"
+      ]
+    },
+    {
+      "id": "nivolumab-ipilimumab",
+      "name": "Nivolumab + Ipilimumab (Kombinations-Immuntherapie)",
+      "group": "Immuntherapie",
+      "aliases": [
+        "Nivolumab + Ipilimumab (Kombinations-Immuntherapie)"
+      ]
+    },
+    {
+      "id": "octreotide-lanreotide",
+      "name": "Octreotid/Lanreotid (Somatostatin-Analogon)",
+      "group": "Zielgerichtete Therapie",
+      "aliases": [
+        "Octreotid/Lanreotid (Somatostatin-Analogon)"
+      ]
+    },
+    {
+      "id": "osimertinib",
+      "name": "Osimertinib (EGFR-TKI)",
+      "group": "Zielgerichtete Therapie",
+      "aliases": [
+        "Osimertinib (EGFR-TKI)"
+      ]
+    },
+    {
+      "id": "pembrolizumab",
+      "name": "Pembrolizumab (PD-1-Inhibitor)",
+      "group": "Immuntherapie",
+      "aliases": [
+        "Pembrolizumab (PD-1-Inhibitor)"
+      ]
+    },
+    {
+      "id": "pembrolizumab-carbo-paclitaxel",
+      "name": "Pembrolizumab + Carboplatin + (nab)Paclitaxel",
+      "group": "Chemotherapie",
+      "aliases": [
+        "Pembrolizumab + Carboplatin + (nab)Paclitaxel"
+      ]
+    },
+    {
+      "id": "pembrolizumab-carbo-pemetrexed",
+      "name": "Pembrolizumab + Carboplatin + Pemetrexed",
+      "group": "Chemotherapie",
+      "aliases": [
+        "Pembrolizumab + Carboplatin + Pemetrexed"
+      ]
+    },
+    {
+      "id": "pemetrexed-monotherapy",
+      "name": "Pemetrexed (Monotherapie)",
+      "group": "Chemotherapie",
+      "aliases": [
+        "Pemetrexed (Monotherapie)"
+      ]
+    },
+    {
+      "id": "pralsetinib",
+      "name": "Pralsetinib (RET-Inhibitor)",
+      "group": "Zielgerichtete Therapie",
+      "aliases": [
+        "Pralsetinib (RET-Inhibitor)"
+      ]
+    },
+    {
+      "id": "selpercatinib",
+      "name": "Selpercatinib (RET-Inhibitor)",
+      "group": "Zielgerichtete Therapie",
+      "aliases": [
+        "Selpercatinib (RET-Inhibitor)"
+      ]
+    },
+    {
+      "id": "sotorasib",
+      "name": "Sotorasib (KRAS^G12C^-Inhibitor)",
+      "group": "Zielgerichtete Therapie",
+      "aliases": [
+        "Sotorasib (KRAS^G12C^-Inhibitor)"
+      ]
+    },
+    {
+      "id": "tepotinib",
+      "name": "Tepotinib (MET-Inhibitor)",
+      "group": "Zielgerichtete Therapie",
+      "aliases": [
+        "Tepotinib (MET-Inhibitor)"
+      ]
+    },
+    {
+      "id": "topotecan",
+      "name": "Topotecan (2nd Line SCLC)",
+      "group": "Chemotherapie",
+      "aliases": [
+        "Topotecan (2nd Line SCLC)"
+      ]
+    },
+    {
+      "id": "vinorelbine-monotherapy",
+      "name": "Vinorelbin (Monotherapie)",
+      "group": "Chemotherapie",
+      "aliases": [
+        "Vinorelbin (Monotherapie)"
+      ]
+    },
+    {
+      "id": "basismedikation",
+      "name": "Basismedikation (supportive Standards)",
+      "group": "Basismedikation",
+      "aliases": [
+        "Basismedikation (supportive Standards)"
+      ]
+    },
+    {
+      "id": "krascendo02-studie",
+      "name": "KRASCENDO_02 Studienprophylaxe",
+      "group": "Studienmedikation",
+      "aliases": [
+        "KRASCENDO_02 Studienprophylaxe"
+      ]
+    }
+  ],
+  "items": [
+    {
+      "id": "sup-aprep",
+      "name": "Aprepitant",
+      "substance": "Aprepitant",
+      "class": "NK1-Antagonist",
+      "indication": "Vorbeugung von verzögerter Übelkeit und Erbrechen, die typischerweise 24–72 Stunden nach einer Chemotherapie auftreten.",
+      "dosing": "125 mg am ersten Tag (1 Stunde vor der Chemotherapie), danach 80 mg morgens an Tag 2 und 3.",
+      "max_daily": "125 mg an Tag 1, 80 mg an Tag 2–3.",
+      "side_effects": "Häufig: Müdigkeit, Aufstoßen, Verstopfung. Selten: Kopfschmerzen, Appetitlosigkeit.",
+      "warnings": "Wechselwirkungen mit vielen Medikamenten (z. B. Dexamethason, Warfarin, orale Kontrazeptiva). Immer die Medikation prüfen lassen.",
+      "regimen_category": "Antiemetika",
+      "specialty": "Onkologie",
+      "disease": "NSCLC, SCLC, Mesotheliom, Thymustumoren, Lungen-NET",
+      "regimens": [
+        "basismedikation",
+        "krascendo02-studie"
+      ]
+    },
+    {
+      "id": "sup-fosa",
+      "name": "Fosaprepitant",
+      "substance": "Fosaprepitant",
+      "class": "NK1-Antagonist (Prodrug von Aprepitant)",
+      "indication": "Vorbeugung von Übelkeit und Erbrechen durch Chemotherapie (akut und verzögert).",
+      "dosing": "150 mg i.v. als Einmalgabe am ersten Tag (ca. 30 Minuten vor Chemotherapie).",
+      "max_daily": "150 mg i.v. an Tag 1.",
+      "side_effects": "Häufig: Reaktionen an der Infusionsstelle, Müdigkeit, Appetitlosigkeit.",
+      "warnings": "Wie Aprepitant CYP3A4-abhängig; kann Wirkung anderer Medikamente verstärken oder abschwächen.",
+      "regimen_category": "Antiemetika",
+      "specialty": "Onkologie",
+      "disease": "NSCLC, SCLC, Mesotheliom, Thymustumoren, Lungen-NET",
+      "regimens": []
+    },
+    {
+      "id": "sup-netup",
+      "name": "Netupitant",
+      "substance": "Netupitant",
+      "class": "NK1-Antagonist (meist Fixkombination mit Palonosetron)",
+      "indication": "Vorbeugung von akuter und verzögerter Übelkeit und Erbrechen bei Chemotherapie.",
+      "dosing": "Als Fixkombination (Netupitant 300 mg + Palonosetron 0,5 mg) 1 Stunde vor Chemotherapie.",
+      "max_daily": "300 mg Netupitant als Einmalgabe pro Zyklus.",
+      "side_effects": "Häufig: Kopfschmerzen, Müdigkeit, Verdauungsbeschwerden.",
+      "warnings": "Wechselwirkungen über CYP3A4; Kombination mit Steroiden erfordert Dosisanpassung.",
+      "regimen_category": "Antiemetika",
+      "specialty": "Onkologie",
+      "disease": "NSCLC, SCLC, Mesotheliom, Thymustumoren, Lungen-NET",
+      "regimens": []
+    },
+    {
+      "id": "sup-onda",
+      "name": "Ondansetron",
+      "substance": "Ondansetron",
+      "class": "5-HT3-Antagonist",
+      "indication": "Vorbeugung und Behandlung von akuter Übelkeit und Erbrechen nach Chemo- oder Strahlentherapie.",
+      "dosing": "8 mg oral oder i.v. etwa 30 Minuten vor Chemotherapie; bei Bedarf Wiederholung nach 8–12 Stunden.",
+      "max_daily": "Bis 32 mg pro Tag (oral); i.v. Einzeldosis nicht über 16 mg wegen QT-Risiko.",
+      "side_effects": "Häufig: Kopfschmerzen, Verstopfung. Selten: Herzrhythmusstörungen.",
+      "warnings": "Nicht mit anderen QT-verlängernden Medikamenten kombinieren; Vorsicht bei Herzpatient:innen.",
+      "regimen_category": "Antiemetika",
+      "specialty": "Onkologie",
+      "disease": "NSCLC, SCLC, Mesotheliom, Thymustumoren, Lungen-NET",
+      "regimens": [
+        "basismedikation",
+        "krascendo02-studie"
+      ]
+    },
+    {
+      "id": "sup-grani",
+      "name": "Granisetron",
+      "substance": "Granisetron",
+      "class": "5-HT3-Antagonist",
+      "indication": "Vorbeugung von Übelkeit und Erbrechen im Rahmen einer Chemo- oder Strahlentherapie.",
+      "dosing": "1–2 mg oral oder 1 mg i.v. vor Chemotherapie.",
+      "max_daily": "Bis 3 mg pro Tag.",
+      "side_effects": "Häufig: Kopfschmerzen, Müdigkeit, Verstopfung.",
+      "warnings": "QT-Verlängerung möglich; Vorsicht bei Herzrhythmusstörungen.",
+      "regimen_category": "Antiemetika",
+      "specialty": "Onkologie",
+      "disease": "NSCLC, SCLC, Mesotheliom, Thymustumoren, Lungen-NET",
+      "regimens": []
+    },
+    {
+      "id": "sup-palo",
+      "name": "Palonosetron",
+      "substance": "Palonosetron",
+      "class": "5-HT3-Antagonist (langwirksam)",
+      "indication": "Prophylaxe von akuter und verzögerter Übelkeit und Erbrechen unter Chemotherapie.",
+      "dosing": "0,25 mg i.v. ca. 30 Minuten vor Chemotherapie.",
+      "max_daily": "Einmalgabe pro Zyklus ausreichend.",
+      "side_effects": "Kopfschmerzen, Schwindel, Verstopfung.",
+      "warnings": "Vorsicht bei Herzrhythmusstörungen.",
+      "regimen_category": "Antiemetika",
+      "specialty": "Onkologie",
+      "disease": "NSCLC, SCLC, Mesotheliom, Thymustumoren, Lungen-NET",
+      "regimens": []
+    },
+    {
+      "id": "sup-tropi",
+      "name": "Tropisetron",
+      "substance": "Tropisetron",
+      "class": "5-HT3-Antagonist",
+      "indication": "Vorbeugung und Behandlung von Chemotherapie-induzierter Übelkeit und Erbrechen.",
+      "dosing": "5 mg oral oder i.v. vor Chemotherapie.",
+      "max_daily": "5 mg pro Tag.",
+      "side_effects": "Kopfschmerzen, Schwindel, Magen-Darm-Beschwerden.",
+      "warnings": "Kann QT-Verlängerung auslösen.",
+      "regimen_category": "Antiemetika",
+      "specialty": "Onkologie",
+      "disease": "NSCLC, SCLC, Mesotheliom, Thymustumoren, Lungen-NET",
+      "regimens": []
+    },
+    {
+      "id": "sup-olan",
+      "name": "Olanzapin",
+      "substance": "Olanzapin",
+      "class": "Atypisches Neuroleptikum (off-label)",
+      "indication": "Zusatzmedikament zur Vorbeugung und Behandlung von Übelkeit, besonders bei stark emetogener Chemotherapie.",
+      "dosing": "5–10 mg oral ab Chemotag für 3–4 Tage.",
+      "max_daily": "10 mg pro Tag.",
+      "side_effects": "Häufig: Müdigkeit, Gewichtszunahme, Mundtrockenheit. Selten: Zuckerstoffwechselstörungen.",
+      "warnings": "Kann stark müde machen – Vorsicht beim Autofahren; Gewicht und Blutzucker beachten.",
+      "regimen_category": "Antiemetika",
+      "specialty": "Onkologie",
+      "disease": "NSCLC, SCLC, Mesotheliom, Thymustumoren, Lungen-NET",
+      "regimens": [
+        "basismedikation"
+      ]
+    },
+    {
+      "id": "sup-lora",
+      "name": "Lorazepam",
+      "substance": "Lorazepam",
+      "class": "Benzodiazepin",
+      "indication": "Vorbeugung antizipatorischer Übelkeit (Angst-bedingt); wirkt beruhigend und angstlösend.",
+      "dosing": "0,5–2 mg oral am Abend vor und/oder am Chemotag.",
+      "max_daily": "Bis 4 mg pro Tag.",
+      "side_effects": "Müdigkeit, Benommenheit, Abhängigkeitsrisiko bei längerem Gebrauch.",
+      "warnings": "Nicht dauerhaft anwenden; kein Alkohol; kein Autofahren nach Einnahme.",
+      "regimen_category": "Antiemetika",
+      "specialty": "Onkologie",
+      "disease": "NSCLC, SCLC, Mesotheliom, Thymustumoren, Lungen-NET",
+      "regimens": []
+    },
+    {
+      "id": "sup-mcp",
+      "name": "Metoclopramid",
+      "substance": "Metoclopramid",
+      "class": "Prokinetikum / D2-Antagonist",
+      "indication": "Leichte bis mäßige Übelkeit; Zusatzmedikament bei gering emetogener Chemotherapie.",
+      "dosing": "10 mg oral oder i.v. bis zu 3× täglich.",
+      "max_daily": "30 mg pro Tag.",
+      "side_effects": "Müdigkeit, Durchfall, Bewegungsstörungen bei längerer Anwendung.",
+      "warnings": "Nicht für Langzeitgebrauch; Vorsicht bei Parkinson und Epilepsie.",
+      "regimen_category": "Antiemetika",
+      "specialty": "Onkologie",
+      "disease": "NSCLC, SCLC, Mesotheliom, Thymustumoren, Lungen-NET",
+      "regimens": []
+    },
+    {
+      "id": "sup-dime",
+      "name": "Dimenhydrinat",
+      "substance": "Dimenhydrinat",
+      "class": "Antihistaminikum H1",
+      "indication": "Leichte Übelkeit und Erbrechen; Reservemittel oder Zusatz bei Bedarf.",
+      "dosing": "50–100 mg oral bis zu 3× täglich.",
+      "max_daily": "Bis 400 mg pro Tag.",
+      "side_effects": "Starke Müdigkeit, Mundtrockenheit, Schwindel.",
+      "warnings": "Nicht mit Alkohol oder anderen Beruhigungsmitteln kombinieren.",
+      "regimen_category": "Antiemetika",
+      "specialty": "Onkologie",
+      "disease": "NSCLC, SCLC, Mesotheliom, Thymustumoren, Lungen-NET",
+      "regimens": []
+    },
+    {
+      "id": "sup-diph",
+      "name": "Diphenhydramin",
+      "substance": "Diphenhydramin",
+      "class": "Antihistaminikum H1",
+      "indication": "Reservemedikament gegen Übelkeit; oft auch als Schlaf- und Beruhigungsmittel genutzt.",
+      "dosing": "25–50 mg oral bei Bedarf; max. 3–4 Gaben pro Tag.",
+      "max_daily": "Bis 200 mg pro Tag.",
+      "side_effects": "Sehr müde machend, Mundtrockenheit, Benommenheit.",
+      "warnings": "Sturzrisiko bei älteren Patient:innen; nicht mit Alkohol kombinieren.",
+      "regimen_category": "Antiemetika",
+      "specialty": "Onkologie",
+      "disease": "NSCLC, SCLC, Mesotheliom, Thymustumoren, Lungen-NET",
+      "regimens": []
+    },
+    {
+      "id": "sup-clem",
+      "name": "Clemastin",
+      "substance": "Clemastin",
+      "class": "Antihistaminikum H1",
+      "indication": "Reservemedikament bei Übelkeit, kann auch allergische Beschwerden lindern.",
+      "dosing": "1 mg oral 2× täglich.",
+      "max_daily": "2 mg pro Tag.",
+      "side_effects": "Müdigkeit, Mundtrockenheit, Benommenheit.",
+      "warnings": "Sedierend; Vorsicht bei Autofahren.",
+      "regimen_category": "Antiemetika",
+      "specialty": "Onkologie",
+      "disease": "NSCLC, SCLC, Mesotheliom, Thymustumoren, Lungen-NET",
+      "regimens": []
+    },
+    {
+      "id": "sup-nabi",
+      "name": "Nabilon",
+      "substance": "Nabilon",
+      "class": "Cannabinoid",
+      "indication": "Reservetherapie bei Chemotherapie-induzierter Übelkeit, wenn Standardmittel nicht wirken.",
+      "dosing": "1 mg 2× täglich; Steigerung auf 2 mg 2–3× täglich möglich.",
+      "max_daily": "Bis 6 mg pro Tag.",
+      "side_effects": "Schläfrigkeit, Schwindel, Mundtrockenheit, Stimmungsschwankungen.",
+      "warnings": "Kann psychotrope Effekte auslösen; Vorsicht bei älteren Patient:innen.",
+      "regimen_category": "Antiemetika",
+      "specialty": "Onkologie",
+      "disease": "NSCLC, SCLC, Mesotheliom, Thymustumoren, Lungen-NET",
+      "regimens": []
+    },
+    {
+      "id": "sup-zoled",
+      "name": "Zoledronsäure",
+      "substance": "Zoledronsäure",
+      "class": "Bisphosphonat",
+      "indication": "Behandlung tumorbedingter Knochenschäden (z. B. Metastasen in den Knochen) sowie Vorbeugung von Skelettkomplikationen.",
+      "dosing": "Standard: 4 mg intravenös alle 3–4 Wochen, Infusion über mindestens 15 Minuten.",
+      "max_daily": "Maximal 4 mg alle 3–4 Wochen.",
+      "side_effects": "Häufig: Grippeähnliche Beschwerden nach Infusion, Knochenschmerzen, Müdigkeit. Selten: Kiefernekrosen, Nierenfunktionsstörungen, Hypocalcämie.",
+      "warnings": "Vor Beginn Zahnarztkontrolle empfohlen (Kiefernekrose-Risiko). Nierenfunktion vor jeder Gabe kontrollieren. Immer Calcium + Vitamin D ergänzen.",
+      "regimen_category": "Antiresorptiva",
+      "specialty": "Onkologie",
+      "disease": "NSCLC, SCLC, Mesotheliom, Thymustumoren, Lungen-NET",
+      "regimens": []
+    },
+    {
+      "id": "sup-pamid",
+      "name": "Pamidronat",
+      "substance": "Pamidronat",
+      "class": "Bisphosphonat",
+      "indication": "Behandlung tumorbedingter Knochenmetastasen und tumorinduzierter Hyperkalzämie.",
+      "dosing": "60–90 mg intravenös alle 3–4 Wochen, Infusion über 2–4 Stunden.",
+      "max_daily": "90 mg pro Gabe (alle 3–4 Wochen).",
+      "side_effects": "Häufig: Grippeähnliche Beschwerden, Müdigkeit, Muskelschmerzen. Selten: Kiefernekrosen, Hypocalcämie, Nierenfunktionsstörungen.",
+      "warnings": "Nierenfunktion überwachen. Zahnärztliche Kontrolle vor Therapiebeginn. Kombination mit Calcium/Vitamin D erforderlich.",
+      "regimen_category": "Antiresorptiva",
+      "specialty": "Onkologie",
+      "disease": "NSCLC, SCLC, Mesotheliom, Thymustumoren, Lungen-NET",
+      "regimens": []
+    },
+    {
+      "id": "sup-denos",
+      "name": "Denosumab",
+      "substance": "Denosumab",
+      "class": "RANKL-Inhibitor (monoklonaler Antikörper)",
+      "indication": "Vorbeugung von Skelettkomplikationen bei Knochenmetastasen sowie Behandlung tumorinduzierter Hyperkalzämie.",
+      "dosing": "120 mg subkutan alle 4 Wochen.",
+      "max_daily": "120 mg alle 4 Wochen.",
+      "side_effects": "Häufig: Muskelschmerzen, Müdigkeit, Hautausschlag. Selten: Kiefernekrosen, Hypocalcämie, Infektionen.",
+      "warnings": "Vor Gabe Zahnarztkontrolle durchführen. Regelmäßig Calcium- und Vitamin-D-Spiegel prüfen. Calcium/Vitamin D Supplement verpflichtend.",
+      "regimen_category": "Antiresorptiva",
+      "specialty": "Onkologie",
+      "disease": "NSCLC, SCLC, Mesotheliom, Thymustumoren, Lungen-NET",
+      "regimens": []
+    },
+    {
+      "id": "sup-cavd",
+      "name": "Calcium-Sandoz D Osteo (Calcium + Vitamin D3)",
+      "substance": "Calcium-Sandoz D Osteo (Calcium + Vitamin D3)",
+      "class": "Mineralstoff-/Vitamin-Kombination",
+      "indication": "Begleittherapie bei Bisphosphonaten oder Denosumab zur Vorbeugung von Calciummangel und Knochenschwäche.",
+      "dosing": "Typisch: 1–2 Brausetabletten täglich (je 1000 mg Calcium + 880 I.E. Vitamin D3).",
+      "max_daily": "2000 mg Calcium + 1760 I.E. Vitamin D3 (entsprechend 2 Tabletten).",
+      "side_effects": "Gelegentlich: Verstopfung, Blähungen, Übelkeit. Selten: Nierensteine bei Überdosierung.",
+      "warnings": "Nicht überdosieren. Vorsicht bei Nierensteinen oder Nierenfunktionsstörungen. Andere Vitamin-D- oder Calciumquellen berücksichtigen.",
+      "regimen_category": "Antiresorptiva",
+      "specialty": "Onkologie",
+      "disease": "NSCLC, SCLC, Mesotheliom, Thymustumoren, Lungen-NET",
+      "regimens": []
+    },
+    {
+      "id": "sup-epoa",
+      "name": "Epoetin alfa",
+      "substance": "Epoetin alfa",
+      "class": "Erythropoetin (EPO)",
+      "indication": "Behandlung einer Blutarmut (Anämie), die durch Chemotherapie verursacht ist.",
+      "dosing": "Typisch: 150 I.E./kg Körpergewicht 3× pro Woche oder 450 I.E./kg 1× pro Woche subkutan.",
+      "max_daily": "Nicht über 20.000–40.000 I.E. pro Woche hinaus, abhängig vom Schema.",
+      "side_effects": "Häufig: Bluthochdruck, Kopfschmerzen. Selten: Blutgerinnsel, Gefäßkomplikationen.",
+      "warnings": "Anwendung nur bei symptomatischer Anämie unter Chemo. Vorsicht bei erhöhtem Thromboserisiko.",
+      "regimen_category": "Wachstumsfaktor",
+      "specialty": "Onkologie",
+      "disease": "NSCLC, SCLC, Mesotheliom, Thymustumoren, Lungen-NET",
+      "regimens": []
+    },
+    {
+      "id": "sup-darb",
+      "name": "Darbepoetin alfa",
+      "substance": "Darbepoetin alfa",
+      "class": "Erythropoetin-Analogon (langwirksam)",
+      "indication": "Behandlung einer Chemotherapie-induzierten Anämie.",
+      "dosing": "500 µg alle 3 Wochen oder 150 µg 1× pro Woche subkutan.",
+      "max_daily": "500 µg alle 3 Wochen.",
+      "side_effects": "Häufig: Bluthochdruck, Kopfschmerzen. Selten: Blutgerinnsel.",
+      "warnings": "Nur einsetzen, wenn Chemotherapie läuft. Thromboserisiko beachten.",
+      "regimen_category": "Wachstumsfaktor",
+      "specialty": "Onkologie",
+      "disease": "NSCLC, SCLC, Mesotheliom, Thymustumoren, Lungen-NET",
+      "regimens": []
+    },
+    {
+      "id": "sup-filg",
+      "name": "Filgrastim",
+      "substance": "Filgrastim",
+      "class": "G-CSF",
+      "indication": "Vorbeugung und Behandlung von Abfall weißer Blutkörperchen (Neutropenie) nach Chemotherapie.",
+      "dosing": "5 µg/kg Körpergewicht pro Tag subkutan bis Normalisierung der Blutwerte.",
+      "max_daily": "In der Regel max. 10 µg/kg pro Tag.",
+      "side_effects": "Häufig: Knochenschmerzen, Muskelschmerzen. Selten: Milzvergrößerung.",
+      "warnings": "Nur nach Chemotherapie. Blutwerte regelmäßig kontrollieren.",
+      "regimen_category": "Wachstumsfaktor",
+      "specialty": "Onkologie",
+      "disease": "NSCLC, SCLC, Mesotheliom, Thymustumoren, Lungen-NET",
+      "regimens": []
+    },
+    {
+      "id": "sup-leno",
+      "name": "Lenograstim",
+      "substance": "Lenograstim",
+      "class": "G-CSF",
+      "indication": "Vorbeugung und Behandlung von Neutropenie nach Chemotherapie.",
+      "dosing": "150 µg/m² pro Tag subkutan bis Normalisierung der Neutrophilen.",
+      "max_daily": "Einmalgabe pro Tag, je nach Blutwerten.",
+      "side_effects": "Häufig: Knochenschmerzen. Selten: Milzprobleme.",
+      "warnings": "Wie Filgrastim: Blutwerte überwachen.",
+      "regimen_category": "Wachstumsfaktor",
+      "specialty": "Onkologie",
+      "disease": "NSCLC, SCLC, Mesotheliom, Thymustumoren, Lungen-NET",
+      "regimens": []
+    },
+    {
+      "id": "sup-pegf",
+      "name": "Pegfilgrastim",
+      "substance": "Pegfilgrastim",
+      "class": "PEGyliertes G-CSF (langwirksam)",
+      "indication": "Vorbeugung von Neutropenie nach Chemotherapie.",
+      "dosing": "6 mg als Einzeldosis subkutan, frühestens 24 Stunden nach Chemotherapie.",
+      "max_daily": "6 mg pro Chemotherapiezyklus.",
+      "side_effects": "Häufig: Knochenschmerzen. Selten: Milzprobleme.",
+      "warnings": "Nur als Einmalgabe pro Zyklus. Nicht gleichzeitig mit Chemo verabreichen.",
+      "regimen_category": "Wachstumsfaktor",
+      "specialty": "Onkologie",
+      "disease": "NSCLC, SCLC, Mesotheliom, Thymustumoren, Lungen-NET",
+      "regimens": []
+    },
+    {
+      "id": "sup-lipe",
+      "name": "Lipegfilgrastim",
+      "substance": "Lipegfilgrastim",
+      "class": "Langwirksames G-CSF",
+      "indication": "Vorbeugung von Neutropenie nach Chemotherapie.",
+      "dosing": "6 mg subkutan einmal pro Chemotherapiezyklus.",
+      "max_daily": "6 mg pro Zyklus.",
+      "side_effects": "Knochenschmerzen, Müdigkeit, selten Milzprobleme.",
+      "warnings": "Wie Pegfilgrastim: Einmalgabe pro Zyklus. Blutwerte überwachen.",
+      "regimen_category": "Wachstumsfaktor",
+      "specialty": "Onkologie",
+      "disease": "NSCLC, SCLC, Mesotheliom, Thymustumoren, Lungen-NET",
+      "regimens": []
+    },
+    {
+      "id": "sup-eltro",
+      "name": "Eltrombopag",
+      "substance": "Eltrombopag",
+      "class": "TPO-Rezeptor-Agonist",
+      "indication": "Behandlung von anhaltend niedrigen Blutplättchen (Thrombozytopenie), wenn andere Maßnahmen nicht helfen.",
+      "dosing": "50 mg oral 1× täglich, Anpassung nach Blutplättchenwerten.",
+      "max_daily": "Meist 75 mg pro Tag.",
+      "side_effects": "Häufig: Kopfschmerzen, Übelkeit, Durchfall. Selten: Thrombosen, Leberschäden.",
+      "warnings": "Leberwerte überwachen. Risiko für Blutgerinnsel beachten.",
+      "regimen_category": "Wachstumsfaktor",
+      "specialty": "Onkologie",
+      "disease": "NSCLC, SCLC, Mesotheliom, Thymustumoren, Lungen-NET",
+      "regimens": []
+    },
+    {
+      "id": "sup-romip",
+      "name": "Romiplostim",
+      "substance": "Romiplostim",
+      "class": "TPO-Rezeptor-Agonist (Peptid)",
+      "indication": "Behandlung von anhaltender Thrombozytopenie, vor allem bei starker Chemotherapie-induzierter Thrombozytopenie.",
+      "dosing": "1 µg/kg subkutan 1× pro Woche; Dosisanpassung nach Blutplättchenwerten.",
+      "max_daily": "Maximaldosis 10 µg/kg pro Woche.",
+      "side_effects": "Häufig: Kopfschmerzen, Gelenkschmerzen, Müdigkeit. Selten: Thrombosen, Knochenmarkveränderungen.",
+      "warnings": "Regelmäßige Blutbildkontrollen. Thromboserisiko beachten.",
+      "regimen_category": "Wachstumsfaktor",
+      "specialty": "Onkologie",
+      "disease": "NSCLC, SCLC, Mesotheliom, Thymustumoren, Lungen-NET",
+      "regimens": []
+    },
+    {
+      "id": "sup-dexa",
+      "name": "Dexamethason",
+      "substance": "Dexamethason",
+      "class": "Glukokortikoid – systemisch",
+      "indication": "Teil der Standard-Prophylaxe gegen Übelkeit/Erbrechen unter moderat bis hoch emetogener Chemotherapie; außerdem als Prämedikation zur Verminderung von Überempfindlichkeits- und Hautreaktionen (z. B. vor Paclitaxel oder Pemetrexed).",
+      "dosing": "Antiemese: meist 8–20 mg oral/i.v. 30–60 Min vor Chemotherapie; je nach Schema 4–8 mg an Tagen 2–4. Prämedikation (z. B. Pemetrexed): häufig 4 mg 2×/Tag am Vortag, Behandlungstag und Folgetag – nach ärztlicher Anordnung.",
+      "max_daily": "Meist bis 20 mg/Tag (antiemetische Protokolle); genaue Dosis gemäß Schema und ärztlicher Anordnung.",
+      "side_effects": "Kurzfristig: Schlafstörungen, Unruhe, Magenbeschwerden, erhöhter Blutzucker. Längerfristig: Infektanfälligkeit, Blutdruckanstieg, Stimmungsschwankungen.",
+      "warnings": "Vorsicht bei Diabetes, Magen-/Darmgeschwüren, Infektionen. Nicht abrupt absetzen nach längerer Gabe.",
+      "regimen_category": "Steroid",
+      "specialty": "Onkologie",
+      "disease": "NSCLC, SCLC, Mesotheliom, Thymustumoren, Lungen-NET",
+      "regimens": [
+        "basismedikation",
+        "krascendo02-studie"
+      ]
+    },
+    {
+      "id": "sup-pred",
+      "name": "Prednisolon",
+      "substance": "Prednisolon",
+      "class": "Glukokortikoid – systemisch",
+      "indication": "Entzündungshemmung und Abschwellung z. B. bei tumor- oder therapiebedingten Reizungen (nach ärztlicher Anordnung). Kann als Alternative zu Dexamethason in bestimmten Schemata genutzt werden.",
+      "dosing": "Sehr unterschiedlich je nach Einsatz. Häufig 0,5–1 mg/kg/Tag kurzfristig, anschließend Ausschleichen. Exakte Dosis gemäß ärztlichem Schema.",
+      "max_daily": "Nach Indikation; häufig bis 60–80 mg/Tag kurzzeitig.",
+      "side_effects": "Ähnlich wie Dexamethason: Schlafstörungen, erhöhter Blutzucker, Blutdruck, Stimmungsschwankungen; bei längerer Gabe Osteoporose, Infektanfälligkeit.",
+      "warnings": "Magenschutz erwägen, Blutzucker und Blutdruck kontrollieren; nicht abrupt absetzen nach längerer Einnahme.",
+      "regimen_category": "Steroid",
+      "specialty": "Onkologie",
+      "disease": "NSCLC, SCLC, Mesotheliom, Thymustumoren, Lungen-NET",
+      "regimens": []
+    },
+    {
+      "id": "sup-hydr",
+      "name": "Hydrocortison (topisch)",
+      "substance": "Hydrocortison (topisch)",
+      "class": "Glukokortikoid – topisch (schwach)",
+      "indication": "Linderung entzündlicher Hautreaktionen (z. B. durch Chemo/Strahlentherapie oder EGFR-Inhibitoren), Juckreiz und Rötung.",
+      "dosing": "Dünn 1–2× täglich auf betroffene Hautareale auftragen. Nur kurzzeitig anwenden; bei ausbleibender Besserung ärztlich rücksprechen.",
+      "max_daily": "Max. 1–2 Anwendungen/Tag, keine großflächige oder längerfristige Anwendung ohne ärztliche Kontrolle.",
+      "side_effects": "Lokal: Hautverdünnung, Reizung, Brennen; bei großflächiger/langfristiger Anwendung systemische Effekte möglich.",
+      "warnings": "Nicht auf offene Wunden/Infektionen ohne ärztliche Anweisung. Kontakt mit Augen vermeiden.",
+      "regimen_category": "Steroid",
+      "specialty": "Onkologie",
+      "disease": "NSCLC, SCLC, Mesotheliom, Thymustumoren, Lungen-NET",
+      "regimens": []
+    },
+    {
+      "id": "sup-bude",
+      "name": "Budesonid (inhalativ)",
+      "substance": "Budesonid (inhalativ)",
+      "class": "Glukokortikoid – inhalativ",
+      "indication": "Entzündungshemmung der Atemwege, z. B. bei tumor- oder therapieassoziiertem Husten/Bronchitis; symptomlindernd nach ärztlicher Anordnung.",
+      "dosing": "Typisch 200–400 µg 2× täglich per Inhalator; Dosis nach Bedarf und ärztlicher Vorgabe.",
+      "max_daily": "Je nach Produktinformation oft bis 1600 µg/Tag.",
+      "side_effects": "Heiserkeit, Reizung im Rachen; selten Mundsoor – nach Inhalation Mund spülen.",
+      "warnings": "Richtige Inhalationstechnik wichtig. Bei anhaltenden Beschwerden ärztliche Kontrolle.",
+      "regimen_category": "Steroid",
+      "specialty": "Onkologie",
+      "disease": "NSCLC, SCLC, Mesotheliom, Thymustumoren, Lungen-NET",
+      "regimens": []
+    },
+    {
+      "id": "sup-budeo",
+      "name": "Budesonid (oral)",
+      "substance": "Budesonid (oral)",
+      "class": "Glukokortikoid – oral",
+      "indication": "Behandlung von Durchfällen (Kolitis) oder Hepatitis im Rahmen einer Immuntherapie (Checkpointinhibitoren), wenn die Nebenwirkung leicht bis moderat ist.",
+      "dosing": "Typisch 9 mg/Tag als Einmalgabe (Kapseln), ggf. schrittweise Reduktion nach Abklingen der Beschwerden.",
+      "max_daily": "9 mg pro Tag.",
+      "side_effects": "Bauchschmerzen, Übelkeit, Kopfschmerzen, erhöhter Blutdruck. Langfristig: Osteoporose, Infektanfälligkeit.",
+      "warnings": "Nicht abrupt absetzen. Vorsicht bei Leberfunktionsstörungen. Regelmäßige Kontrolle der Leberwerte und Stuhlgewohnheiten erforderlich.",
+      "regimen_category": "Steroid",
+      "specialty": "Onkologie",
+      "disease": "NSCLC, SCLC, Mesotheliom, Thymustumoren, Lungen-NET",
+      "regimens": []
+    },
+    {
+      "id": "sup-ecur",
+      "name": "Mometasonfuroat – Ecural® Salbe",
+      "substance": "Mometasonfuroat – Ecural® Salbe",
+      "class": "Glukokortikoid – topisch (stark)",
+      "indication": "Behandlung entzündlicher, juckender Hautveränderungen, z. B. unter onkologischer Therapie (EGFR-Inhibitor-Rash, Strahlen-Dermatitis) – nach ärztlicher Anweisung.",
+      "dosing": "Dünn 1× täglich auf die betroffenen Stellen auftragen. Anwendung in der Regel auf wenige Wochen begrenzt.",
+      "max_daily": "1 Anwendung/Tag; großflächige oder Okklusiv-Anwendung nur nach ärztlicher Anweisung.",
+      "side_effects": "Lokal: Brennen, Trockenheit, Hautverdünnung; bei Fehlanwendung systemische Effekte möglich.",
+      "warnings": "Nicht auf infizierte, offene oder nässende Areale ohne ärztliche Anweisung. Kontakt mit Augen vermeiden.",
+      "regimen_category": "Steroid",
+      "specialty": "Onkologie",
+      "disease": "NSCLC, SCLC, Mesotheliom, Thymustumoren, Lungen-NET",
+      "regimens": []
+    },
+    {
+      "id": "sup-defla",
+      "name": "Mometasonfuroat – Deflatop® Haarschaum",
+      "substance": "Mometasonfuroat – Deflatop® Haarschaum",
+      "class": "Glukokortikoid – topisch (stark, Kopfhaut)",
+      "indication": "Linderung entzündlicher, juckender Veränderungen der Kopfhaut (z. B. therapiebedingte Dermatosen) – nach ärztlicher Anordnung.",
+      "dosing": "Einmal täglich eine kleine Menge Schaum auf die betroffenen Kopfhautstellen auftragen und sanft einmassieren.",
+      "max_daily": "1 Anwendung/Tag; Anwendungsdauer begrenzen (typ. bis 2 Wochen), dann Intervall/Absetzen prüfen.",
+      "side_effects": "Brennen, Trockenheit, Haarwurzelreizung; bei längerer/großflächiger Anwendung Risiko systemischer Steroideffekte.",
+      "warnings": "Nicht in die Augen. Nur auf gesunde Kopfhaut (ohne offene Stellen). Bei fehlender Besserung ärztliche Kontrolle.",
+      "regimen_category": "Steroid",
+      "specialty": "Onkologie",
+      "disease": "NSCLC, SCLC, Mesotheliom, Thymustumoren, Lungen-NET",
+      "regimens": []
+    },
+    {
+      "id": "sup-panto",
+      "name": "Pantoprazol",
+      "substance": "Pantoprazol",
+      "class": "Protonenpumpeninhibitor (PPI)",
+      "indication": "Vorbeugung und Behandlung von Magenschleimhautreizungen, Geschwüren und Sodbrennen, insbesondere unter Corticoid- oder Chemotherapie.",
+      "dosing": "Standard: 40 mg 1× täglich; Einnahme morgens vor dem Frühstück.",
+      "max_daily": "80 mg pro Tag (doppelte Standarddosis).",
+      "side_effects": "Häufig: Kopfschmerzen, Bauchschmerzen, Durchfall, Blähungen. Langfristig: Vitamin-B12-Mangel, Osteoporose.",
+      "warnings": "Nicht abrupt absetzen; Vorsicht bei langfristiger Einnahme (regelmäßige Kontrolle empfohlen).",
+      "regimen_category": "Magen-/Säurehemmung",
+      "specialty": "Onkologie",
+      "disease": "NSCLC, SCLC, Mesotheliom, Thymustumoren, Lungen-NET",
+      "regimens": [
+        "basismedikation"
+      ]
+    },
+    {
+      "id": "sup-omepr",
+      "name": "Omeprazol",
+      "substance": "Omeprazol",
+      "class": "Protonenpumpeninhibitor (PPI)",
+      "indication": "Behandlung und Vorbeugung von Magenschleimhautreizungen und Geschwüren unter onkologischer Therapie.",
+      "dosing": "Standard: 20 mg 1× täglich, morgens nüchtern.",
+      "max_daily": "40 mg pro Tag.",
+      "side_effects": "Kopfschmerzen, Bauchschmerzen, Durchfall. Langfristig: Risiko für Mangel an Vitamin B12 und Magnesium.",
+      "warnings": "Langzeiteinnahme nur unter ärztlicher Kontrolle; Absetzen ausschleichend.",
+      "regimen_category": "Magen-/Säurehemmung",
+      "specialty": "Onkologie",
+      "disease": "NSCLC, SCLC, Mesotheliom, Thymustumoren, Lungen-NET",
+      "regimens": []
+    },
+    {
+      "id": "sup-esome",
+      "name": "Esomeprazol",
+      "substance": "Esomeprazol",
+      "class": "Protonenpumpeninhibitor (PPI)",
+      "indication": "Behandlung von Sodbrennen und Magenschleimhautentzündungen, Schutz bei Risikomedikation wie Steroiden oder Chemotherapie.",
+      "dosing": "Standard: 20 mg 1× täglich.",
+      "max_daily": "40 mg pro Tag.",
+      "side_effects": "Bauchschmerzen, Durchfall, Kopfschmerzen. Langfristig: Elektrolytstörungen.",
+      "warnings": "Langfristige Einnahme kann Osteoporose fördern. Regelmäßige Kontrollen empfohlen.",
+      "regimen_category": "Magen-/Säurehemmung",
+      "specialty": "Onkologie",
+      "disease": "NSCLC, SCLC, Mesotheliom, Thymustumoren, Lungen-NET",
+      "regimens": []
+    },
+    {
+      "id": "sup-lanso",
+      "name": "Lansoprazol",
+      "substance": "Lansoprazol",
+      "class": "Protonenpumpeninhibitor (PPI)",
+      "indication": "Behandlung von Sodbrennen, Gastritis und Ulzera. Vorbeugung bei Einnahme von Medikamenten mit Magenrisiko.",
+      "dosing": "Standard: 30 mg 1× täglich.",
+      "max_daily": "60 mg pro Tag.",
+      "side_effects": "Häufig: Durchfall, Kopfschmerzen, Bauchschmerzen.",
+      "warnings": "Langzeittherapie nur nach ärztlicher Kontrolle; mögliche Wechselwirkungen mit Antitumormitteln.",
+      "regimen_category": "Magen-/Säurehemmung",
+      "specialty": "Onkologie",
+      "disease": "NSCLC, SCLC, Mesotheliom, Thymustumoren, Lungen-NET",
+      "regimens": []
+    },
+    {
+      "id": "sup-rabe",
+      "name": "Rabeprazol",
+      "substance": "Rabeprazol",
+      "class": "Protonenpumpeninhibitor (PPI)",
+      "indication": "Vorbeugung und Behandlung von Geschwüren und Sodbrennen, insbesondere bei Einnahme von Steroiden oder Chemotherapie.",
+      "dosing": "Standard: 20 mg 1× täglich.",
+      "max_daily": "40 mg pro Tag.",
+      "side_effects": "Kopfschmerzen, Durchfall, Bauchschmerzen.",
+      "warnings": "Langzeitgebrauch erhöht Risiko für Elektrolytstörungen; regelmäßige Kontrolle sinnvoll.",
+      "regimen_category": "Magen-/Säurehemmung",
+      "specialty": "Onkologie",
+      "disease": "NSCLC, SCLC, Mesotheliom, Thymustumoren, Lungen-NET",
+      "regimens": []
+    },
+    {
+      "id": "sup-famo",
+      "name": "Famotidin",
+      "substance": "Famotidin",
+      "class": "H2-Rezeptorantagonist",
+      "indication": "Alternative bei Unverträglichkeit von PPIs; Behandlung von Sodbrennen, Ulzera und Reflux.",
+      "dosing": "20 mg 2× täglich oder 40 mg 1× täglich.",
+      "max_daily": "80 mg pro Tag.",
+      "side_effects": "Kopfschmerzen, Durchfall, Müdigkeit. Selten: Verwirrtheit bei älteren Patienten.",
+      "warnings": "Dosisanpassung bei Nierenfunktionsstörungen notwendig.",
+      "regimen_category": "Magen-/Säurehemmung",
+      "specialty": "Onkologie",
+      "disease": "NSCLC, SCLC, Mesotheliom, Thymustumoren, Lungen-NET",
+      "regimens": []
+    },
+    {
+      "id": "sup-rani",
+      "name": "Ranitidin",
+      "substance": "Ranitidin",
+      "class": "H2-Rezeptorantagonist",
+      "indication": "Historisch gebräuchlich bei Ulzera, Reflux und Sodbrennen. Heute kaum mehr im Einsatz (Rückzüge vom Markt).",
+      "dosing": "Standard: 150 mg 2× täglich.",
+      "max_daily": "300 mg pro Tag.",
+      "side_effects": "Kopfschmerzen, Durchfall, Müdigkeit. Selten: Leberwertveränderungen.",
+      "warnings": "Aufgrund von Verunreinigungen (NDMA) vom Markt genommen; nur historische Bedeutung.",
+      "regimen_category": "Magen-/Säurehemmung",
+      "specialty": "Onkologie",
+      "disease": "NSCLC, SCLC, Mesotheliom, Thymustumoren, Lungen-NET",
+      "regimens": []
+    },
+    {
+      "id": "sup-sucr",
+      "name": "Sucralfat",
+      "substance": "Sucralfat",
+      "class": "Schleimhautschutz",
+      "indication": "Unterstützung bei Magenschleimhautreizungen, Ulzera oder Reflux. Bildet eine Schutzschicht über der Magenschleimhaut.",
+      "dosing": "1 g 4× täglich (vor den Mahlzeiten und vor dem Schlafengehen).",
+      "max_daily": "4 g pro Tag.",
+      "side_effects": "Verstopfung, trockener Mund, Übelkeit.",
+      "warnings": "Kann die Aufnahme anderer Medikamente beeinträchtigen (zeitlicher Abstand nötig).",
+      "regimen_category": "Magen-/Säurehemmung",
+      "specialty": "Onkologie",
+      "disease": "NSCLC, SCLC, Mesotheliom, Thymustumoren, Lungen-NET",
+      "regimens": []
+    },
+    {
+      "id": "sup-clind",
+      "name": "Clindamycin",
+      "substance": "Clindamycin",
+      "class": "Antibiotikum – Lincosamid",
+      "indication": "Behandlung von bakteriellen Infektionen, z. B. Hautinfektionen oder entzündliche Hautreaktionen (z. B. EGFR-Inhibitor-Rash).",
+      "dosing": "Typisch 600–1800 mg pro Tag in 2–4 Einzeldosen, oral oder intravenös.",
+      "max_daily": "Bis 2400 mg/Tag (oral), 4800 mg/Tag (i.v.).",
+      "side_effects": "Häufig: Durchfall, Bauchschmerzen. Selten: schwere Darmentzündung (Clostridioides-difficile-assoziiert).",
+      "warnings": "Bei Durchfällen sofort ärztlich abklären. Vorsicht bei Leberfunktionsstörungen.",
+      "regimen_category": "Antibiotika",
+      "specialty": "Onkologie",
+      "disease": "NSCLC, SCLC, Mesotheliom, Thymustumoren, Lungen-NET",
+      "regimens": []
+    },
+    {
+      "id": "sup-doxy",
+      "name": "Doxycyclin",
+      "substance": "Doxycyclin",
+      "class": "Antibiotikum – Tetrazyklin",
+      "indication": "Häufig genutzt bei Hautausschlägen unter EGFR-Inhibitoren (z. B. Erlotinib, Gefitinib) sowie bei bakteriellen Atemwegsinfektionen.",
+      "dosing": "200 mg am ersten Tag, danach 100 mg 1× täglich oral.",
+      "max_daily": "200 mg pro Tag.",
+      "side_effects": "Häufig: Übelkeit, Durchfall, Hautempfindlichkeit gegen Sonne. Selten: Speiseröhrenreizungen.",
+      "warnings": "Tabletten mit viel Wasser einnehmen, nicht im Liegen. Sonnenschutz wichtig.",
+      "regimen_category": "Antibiotika",
+      "specialty": "Onkologie",
+      "disease": "NSCLC, SCLC, Mesotheliom, Thymustumoren, Lungen-NET",
+      "regimens": []
+    },
+    {
+      "id": "sup-mino",
+      "name": "Minocyclin",
+      "substance": "Minocyclin",
+      "class": "Antibiotikum – Tetrazyklin",
+      "indication": "Alternative zu Doxycyclin bei EGFR-Inhibitor-induziertem Hautausschlag und anderen bakteriellen Infektionen.",
+      "dosing": "200 mg als Einzeldosis, dann 100 mg 1–2× täglich oral.",
+      "max_daily": "200 mg pro Tag (üblich).",
+      "side_effects": "Häufig: Schwindel, Übelkeit, Hautveränderungen. Selten: Leberfunktionsstörungen.",
+      "warnings": "Sonnenschutz beachten. Bei längerfristiger Einnahme Leberwerte kontrollieren.",
+      "regimen_category": "Antibiotika",
+      "specialty": "Onkologie",
+      "disease": "NSCLC, SCLC, Mesotheliom, Thymustumoren, Lungen-NET",
+      "regimens": []
+    },
+    {
+      "id": "sup-nyst",
+      "name": "Nystatin",
+      "substance": "Nystatin",
+      "class": "Antimykotikum – Polyen",
+      "indication": "Behandlung von Pilzinfektionen im Mund- und Rachenraum (Soor) sowie im Darm.",
+      "dosing": "500.000 I.E. 4× täglich als Suspension im Mund verteilen und schlucken.",
+      "max_daily": "Bis 4× 1 Mio. I.E. pro Tag.",
+      "side_effects": "Gelegentlich: Übelkeit, Durchfall, Magenbeschwerden.",
+      "warnings": "Suspension möglichst lange im Mund behalten für bessere Wirkung.",
+      "regimen_category": "Antimykotika",
+      "specialty": "Onkologie",
+      "disease": "NSCLC, SCLC, Mesotheliom, Thymustumoren, Lungen-NET",
+      "regimens": []
+    },
+    {
+      "id": "sup-fluco",
+      "name": "Fluconazol",
+      "substance": "Fluconazol",
+      "class": "Antimykotikum – Azol",
+      "indication": "Behandlung und Vorbeugung von Pilzinfektionen (z. B. Soor, Candida-Infektionen von Mund, Speiseröhre oder Blut).",
+      "dosing": "Typisch: 100–200 mg oral/iv pro Tag; bei systemischen Infektionen bis 400 mg.",
+      "max_daily": "400 mg pro Tag.",
+      "side_effects": "Übelkeit, Kopfschmerzen, Hautausschlag. Selten: Leberfunktionsstörungen.",
+      "warnings": "Leberwerte überwachen; Wechselwirkungen mit vielen Medikamenten (CYP-Inhibitor).",
+      "regimen_category": "Antimykotika",
+      "specialty": "Onkologie",
+      "disease": "NSCLC, SCLC, Mesotheliom, Thymustumoren, Lungen-NET",
+      "regimens": []
+    },
+    {
+      "id": "sup-posa",
+      "name": "Posaconazol",
+      "substance": "Posaconazol",
+      "class": "Antimykotikum – Azol",
+      "indication": "Vorbeugung schwerer Pilzinfektionen bei stark geschwächtem Immunsystem, z. B. während länger dauernder Neutropenie unter Chemotherapie.",
+      "dosing": "300 mg 2× am ersten Tag, dann 300 mg 1× täglich (oral oder i.v.).",
+      "max_daily": "300 mg pro Tag (nach Aufsättigungstag).",
+      "side_effects": "Übelkeit, Durchfall, Kopfschmerzen, Leberwertveränderungen.",
+      "warnings": "Wechselwirkungen mit vielen Medikamenten. Regelmäßige Kontrolle von Leberwerten und Spiegelbestimmungen möglich.",
+      "regimen_category": "Antimykotika",
+      "specialty": "Onkologie",
+      "disease": "NSCLC, SCLC, Mesotheliom, Thymustumoren, Lungen-NET",
+      "regimens": []
+    },
+    {
+      "id": "sup-ampho",
+      "name": "Amphomoronal® Lösung (Amphotericin B + Moronal)",
+      "substance": "Amphomoronal® Lösung (Amphotericin B + Moronal)",
+      "class": "Antimykotikum – Polyen (lokal)",
+      "indication": "Behandlung von Pilzinfektionen im Mund- und Rachenraum (Soor).",
+      "dosing": "10 ml Lösung mehrmals täglich im Mund spülen und langsam schlucken.",
+      "max_daily": "Mehrfachgabe nach ärztlicher Anweisung, keine feste Maximaldosis für lokale Anwendung.",
+      "side_effects": "Gelegentlich: Übelkeit, Geschmacksstörungen, Magenbeschwerden.",
+      "warnings": "Langsam im Mund behalten für bestmögliche Wirkung. Bei fehlender Besserung ärztliche Kontrolle.",
+      "regimen_category": "Antimykotika",
+      "specialty": "Onkologie",
+      "disease": "NSCLC, SCLC, Mesotheliom, Thymustumoren, Lungen-NET",
+      "regimens": [
+        "basismedikation",
+        "krascendo02-studie"
+      ]
+    },
+    {
+      "id": "sup-para",
+      "name": "Paracetamol",
+      "substance": "Paracetamol",
+      "class": "Nicht-opioides Analgetikum",
+      "indication": "Leichte bis mäßige Schmerzen und Fieber.",
+      "dosing": "500–1000 mg oral alle 6–8 Stunden.",
+      "max_daily": "4000 mg pro Tag.",
+      "side_effects": "Selten: Leberfunktionsstörungen bei Überdosierung, Hautreaktionen.",
+      "warnings": "Nicht mehr als 4 g pro Tag. Vorsicht bei Lebererkrankungen und Alkoholmissbrauch.",
+      "regimen_category": "Analgetika",
+      "specialty": "Onkologie",
+      "disease": "NSCLC, SCLC, Mesotheliom, Thymustumoren, Lungen-NET",
+      "regimens": []
+    },
+    {
+      "id": "sup-meta",
+      "name": "Metamizol (Novalgin®)",
+      "substance": "Metamizol (Novalgin®)",
+      "class": "Nicht-opioides Analgetikum",
+      "indication": "Starke Schmerzen und Fieber, wenn andere Mittel nicht wirken.",
+      "dosing": "500–1000 mg oral oder i.v. alle 6–8 Stunden.",
+      "max_daily": "4000 mg pro Tag.",
+      "side_effects": "Selten: Blutbildveränderungen (Agranulozytose), Kreislaufprobleme.",
+      "warnings": "Nur unter ärztlicher Kontrolle, Blutbildkontrollen empfohlen.",
+      "regimen_category": "Analgetika",
+      "specialty": "Onkologie",
+      "disease": "NSCLC, SCLC, Mesotheliom, Thymustumoren, Lungen-NET",
+      "regimens": [
+        "basismedikation",
+        "krascendo02-studie"
+      ]
+    },
+    {
+      "id": "sup-ibup",
+      "name": "Ibuprofen",
+      "substance": "Ibuprofen",
+      "class": "NSAR",
+      "indication": "Schmerzen und Entzündungen.",
+      "dosing": "400–600 mg oral alle 6–8 Stunden.",
+      "max_daily": "2400 mg pro Tag.",
+      "side_effects": "Magenbeschwerden, Blutdrucksteigerung, Nierenfunktionsstörungen.",
+      "warnings": "Nicht bei Magen-/Darmgeschwüren oder schwerer Niereninsuffizienz. Magenschutz erwägen.",
+      "regimen_category": "Analgetika",
+      "specialty": "Onkologie",
+      "disease": "NSCLC, SCLC, Mesotheliom, Thymustumoren, Lungen-NET",
+      "regimens": []
+    },
+    {
+      "id": "sup-dicl",
+      "name": "Diclofenac",
+      "substance": "Diclofenac",
+      "class": "NSAR",
+      "indication": "Schmerzen und Entzündungen.",
+      "dosing": "50 mg oral alle 8 Stunden.",
+      "max_daily": "150 mg pro Tag.",
+      "side_effects": "Magenbeschwerden, kardiovaskuläre Risiken, Leberwerte erhöht.",
+      "warnings": "Nicht bei Magen-/Darmgeschwüren. Vorsicht bei Herz-Kreislauf-Erkrankungen.",
+      "regimen_category": "Analgetika",
+      "specialty": "Onkologie",
+      "disease": "NSCLC, SCLC, Mesotheliom, Thymustumoren, Lungen-NET",
+      "regimens": []
+    },
+    {
+      "id": "sup-napr",
+      "name": "Naproxen",
+      "substance": "Naproxen",
+      "class": "NSAR",
+      "indication": "Schmerzen und Entzündungen.",
+      "dosing": "250–500 mg oral 2× täglich.",
+      "max_daily": "1000 mg pro Tag.",
+      "side_effects": "Magen-Darm-Beschwerden, Kopfschmerzen, Müdigkeit.",
+      "warnings": "Nicht bei Ulzera oder schwerer Niereninsuffizienz. Magenschutz empfohlen.",
+      "regimen_category": "Analgetika",
+      "specialty": "Onkologie",
+      "disease": "NSCLC, SCLC, Mesotheliom, Thymustumoren, Lungen-NET",
+      "regimens": []
+    },
+    {
+      "id": "sup-cele",
+      "name": "Celecoxib",
+      "substance": "Celecoxib",
+      "class": "COX-2-Hemmer",
+      "indication": "Schmerz- und Entzündungshemmung mit geringerem Risiko für Magenblutungen.",
+      "dosing": "200 mg oral 1–2× täglich.",
+      "max_daily": "400 mg pro Tag.",
+      "side_effects": "Bluthochdruck, Ödeme, selten Magenbeschwerden.",
+      "warnings": "Vorsicht bei Herz-Kreislauf-Erkrankungen.",
+      "regimen_category": "Analgetika",
+      "specialty": "Onkologie",
+      "disease": "NSCLC, SCLC, Mesotheliom, Thymustumoren, Lungen-NET",
+      "regimens": []
+    },
+    {
+      "id": "sup-etor",
+      "name": "Etoricoxib",
+      "substance": "Etoricoxib",
+      "class": "COX-2-Hemmer",
+      "indication": "Schmerzen und Entzündungen, besonders bei NSAR-Unverträglichkeit.",
+      "dosing": "60–90 mg oral 1× täglich.",
+      "max_daily": "120 mg pro Tag.",
+      "side_effects": "Bluthochdruck, Wassereinlagerungen, selten Magenbeschwerden.",
+      "warnings": "Nicht bei schwerer Herzschwäche. Blutdruck regelmäßig kontrollieren.",
+      "regimen_category": "Analgetika",
+      "specialty": "Onkologie",
+      "disease": "NSCLC, SCLC, Mesotheliom, Thymustumoren, Lungen-NET",
+      "regimens": []
+    },
+    {
+      "id": "sup-code",
+      "name": "Codein",
+      "substance": "Codein",
+      "class": "Schwaches Opioid",
+      "indication": "Leichte bis mäßige Schmerzen, häufig in Kombination mit Paracetamol.",
+      "dosing": "30–60 mg oral alle 4–6 Stunden.",
+      "max_daily": "240 mg pro Tag.",
+      "side_effects": "Müdigkeit, Übelkeit, Verstopfung.",
+      "warnings": "Abhängigkeitspotenzial. Vorsicht bei Atemwegserkrankungen.",
+      "regimen_category": "Analgetika",
+      "specialty": "Onkologie",
+      "disease": "NSCLC, SCLC, Mesotheliom, Thymustumoren, Lungen-NET",
+      "regimens": []
+    },
+    {
+      "id": "sup-tram-ir",
+      "name": "Tramadol (kurzwirksam)",
+      "substance": "Tramadol (kurzwirksam)",
+      "class": "Schwaches Opioid",
+      "indication": "Mäßige bis starke Schmerzen.",
+      "dosing": "50–100 mg oral alle 6 Stunden.",
+      "max_daily": "400 mg pro Tag.",
+      "side_effects": "Schwindel, Übelkeit, Verstopfung, Schläfrigkeit.",
+      "warnings": "Erhöhtes Risiko für Krampfanfälle. Wechselwirkungen mit Antidepressiva.",
+      "regimen_category": "Analgetika",
+      "specialty": "Onkologie",
+      "disease": "NSCLC, SCLC, Mesotheliom, Thymustumoren, Lungen-NET",
+      "regimens": []
+    },
+    {
+      "id": "sup-tram-ret",
+      "name": "Tramadol (retardiert)",
+      "substance": "Tramadol (retardiert)",
+      "class": "Schwaches Opioid (Retard)",
+      "indication": "Chronische mäßige Schmerzen.",
+      "dosing": "100–200 mg 2× täglich.",
+      "max_daily": "400 mg pro Tag.",
+      "side_effects": "Wie Tramadol kurz wirksam, zusätzlich Schlafstörungen möglich.",
+      "warnings": "Abhängigkeitspotenzial, gleiche Vorsicht wie bei kurz wirksamem Tramadol.",
+      "regimen_category": "Analgetika",
+      "specialty": "Onkologie",
+      "disease": "NSCLC, SCLC, Mesotheliom, Thymustumoren, Lungen-NET",
+      "regimens": []
+    },
+    {
+      "id": "sup-morph-ir",
+      "name": "Morphin (kurzwirksam)",
+      "substance": "Morphin (kurzwirksam)",
+      "class": "Starkes Opioid",
+      "indication": "Starke Tumorschmerzen.",
+      "dosing": "5–20 mg oral alle 4 Stunden, individuell angepasst.",
+      "max_daily": "Keine fixe Obergrenze, nach Bedarf titriert.",
+      "side_effects": "Verstopfung, Übelkeit, Müdigkeit, Atemdämpfung.",
+      "warnings": "Abführmittel immer begleitend geben. Dosierung individuell titrieren.",
+      "regimen_category": "Analgetika",
+      "specialty": "Onkologie",
+      "disease": "NSCLC, SCLC, Mesotheliom, Thymustumoren, Lungen-NET",
+      "regimens": []
+    },
+    {
+      "id": "sup-morph-ret",
+      "name": "Morphin (retardiert)",
+      "substance": "Morphin (retardiert)",
+      "class": "Starkes Opioid (Retard)",
+      "indication": "Starke chronische Tumorschmerzen.",
+      "dosing": "10–60 mg oral alle 12 Stunden, individuell angepasst.",
+      "max_daily": "Keine fixe Obergrenze.",
+      "side_effects": "Wie Morphin kurz wirksam.",
+      "warnings": "Retard nur für Dauerschmerztherapie; nicht bei Durchbruchschmerz.",
+      "regimen_category": "Analgetika",
+      "specialty": "Onkologie",
+      "disease": "NSCLC, SCLC, Mesotheliom, Thymustumoren, Lungen-NET",
+      "regimens": []
+    },
+    {
+      "id": "sup-oxy-ir",
+      "name": "Oxycodon (kurzwirksam)",
+      "substance": "Oxycodon (kurzwirksam)",
+      "class": "Starkes Opioid",
+      "indication": "Starke Schmerzen, insbesondere bei Durchbruchschmerz.",
+      "dosing": "5–20 mg oral alle 4–6 Stunden.",
+      "max_daily": "Keine fixe Obergrenze.",
+      "side_effects": "Verstopfung, Übelkeit, Schläfrigkeit.",
+      "warnings": "Abführmittel begleitend. Suchtgefahr beachten.",
+      "regimen_category": "Analgetika",
+      "specialty": "Onkologie",
+      "disease": "NSCLC, SCLC, Mesotheliom, Thymustumoren, Lungen-NET",
+      "regimens": []
+    },
+    {
+      "id": "sup-oxy-ret",
+      "name": "Oxycodon (retardiert)",
+      "substance": "Oxycodon (retardiert)",
+      "class": "Starkes Opioid (Retard)",
+      "indication": "Starke chronische Schmerzen.",
+      "dosing": "10–40 mg oral alle 12 Stunden.",
+      "max_daily": "Keine fixe Obergrenze.",
+      "side_effects": "Wie Oxycodon kurz wirksam.",
+      "warnings": "Nur für Dauerschmerzen. Kombination mit Naloxon möglich (weniger Obstipation).",
+      "regimen_category": "Analgetika",
+      "specialty": "Onkologie",
+      "disease": "NSCLC, SCLC, Mesotheliom, Thymustumoren, Lungen-NET",
+      "regimens": []
+    },
+    {
+      "id": "sup-fent-td",
+      "name": "Fentanyl transdermal (Pflaster)",
+      "substance": "Fentanyl transdermal (Pflaster)",
+      "class": "Starkes Opioid – Retard",
+      "indication": "Dauertherapie bei starken chronischen Schmerzen",
+      "dosing": "Pflaster 12–100 µg/h, alle 72 Stunden wechseln",
+      "max_daily": "Individuell, keine fixe Obergrenze",
+      "side_effects": "Müdigkeit, Verstopfung, Schwindel, Atemdämpfung",
+      "warnings": "Pflaster nie zerschneiden; Hitze (z. B. Sauna) verstärkt Wirkung; Laxanzien obligat",
+      "regimen_category": "Analgetika",
+      "specialty": "Onkologie",
+      "disease": "NSCLC, SCLC, Mesotheliom, Thymustumoren, Lungen-NET",
+      "regimens": []
+    },
+    {
+      "id": "sup-fent-eff",
+      "name": "Fentanyl Buccaltabletten (Effentora®)",
+      "substance": "Fentanyl Buccaltabletten (Effentora®)",
+      "class": "Starkes Opioid – schnell wirksam",
+      "indication": "Behandlung von Durchbruchschmerzen bei bereits bestehender Opioidtherapie",
+      "dosing": "100–800 µg pro Episode, langsam im Mund zergehen lassen",
+      "max_daily": "Mehrfachgabe möglich, Dosierung individuell titriert",
+      "side_effects": "Übelkeit, Müdigkeit, Atemdämpfung",
+      "warnings": "Nur bei Patient:innen mit Opioidtoleranz; Überdosierungsrisiko",
+      "regimen_category": "Analgetika",
+      "specialty": "Onkologie",
+      "disease": "NSCLC, SCLC, Mesotheliom, Thymustumoren, Lungen-NET",
+      "regimens": []
+    },
+    {
+      "id": "sup-fent-nas",
+      "name": "Fentanyl Nasenspray (Instanyl®)",
+      "substance": "Fentanyl Nasenspray (Instanyl®)",
+      "class": "Starkes Opioid – schnell wirksam",
+      "indication": "Durchbruchschmerzen bei Opioidtoleranz",
+      "dosing": "50–200 µg pro Sprühstoß, 1 Dosis pro Episode, ggf. Wiederholung nach 10 Min",
+      "max_daily": "Max. 4 Dosen pro Tag",
+      "side_effects": "Schläfrigkeit, Schwindel, Übelkeit, Atemdepression",
+      "warnings": "Nur für opioid-erfahrene Patient:innen; hohes Überdosierungsrisiko",
+      "regimen_category": "Analgetika",
+      "specialty": "Onkologie",
+      "disease": "NSCLC, SCLC, Mesotheliom, Thymustumoren, Lungen-NET",
+      "regimens": []
+    },
+    {
+      "id": "sup-lope",
+      "name": "Loperamid",
+      "substance": "Loperamid",
+      "class": "Antidiarrhoikum – Opioid-Derivat",
+      "indication": "Behandlung akuter Durchfälle, z. B. nach Chemotherapie oder Bestrahlung.",
+      "dosing": "Initial 4 mg, danach 2 mg nach jedem ungeformten Stuhl. Anwendung bis max. 2 Tage ohne ärztliche Rücksprache.",
+      "max_daily": "16 mg pro Tag.",
+      "side_effects": "Gelegentlich: Verstopfung, Blähungen, Bauchschmerzen. Selten: Herzrhythmusstörungen bei Überdosierung.",
+      "warnings": "Nicht länger als 2 Tage ohne ärztliche Kontrolle einnehmen. Vorsicht bei Fieber oder blutigem Stuhl.",
+      "regimen_category": "Antidiarrhoika",
+      "specialty": "Onkologie",
+      "disease": "NSCLC, SCLC, Mesotheliom, Thymustumoren, Lungen-NET",
+      "regimens": [
+        "basismedikation",
+        "krascendo02-studie"
+      ]
+    },
+    {
+      "id": "sup-race",
+      "name": "Racecadotril",
+      "substance": "Racecadotril",
+      "class": "Antisekretorisches Antidiarrhoikum",
+      "indication": "Behandlung akuter Durchfälle, insbesondere wenn Loperamid nicht vertragen wird oder nicht ausreicht.",
+      "dosing": "100 mg oral 3× täglich vor den Mahlzeiten.",
+      "max_daily": "300 mg pro Tag.",
+      "side_effects": "Gelegentlich: Kopfschmerzen, Hautausschlag, Übelkeit.",
+      "warnings": "Nicht anwenden bei chronischem Durchfall oder schwerer Nierenfunktionsstörung.",
+      "regimen_category": "Antidiarrhoika",
+      "specialty": "Onkologie",
+      "disease": "NSCLC, SCLC, Mesotheliom, Thymustumoren, Lungen-NET",
+      "regimens": []
+    },
+    {
+      "id": "sup-opiu",
+      "name": "Opiumtinktur",
+      "substance": "Opiumtinktur",
+      "class": "Opioid – Antidiarrhoisch wirksam",
+      "indication": "Reservemedikament bei schweren, therapieresistenten Durchfällen (z. B. unter Tyrosinkinase-Inhibitoren).",
+      "dosing": "2–10 Tropfen (je nach Konzentration) 1–2× täglich; Dosierung streng nach ärztlicher Anweisung.",
+      "max_daily": "Individuell; meist nicht mehr als 20 Tropfen pro Tag.",
+      "side_effects": "Müdigkeit, Verstopfung, Übelkeit, Schwindel. Risiko für Abhängigkeit.",
+      "warnings": "Nur bei schwerer, therapieresistenter Diarrhoe einsetzen. Suchtpotenzial beachten.",
+      "regimen_category": "Antidiarrhoika",
+      "specialty": "Onkologie",
+      "disease": "NSCLC, SCLC, Mesotheliom, Thymustumoren, Lungen-NET",
+      "regimens": []
+    },
+    {
+      "id": "sup-dexra",
+      "name": "Dexrazoxan",
+      "substance": "Dexrazoxan",
+      "class": "Kardioprotektivum",
+      "indication": "Vorbeugung von Herzschäden durch Anthrazyklin-Chemotherapie (z. B. Doxorubicin).",
+      "dosing": "10× die Doxorubicin-Dosis, 30 Minuten vor der Chemotherapie i.v.",
+      "max_daily": "Entspricht 10-facher Anthrazyklin-Dosis, nicht überschreiten.",
+      "side_effects": "Müdigkeit, Blutbildveränderungen, Übelkeit.",
+      "warnings": "Nur bei hohem Risiko für Herzschäden. Nur unter ärztlicher Aufsicht.",
+      "regimen_category": "Supportiv sonstiges",
+      "specialty": "Onkologie",
+      "disease": "NSCLC, SCLC, Mesotheliom, Thymustumoren, Lungen-NET",
+      "regimens": []
+    },
+    {
+      "id": "sup-pali",
+      "name": "Palifermin",
+      "substance": "Palifermin",
+      "class": "Wachstumsfaktor für Epithelzellen (Keratinocyt Growth Factor)",
+      "indication": "Vorbeugung und Behandlung schwerer Schleimhautentzündung (Mukositis) nach hochdosierter Chemo-/Radiotherapie und Stammzelltransplantation.",
+      "dosing": "60 µg/kg/Tag i.v. an 3 Tagen vor und 3 Tagen nach Hochdosistherapie.",
+      "max_daily": "60 µg/kg.",
+      "side_effects": "Geschmacksstörungen, Hautausschläge, Zungenvergrößerung.",
+      "warnings": "Nicht gleichzeitig am selben Tag wie Chemotherapie geben.",
+      "regimen_category": "Supportiv sonstiges",
+      "specialty": "Onkologie",
+      "disease": "NSCLC, SCLC, Mesotheliom, Thymustumoren, Lungen-NET",
+      "regimens": []
+    },
+    {
+      "id": "sup-benz",
+      "name": "Benzydamin (Mundspüllösung)",
+      "substance": "Benzydamin (Mundspüllösung)",
+      "class": "Lokales Analgetikum/Antiphlogistikum",
+      "indication": "Linderung von Schmerzen und Entzündungen bei Schleimhautentzündung (Mukositis, Stomatitis).",
+      "dosing": "15 ml unverdünnt gurgeln/spülen alle 1,5–3 Stunden.",
+      "max_daily": "Mehrfachanwendung möglich, keine feste Obergrenze.",
+      "side_effects": "Mundtrockenheit, Taubheitsgefühl, selten Allergien.",
+      "warnings": "Nicht verschlucken. Nur zur lokalen Anwendung.",
+      "regimen_category": "Supportiv sonstiges",
+      "specialty": "Onkologie",
+      "disease": "NSCLC, SCLC, Mesotheliom, Thymustumoren, Lungen-NET",
+      "regimens": []
+    },
+    {
+      "id": "sup-lido",
+      "name": "Lidocain (topisch, Gel/Lösung/Pflaster)",
+      "substance": "Lidocain (topisch, Gel/Lösung/Pflaster)",
+      "class": "Lokalanästhetikum",
+      "indication": "Linderung lokaler Schmerzen, z. B. Schleimhautschmerzen, neuropathische Schmerzen oder Hautschmerzen.",
+      "dosing": "Gel/Lösung: mehrmals täglich dünn auftragen; Pflaster: 1× täglich bis zu 12 Stunden.",
+      "max_daily": "Je nach Applikationsform (z. B. max. 3 Pflaster gleichzeitig).",
+      "side_effects": "Lokal: Taubheitsgefühl, Hautreizungen. Selten: Herzrhythmusstörungen bei Überdosierung.",
+      "warnings": "Nicht auf verletzte Haut ohne ärztliche Anweisung. Überdosierung vermeiden.",
+      "regimen_category": "Supportiv sonstiges",
+      "specialty": "Onkologie",
+      "disease": "NSCLC, SCLC, Mesotheliom, Thymustumoren, Lungen-NET",
+      "regimens": []
+    },
+    {
+      "id": "sup-urea",
+      "name": "Urea (topisch)",
+      "substance": "Urea (topisch)",
+      "class": "Harnstoffpräparat – Hautpflege",
+      "indication": "Behandlung trockener, juckender Haut (z. B. unter Chemotherapie oder Bestrahlung).",
+      "dosing": "2× täglich als Creme/Lotion auftragen.",
+      "max_daily": "Keine feste Obergrenze.",
+      "side_effects": "Gelegentlich: Hautreizungen, Brennen.",
+      "warnings": "Nicht auf offene Wunden auftragen.",
+      "regimen_category": "Supportiv sonstiges",
+      "specialty": "Onkologie",
+      "disease": "NSCLC, SCLC, Mesotheliom, Thymustumoren, Lungen-NET",
+      "regimens": []
+    },
+    {
+      "id": "sup-vedo",
+      "name": "Vedolizumab",
+      "substance": "Vedolizumab",
+      "class": "Integrin-Antikörper",
+      "indication": "Therapie von schwerer, immunassoziierter Colitis unter Checkpointinhibitoren, wenn Steroide nicht ausreichen.",
+      "dosing": "300 mg i.v. an Woche 0, 2 und 6, danach alle 8 Wochen.",
+      "max_daily": "300 mg pro Infusion.",
+      "side_effects": "Infusionsreaktionen, Kopfschmerzen, Infekte.",
+      "warnings": "Nur in refraktären Fällen, engmaschige Kontrolle notwendig.",
+      "regimen_category": "Supportiv sonstiges",
+      "specialty": "Onkologie",
+      "disease": "NSCLC, SCLC, Mesotheliom, Thymustumoren, Lungen-NET",
+      "regimens": []
+    },
+    {
+      "id": "sup-zolp",
+      "name": "Zolpidem",
+      "substance": "Zolpidem",
+      "class": "Hypnotikum (Z-Substanz)",
+      "indication": "Kurzfristige Behandlung von Ein- und Durchschlafstörungen.",
+      "dosing": "5–10 mg unmittelbar vor dem Schlafengehen.",
+      "max_daily": "10 mg pro Tag.",
+      "side_effects": "Müdigkeit, Benommenheit am nächsten Morgen, Kopfschmerzen. Selten: Schlafwandeln.",
+      "warnings": "Nur kurzzeitig anwenden (max. 2–4 Wochen). Abhängigkeitsrisiko.",
+      "regimen_category": "Schlafmittel",
+      "specialty": "Onkologie",
+      "disease": "NSCLC, SCLC, Mesotheliom, Thymustumoren, Lungen-NET",
+      "regimens": []
+    },
+    {
+      "id": "sup-zopi",
+      "name": "Zopiclon",
+      "substance": "Zopiclon",
+      "class": "Hypnotikum (Z-Substanz)",
+      "indication": "Kurzfristige Behandlung von Schlafstörungen.",
+      "dosing": "7,5 mg unmittelbar vor dem Schlafengehen.",
+      "max_daily": "7,5 mg pro Tag.",
+      "side_effects": "Bitterer Geschmack, Benommenheit am Folgetag, Schwindel.",
+      "warnings": "Maximal 2–4 Wochen anwenden. Abhängigkeitsrisiko.",
+      "regimen_category": "Schlafmittel",
+      "specialty": "Onkologie",
+      "disease": "NSCLC, SCLC, Mesotheliom, Thymustumoren, Lungen-NET",
+      "regimens": []
+    },
+    {
+      "id": "sup-mela",
+      "name": "Melatonin",
+      "substance": "Melatonin",
+      "class": "Schlafhormon – Phytotherapeutikum/Synthetikum",
+      "indication": "Schlafstörungen, insbesondere bei gestörtem Tag-Nacht-Rhythmus (z. B. Klinikaufenthalt, Jetlag).",
+      "dosing": "1–5 mg oral 30 Minuten vor dem Schlafengehen.",
+      "max_daily": "5 mg pro Tag.",
+      "side_effects": "Müdigkeit am Folgetag, Kopfschmerzen, selten lebhafte Träume.",
+      "warnings": "Nicht mit Alkohol kombinieren. Wirksamkeit individuell unterschiedlich.",
+      "regimen_category": "Schlafmittel",
+      "specialty": "Onkologie",
+      "disease": "NSCLC, SCLC, Mesotheliom, Thymustumoren, Lungen-NET",
+      "regimens": []
+    },
+    {
+      "id": "sup-lora-sleep",
+      "name": "Lorazepam (als Schlafmittel)",
+      "substance": "Lorazepam (als Schlafmittel)",
+      "class": "Benzodiazepin",
+      "indication": "Kurzzeitbehandlung von Schlafstörungen, insbesondere wenn Angst eine Rolle spielt.",
+      "dosing": "0,5–2 mg oral vor dem Schlafengehen.",
+      "max_daily": "4 mg pro Tag.",
+      "side_effects": "Müdigkeit, Schwindel, Verwirrtheit, Abhängigkeitspotenzial.",
+      "warnings": "Nur für kurzfristige Anwendung. Abhängigkeitsgefahr bei Dauergebrauch.",
+      "regimen_category": "Schlafmittel",
+      "specialty": "Onkologie",
+      "disease": "NSCLC, SCLC, Mesotheliom, Thymustumoren, Lungen-NET",
+      "regimens": []
+    },
+    {
+      "id": "sup-sert",
+      "name": "Sertralin",
+      "substance": "Sertralin",
+      "class": "SSRI (Selektiver Serotonin-Wiederaufnahmehemmer)",
+      "indication": "Depressive Verstimmung, Angststörungen und Anpassungsstörungen im Rahmen einer onkologischen Erkrankung.",
+      "dosing": "Einstieg 25–50 mg 1× täglich (morgens), langsame Steigerung nach Wirkung/Verträglichkeit.",
+      "max_daily": "200 mg pro Tag.",
+      "side_effects": "Übelkeit, Kopfschmerzen, Schlafstörungen, innere Unruhe; meist vorübergehend.",
+      "warnings": "Wirkeintritt nach 1–2 Wochen; Serotoninsyndrom-Risiko bei Kombination mit anderen serotonergen Medikamenten.",
+      "regimen_category": "Antidepressiva",
+      "specialty": "Onkologie",
+      "disease": "NSCLC, SCLC, Mesotheliom, Thymustumoren, Lungen-NET",
+      "regimens": []
+    },
+    {
+      "id": "sup-esci",
+      "name": "Escitalopram",
+      "substance": "Escitalopram",
+      "class": "SSRI",
+      "indication": "Depression und Angststörungen; häufig gut verträglich.",
+      "dosing": "Einstieg 5–10 mg 1× täglich, nach 1–2 Wochen ggf. Steigerung.",
+      "max_daily": "20 mg pro Tag.",
+      "side_effects": "Übelkeit, Müdigkeit, sexuelle Funktionsstörungen, Kopfschmerzen.",
+      "warnings": "Vorsicht bei QT-Verlängerung; EKG-Kontrollen bei Risikopatient:innen erwägen.",
+      "regimen_category": "Antidepressiva",
+      "specialty": "Onkologie",
+      "disease": "NSCLC, SCLC, Mesotheliom, Thymustumoren, Lungen-NET",
+      "regimens": []
+    },
+    {
+      "id": "sup-dulo",
+      "name": "Duloxetin",
+      "substance": "Duloxetin",
+      "class": "SNRI (Serotonin-Noradrenalin-Wiederaufnahmehemmer)",
+      "indication": "Depression, Angststörungen; zusätzlich wirksam bei Nerven-/Neuropathieschmerzen.",
+      "dosing": "30 mg 1× täglich für eine Woche, dann 60 mg 1× täglich; Anpassung nach Wirkung.",
+      "max_daily": "120 mg pro Tag.",
+      "side_effects": "Übelkeit, Mundtrockenheit, Schwitzen, Schlafstörungen.",
+      "warnings": "Vorsicht bei Lebererkrankungen; Blutdruckkontrolle empfohlen.",
+      "regimen_category": "Antidepressiva",
+      "specialty": "Onkologie",
+      "disease": "NSCLC, SCLC, Mesotheliom, Thymustumoren, Lungen-NET",
+      "regimens": []
+    },
+    {
+      "id": "sup-mirta",
+      "name": "Mirtazapin",
+      "substance": "Mirtazapin",
+      "class": "NaSSA (noradrenerg und spezifisch serotonerg)",
+      "indication": "Depression mit Schlafstörungen und Appetitverlust; oft hilfreich bei Übelkeit.",
+      "dosing": "15 mg abends, bei Bedarf Steigerung auf 30–45 mg abends.",
+      "max_daily": "45 mg pro Tag.",
+      "side_effects": "Müdigkeit, Gewichtszunahme, Mundtrockenheit.",
+      "warnings": "Sedierend – Vorsicht beim Autofahren; v. a. abends einnehmen.",
+      "regimen_category": "Antidepressiva",
+      "specialty": "Onkologie",
+      "disease": "NSCLC, SCLC, Mesotheliom, Thymustumoren, Lungen-NET",
+      "regimens": []
+    },
+    {
+      "id": "sup-preg",
+      "name": "Pregabalin",
+      "substance": "Pregabalin",
+      "class": "Antikonvulsivum – Koanalgetikum",
+      "indication": "Behandlung neuropathischer Schmerzen (z. B. durch Chemotherapie oder Tumorinfiltration).",
+      "dosing": "Start 75 mg 2× täglich, langsame Steigerung auf 150–300 mg 2× täglich.",
+      "max_daily": "600 mg pro Tag.",
+      "side_effects": "Schläfrigkeit, Schwindel, Gewichtszunahme, Wassereinlagerungen.",
+      "warnings": "Dosis langsam auf- und abdosieren. Vorsicht bei Nierenfunktionsstörungen.",
+      "regimen_category": "Koanalgetika",
+      "specialty": "Onkologie",
+      "disease": "NSCLC, SCLC, Mesotheliom, Thymustumoren, Lungen-NET",
+      "regimens": []
+    },
+    {
+      "id": "sup-gaba",
+      "name": "Gabapentin",
+      "substance": "Gabapentin",
+      "class": "Antikonvulsivum – Koanalgetikum",
+      "indication": "Neuropathische Schmerzen, insbesondere bei Polyneuropathie durch Chemotherapie.",
+      "dosing": "Einschleichen mit 300 mg abends, Steigerung auf 900–1800 mg/Tag in 3 Gaben.",
+      "max_daily": "3600 mg pro Tag.",
+      "side_effects": "Schläfrigkeit, Schwindel, Gewichtszunahme, Ödeme.",
+      "warnings": "Langsames Auf- und Abdosieren nötig. Dosisanpassung bei Niereninsuffizienz.",
+      "regimen_category": "Koanalgetika",
+      "specialty": "Onkologie",
+      "disease": "NSCLC, SCLC, Mesotheliom, Thymustumoren, Lungen-NET",
+      "regimens": []
+    },
+    {
+      "id": "sup-amitr",
+      "name": "Amitriptylin",
+      "substance": "Amitriptylin",
+      "class": "Trizyklisches Antidepressivum – Koanalgetikum",
+      "indication": "Chronische Nervenschmerzen, Schlafstörungen mit Schmerzkomponente.",
+      "dosing": "10–25 mg abends, ggf. Steigerung auf 50–75 mg.",
+      "max_daily": "150 mg pro Tag (unter ärztlicher Kontrolle).",
+      "side_effects": "Müdigkeit, Mundtrockenheit, Gewichtszunahme, Herzrhythmusstörungen.",
+      "warnings": "EKG-Kontrollen empfohlen bei höheren Dosen. Sedierend, abends einnehmen.",
+      "regimen_category": "Koanalgetika",
+      "specialty": "Onkologie",
+      "disease": "NSCLC, SCLC, Mesotheliom, Thymustumoren, Lungen-NET",
+      "regimens": []
+    },
+    {
+      "id": "sup-dulo-co",
+      "name": "Duloxetin (als Koanalgetikum)",
+      "substance": "Duloxetin (als Koanalgetikum)",
+      "class": "SNRI – Koanalgetikum",
+      "indication": "Neuropathische Schmerzen (z. B. Chemotherapie-induzierte Polyneuropathie).",
+      "dosing": "30 mg 1× täglich, nach 1 Woche Steigerung auf 60 mg/Tag.",
+      "max_daily": "120 mg pro Tag.",
+      "side_effects": "Übelkeit, Mundtrockenheit, Schwindel, Schlafstörungen.",
+      "warnings": "Blutdruck regelmäßig kontrollieren, Vorsicht bei Lebererkrankungen.",
+      "regimen_category": "Koanalgetika",
+      "specialty": "Onkologie",
+      "disease": "NSCLC, SCLC, Mesotheliom, Thymustumoren, Lungen-NET",
+      "regimens": []
+    },
+    {
+      "id": "sup-bude-1",
+      "name": "Budesonid",
+      "substance": "Budesonid",
+      "class": "topisches Glukokortikoid",
+      "indication": "Lokale antientzündliche Therapie, z. B. bei immuntherapieassoziierter Kolitis (mild), chronisch-entzündlichen Darmerkrankungen oder Strahlenproktitis.",
+      "dosing": "9 mg oral 1-0-0 (retardiert), ggf. Dosisreduktion im Verlauf.",
+      "max_daily": "9 mg/Tag.",
+      "side_effects": "Häufig: Dyspepsie, Kopfschmerzen. Selten: systemische Steroidnebenwirkungen (Cushing-Syndrom, Hyperglykämie, Osteoporose) bei Langzeitgebrauch.",
+      "warnings": "Geringe systemische Bioverfügbarkeit, dennoch Vorsicht bei Langzeittherapie; nicht geeignet bei moderater bis schwerer immunvermittelter Kolitis (hier systemische Steroide erforderlich).",
+      "regimen_category": "Supportivtherapie",
+      "specialty": "Onkologie",
+      "disease": "NSCLC, SCLC, Mesotheliom, Thymustumoren, Lungen-NET",
+      "regimens": []
+    },
+    {
+      "id": "sup-movi",
+      "name": "Movicol",
+      "substance": "Macrogol + Elektrolyte",
+      "class": "osmotisches Laxans",
+      "indication": "Behandlung und Prophylaxe von Obstipation, insbesondere unter Opioid-, Antiemetika- oder Chemotherapie.",
+      "dosing": "1–3 Beutel täglich, jeweils in Wasser gelöst; Dosistitration nach Stuhlfrequenz.",
+      "max_daily": "3 Beutel/Tag (bei chronischer Anwendung üblich).",
+      "side_effects": "Häufig: Blähungen, Völlegefühl, Diarrhö. Selten: Elektrolytverschiebungen.",
+      "warnings": "Auf ausreichende Flüssigkeitszufuhr achten; bei anhaltender Diarrhö Dosis reduzieren oder pausieren.",
+      "regimen_category": "Supportivtherapie",
+      "specialty": "Onkologie",
+      "disease": "NSCLC, SCLC, Mesotheliom, Thymustumoren, Lungen-NET",
+      "regimens": [
+        "basismedikation",
+        "krascendo02-studie"
+      ]
+    },
+    {
+      "id": "sup-laxa",
+      "name": "Laxanstropfen",
+      "substance": "Natriumpicosulfat",
+      "class": "stimulierendes Laxans",
+      "indication": "Kurzfristige Behandlung therapieassoziierter Obstipation (z. B. unter Opioiden, Antiemetika, Chemo-/Immuntherapie).",
+      "dosing": "5–10 Tropfen abends, ggf. langsame Steigerung nach Wirkung.",
+      "max_daily": "10–15 Tropfen/Tag.",
+      "side_effects": "Häufig: Bauchkrämpfe, Diarrhö. Selten: Elektrolytstörungen bei Übergebrauch.",
+      "warnings": "Nicht zur Dauertherapie geeignet; bei längerem Bedarf Kombination mit osmotischem Laxans bevorzugen.",
+      "regimen_category": "Supportivtherapie",
+      "specialty": "Onkologie",
+      "disease": "NSCLC, SCLC, Mesotheliom, Thymustumoren, Lungen-NET",
+      "regimens": []
+    },
+    {
+      "id": "sup-move",
+      "name": "Moventig",
+      "substance": "Naloxegol",
+      "class": "peripherer μ-Opioidrezeptor-Antagonist (PAMORA)",
+      "indication": "Behandlung der opioidinduzierten Obstipation (OIC) bei Patient:innen unter chronischer Opioidtherapie, wenn herkömmliche Laxanzien unzureichend wirksam sind.",
+      "dosing": "25 mg oral 1x täglich morgens nüchtern; bei Unverträglichkeit Reduktion auf 12,5 mg/d.",
+      "max_daily": "25 mg/Tag.",
+      "side_effects": "Häufig: Bauchschmerzen, Diarrhö, Übelkeit, Flatulenz. Gelegentlich: Kopfschmerzen, Schwitzen. Selten: Symptome eines Opioidentzugs.",
+      "warnings": "Nicht bei mechanischem Ileus oder hohem GI-Perforationsrisiko anwenden; Vorsicht bei gleichzeitiger Einnahme starker CYP3A4-Inhibitoren (z. B. Clarithromycin, Azole); Grapefruit vermeiden.",
+      "regimen_category": "Supportivtherapie",
+      "specialty": "Onkologie",
+      "disease": "NSCLC, SCLC, Mesotheliom, Thymustumore",
+      "regimens": []
+    },
+    {
+      "id": "sup-mixa1",
+      "name": "Mixa Panthenol Comfort",
+      "substance": "Mixa Panthenol reparierende Körpercreme",
+      "class": "medizinische Basispflege / Emolliens",
+      "indication": "Basispflege bei trockener, irritierter oder therapieassoziiert empfindlicher Haut (z. B. unter TKI, Immuntherapie, Chemotherapie).",
+      "dosing": "1–2x täglich dünn auf betroffene Hautareale auftragen.",
+      "max_daily": "keine relevante Maximaldosis.",
+      "side_effects": "Sehr gut verträglich; selten lokale Unverträglichkeitsreaktionen (Rötung, Brennen).",
+      "warnings": "Parfümfrei; nicht auf nässende oder infizierte Hautareale auftragen.",
+      "regimen_category": "Supportivtherapie",
+      "specialty": "Onkologie",
+      "disease": "NSCLC, SCLC, Mesotheliom, Thymustumoren, Lungen-NET",
+      "regimens": [
+        "basismedikation",
+        "basismedikation"
+      ]
+    },
+    {
+      "id": "sup-mixa2",
+      "name": "Mixa Urea Cica Repair",
+      "substance": "Mixa Urea 10% + Panthenol",
+      "class": "Harnstoffhaltige Pflegecreme",
+      "indication": "Intensive Pflege bei ausgeprägter Xerosis cutis, Hyperkeratosen und therapieassoziierter Hauttrockenheit (z. B. EGFR-TKI).",
+      "dosing": "1–2x täglich auf trockene Hautpartien auftragen.",
+      "max_daily": "keine relevante Maximaldosis.",
+      "side_effects": "Häufig: kurzzeitiges Brennen auf sehr trockener Haut. Selten: lokale Reizreaktionen.",
+      "warnings": "Nicht auf entzündete, verletzte oder stark fissurierte Haut auftragen; bei Gesichtsanwendung vorsichtig.",
+      "regimen_category": "Supportivtherapie",
+      "specialty": "Onkologie",
+      "disease": "NSCLC, SCLC, Mesotheliom, Thymustumoren, Lungen-NET",
+      "regimens": [
+        "basismedikation",
+        "basismedikation"
+      ]
+    },
+    {
+      "id": "sup-mixa3",
+      "name": "Mixa Anti-Dryness Waschgel",
+      "substance": "Mixa Mildes Dusch- und Waschgel",
+      "class": "milde Hautreinigung",
+      "indication": "Schonende Reinigung bei empfindlicher, trockener Haut unter Systemtherapie.",
+      "dosing": "1x täglich zur Körperreinigung, anschließend rückfettende Pflege.",
+      "max_daily": "—",
+      "side_effects": "Sehr gut verträglich; selten Trockenheitsgefühl bei sehr häufiger Anwendung.",
+      "warnings": "Heißes Wasser vermeiden; keine aggressiven Zusatzprodukte verwenden.",
+      "regimen_category": "Supportivtherapie",
+      "specialty": "Onkologie",
+      "disease": "NSCLC, SCLC, Mesotheliom, Thymustumoren, Lungen-NET",
+      "regimens": [
+        "basismedikation",
+        "basismedikation"
+      ]
+    },
+    {
+      "id": "sup-mixa4",
+      "name": "Mixa Ceramide Protect",
+      "substance": "Mixa Ceramide Barrier Repair",
+      "class": "barriereaufbauende Pflege",
+      "indication": "Unterstützung der Hautbarriere bei therapieassoziierten Hautreaktionen (z. B. Exanthem unter EGFR-/ALK-TKI, Immuntherapie).",
+      "dosing": "1–2x täglich regelmäßig anwenden.",
+      "max_daily": "—",
+      "side_effects": "Sehr gut verträglich; selten lokale Irritationen.",
+      "warnings": "Konsequente, regelmäßige Anwendung notwendig; Kombination mit UV-Schutz empfohlen.",
+      "regimen_category": "Supportivtherapie",
+      "specialty": "Onkologie",
+      "disease": "NSCLC, SCLC, Mesotheliom, Thymustumoren, Lungen-NET",
+      "regimens": []
+    }
+  ]
+}
