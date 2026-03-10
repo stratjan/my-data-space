@@ -59,20 +59,6 @@ const MODULES = [
 ];
 
 export default function Index() {
-  const [studies, setStudies] = useState<Study[]>([]);
-
-  useEffect(() => {
-    (async () => {
-      try {
-        const r = await fetch("/studies/studies.json", { cache: "no-store" });
-        if (r.ok && (r.headers.get("content-type") || "").includes("json")) {
-          const data = await r.json();
-          setStudies(Array.isArray(data) ? data : data.items || []);
-        }
-      } catch { /* ignore */ }
-    })();
-  }, []);
-
   return (
     <div>
       {/* Hero */}
