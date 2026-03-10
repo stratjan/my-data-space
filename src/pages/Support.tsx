@@ -254,9 +254,9 @@ export default function Support() {
               <p className="text-sm text-muted-foreground no-print">Noch keine Auswahl.</p>
             ) : (
               <div className="print-content">
-                {[...byClass.entries()].sort((a, b) => a[0].localeCompare(b[0], "de")).map(([clsName, arr]) => (
-                  <div key={clsName} className="print-block">
-                    <h3 className="print-class-heading">{clsName}</h3>
+                {[...byCategory.entries()].sort((a, b) => a[0].localeCompare(b[0], "de")).map(([categoryName, arr]) => (
+                  <div key={categoryName} className="print-block">
+                    <h3 className="print-class-heading">{categoryName}</h3>
                     <div className="print-items">
                       {arr.map(x => (
                         <div key={x.id} className="print-item">
