@@ -116,4 +116,43 @@
 @media print {
   .no-print { display: none !important; }
   .print-only { display: block !important; }
+  .print-header { display: block !important; }
+
+  @page {
+    size: A4;
+    margin: 12mm 14mm;
+  }
+
+  body {
+    font-size: 10px !important;
+    line-height: 1.4 !important;
+    color: #111 !important;
+    background: white !important;
+  }
+
+  /* Reset layout to single column for print */
+  .grid {
+    display: block !important;
+  }
+
+  /* Print content styling */
+  .print-content {
+    break-inside: auto;
+  }
+
+  .print-block {
+    break-inside: avoid;
+    margin-bottom: 8px;
+  }
+
+  /* Remove shadows and unnecessary borders */
+  .bg-card, .border, .rounded-xl, .rounded-lg {
+    box-shadow: none !important;
+    border-radius: 4px !important;
+  }
+
+  /* Hide scrollbars etc */
+  .sticky {
+    position: static !important;
+  }
 }
