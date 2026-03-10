@@ -98,7 +98,7 @@ export default function Directory() {
   // Seed from JSON if DB is empty
   const seedFromJson = useCallback(async () => {
     try {
-      const res = await fetch("/directory/contacts.example.json", { cache: "no-store" });
+      const res = await fetch("/directory/contacts.json", { cache: "no-store" });
       const legacy: LegacyContact[] = await res.json();
       if (!Array.isArray(legacy) || legacy.length === 0) return;
 

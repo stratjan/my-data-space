@@ -70,7 +70,7 @@ export default function Docs() {
 
   useEffect(() => {
     (async () => {
-      const urls = ["/docs/docs.json", "/docs/docs.example.json"];
+      const urls = ["/docs/docs.json"];
       for (const url of urls) {
         try {
           const r = await fetch(url, { cache: "no-store" });
