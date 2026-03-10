@@ -15,9 +15,17 @@ interface SupportItem {
 
 /** Try to extract a simple dosing scheme like "1-0-0-0" from free text */
 function extractDosingScheme(dosing: string): string {
-  // Look for patterns like "1-0-0", "1-0-1", "1-0-0-0" etc.
-  const match = dosing.match(/(\d)-(\d)-(\d)(?:-(\d))?/);
-  if (match) return match[0];
+  // Look for patterns like "1-0-0", "1-0-1", "1-0-0-0", also with spaces around dashes
+  const match = dosing.match(/(\d+)\s*-\s*(\d+)\s*-\s*(\d+)(?:\s*-\s*(\d+))?/);
+  if (match) return match[0].replace(/\s/g, "");
+  // Look for "Nx täglich" / "Nx daily" patterns
+  const nxMatch = dosing.match(/(\d+)\s*[x×]\s*täglich/i);
+  if (nxMatch) {
+    const n = parseInt(nxMatch[1]);
+    if (n === 1) return "1-0-0";
+    if (n === 2) return "1-0-1";
+    if (n === 3) return "1-1-1";
+  }
   // Look for "morgens" / "abends" patterns
   const lower = dosing.toLowerCase();
   if (lower.includes("morgens") && !lower.includes("abends")) return "1-0-0";
