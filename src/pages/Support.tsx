@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Printer, RotateCcw, CheckSquare, XSquare } from "lucide-react";
+import logoOwl from "@/assets/logo-owl.png";
 
 interface RegimenCatalog { id: string; name: string; group: string | null; aliases: string[]; }
 interface SupportItem {
