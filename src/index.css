@@ -140,51 +140,65 @@
   .print-header-bar {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    border-bottom: 2px solid #1e3a5f;
-    padding-bottom: 6px;
-    margin-bottom: 4px;
+    align-items: flex-end;
+    background: linear-gradient(135deg, #1e3a5f 0%, #2c5282 60%, #3182ce 100%);
+    color: white;
+    padding: 10px 14px;
+    border-radius: 6px;
+    margin-bottom: 6px;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
   }
   .print-header-left {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 12px;
   }
   .print-logo {
-    width: 32px;
-    height: 32px;
+    width: 36px;
+    height: 36px;
     object-fit: contain;
+    filter: brightness(0) invert(1);
+    opacity: 0.9;
   }
   .print-title {
-    font-size: 14px;
-    font-weight: 700;
-    color: #1e3a5f;
-    line-height: 1.2;
+    font-size: 15px;
+    font-weight: 800;
+    color: white;
+    line-height: 1.15;
+    letter-spacing: 0.3px;
+    text-transform: uppercase;
   }
   .print-subtitle {
     font-size: 9px;
-    color: #4a5568;
-    margin-top: 1px;
+    color: rgba(255, 255, 255, 0.85);
+    margin-top: 2px;
+    font-weight: 500;
   }
   .print-header-right {
     text-align: right;
   }
   .print-date {
     font-size: 9px;
-    font-weight: 600;
-    color: #1a1a1a;
+    font-weight: 700;
+    color: white;
   }
   .print-physician {
     font-size: 8px;
-    color: #4a5568;
+    color: rgba(255, 255, 255, 0.8);
+    margin-top: 1px;
   }
   .print-disclaimer {
     font-size: 7px;
-    color: #718096;
-    border-bottom: 1px solid #cbd5e0;
-    padding-bottom: 4px;
+    color: #4a5568;
+    background: #f0f4f8;
+    border-left: 3px solid #1e3a5f;
+    padding: 3px 8px;
     margin-bottom: 8px;
     font-style: italic;
+    border-radius: 0 4px 4px 0;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
   }
 
   /* ── Content blocks ── */
