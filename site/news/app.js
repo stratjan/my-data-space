@@ -229,17 +229,5 @@ document.addEventListener('click', (ev) => {
 load().catch(() => {
   const g = document.getElementById('generated');
   if (g) g.textContent = 'Fehler beim Laden von data.json';
-});
 
-document.addEventListener('click', (ev) => {
-  if (ev.target.closest('a')) return;
-  const card = ev.target.closest('article[data-pmid]');
-  if (!card) return;
-  const abs = card.querySelector('[data-abs]');
-  if (!abs) return;
-  const btn = card.querySelector('[data-action="toggle-abs"]');
-  const willShow = abs.classList.contains('hidden');
-  abs.classList.toggle('hidden');
-  if (btn) btn.textContent = willShow ? 'Abstract ausblenden' : 'Abstract anzeigen';
-});
 
