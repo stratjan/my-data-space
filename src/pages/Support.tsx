@@ -14,6 +14,28 @@ interface SupportItem {
   regimen_category: string; specialty: string; disease: string; regimens: string[];
 }
 
+/** Map regimen_category to patient-friendly German labels */
+const PATIENT_LABELS: Record<string, string> = {
+  "Antiemetika": "Übelkeit & Erbrechen",
+  "Antiresorptiva": "Knochenschutz",
+  "Wachstumsfaktor": "Blutbildung & Abwehrstärkung",
+  "Steroid": "Entzündungshemmung & Kortison",
+  "Magen-/Säurehemmung": "Magenschutz",
+  "Antibiotika": "Infektionsbehandlung (Bakterien)",
+  "Antimykotika": "Pilzinfektionen",
+  "Analgetika": "Schmerzbehandlung",
+  "Antidiarrhoika": "Durchfall",
+  "Supportiv sonstiges": "Weitere Unterstützung",
+  "Schlafmittel": "Schlafstörungen",
+  "Antidepressiva": "Stimmung & Angst",
+  "Koanalgetika": "Nervenschmerzen",
+  "Supportivtherapie": "Allgemeine Begleittherapie",
+};
+
+function getPatientLabel(category: string): string {
+  return PATIENT_LABELS[category] || category || "Sonstige";
+}
+
 /** Try to extract a simple dosing scheme like "1-0-0-0" from free text */
 function extractDosingScheme(dosing: string): string {
   // Look for patterns like "1-0-0", "1-0-1", "1-0-0-0", also with spaces around dashes
