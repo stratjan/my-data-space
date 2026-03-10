@@ -83,8 +83,8 @@ function StudyCard({ study }: { study: Study }) {
                   </a>
                 ))}
               </div>
-            )
-        </div>
+            )}
+          </div>
         <div className="shrink-0 text-muted-foreground mt-1">
           {open ? <ChevronUp className="h-5 w-5" /> : <ChevronDown className="h-5 w-5" />}
         </div>
