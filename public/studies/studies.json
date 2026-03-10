@@ -170,5 +170,27 @@
       "Bekannte Überempfindlichkeit gegen Studienmedikamente oder deren Bestandteile",
       "Schwangerschaft, Stillzeit oder geplante Schwangerschaft"
     ]
+  },
+  {
+    "id": "schnueffelhunde",
+    "name": "Projekt Schnüffelhunde",
+    "phase": "Blindstudie",
+    "status": "Rekrutierung",
+    "population": "Blindstudie zur Ausbildung von Tumorschnüffelhunden zum Screening und zur Differenzialdiagnostik von Lungentumoren auf Basis von Atemproben",
+    "nctId": "",
+    "inclusion": [
+      "Signed Informed Consent – Aufklärungsbogen (1) aushändigen, Zustimmung einholen",
+      "Zwei Exemplare der Einwilligungserklärung (2) unterschreiben lassen – ein Exemplar für den Probanden, eines im Ordner abheften",
+      "Bogen 3 ausfüllen – Probandennummer entspricht der Patientennummer im Haus",
+      "Probandennummer auf drei weißen Aufklebern vermerken und auf die drei Becherdeckel kleben",
+      "Drei verpackte Masken dem Patienten aushändigen",
+      "Patient wäscht Hände oder trägt Handschuhe vor dem Anlegen der Masken",
+      "Patient zieht Masken nacheinander für je 5 Minuten an und atmet normal durch – KEIN vorheriger Konsum von Wurstbrot, Knoblauch, Kaffee, Kaugummi, Bonbons oder Zigaretten",
+      "Nach 5 Minuten Maske abnehmen, auf links drehen, zusammenfalten und in den Becher geben",
+      "Becher mit beschriftetem Deckel gut verschließen – darf danach NICHT mehr geöffnet werden",
+      "Alle drei Becher mit beatmeten Masken zusammen mit Bogen 3 in einen Karton geben",
+      "Lagerung bis Abholung: wenn möglich nicht über Raumtemperatur"
+    ],
+    "exclusion": []
   }
 ]
