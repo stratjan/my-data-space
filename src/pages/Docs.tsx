@@ -70,12 +70,18 @@ export default function Docs() {
 
   useEffect(() => {
     (async () => {
-      try {
-        let r = await fetch("/docs/docs.json", { cache: "no-store" });
-        if (!r.ok) r = await fetch("/docs/docs.example.json", { cache: "no-store" });
-        const data = await r.json();
-        setItems(Array.isArray(data) ? data : data.items || []);
-      } catch { /* ignore */ }
+      const urls = ["/docs/docs.json", "/docs/docs.example.json"];
+      for (const url of urls) {
+        try {
+          const r = await fetch(url, { cache: "no-store" });
+          if (!r.ok) continue;
+          const ct = r.headers.get("content-type") || "";
+          if (!ct.includes("json")) continue;
+          const data = await r.json();
+          setItems(Array.isArray(data) ? data : data.items || []);
+          return;
+        } catch { /* try next */ }
+      }
     })();
   }, []);
 
