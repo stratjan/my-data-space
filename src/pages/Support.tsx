@@ -122,11 +122,11 @@ export default function Support() {
   };
 
   const selected = items.filter(x => selection.has(x.id));
-  const byClass = new Map<string, SupportItem[]>();
+  const byCategory = new Map<string, SupportItem[]>();
   for (const it of selected) {
-    const key = it.class || "Sonstige";
-    if (!byClass.has(key)) byClass.set(key, []);
-    byClass.get(key)!.push(it);
+    const key = getPatientLabel(it.regimen_category);
+    if (!byCategory.has(key)) byCategory.set(key, []);
+    byCategory.get(key)!.push(it);
   }
 
   const getPackSize = (id: string) => packSizes[id] ?? "N2";
