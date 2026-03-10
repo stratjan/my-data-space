@@ -13,6 +13,19 @@ interface SupportItem {
   regimen_category: string; specialty: string; disease: string; regimens: string[];
 }
 
+/** Try to extract a simple dosing scheme like "1-0-0-0" from free text */
+function extractDosingScheme(dosing: string): string {
+  // Look for patterns like "1-0-0", "1-0-1", "1-0-0-0" etc.
+  const match = dosing.match(/(\d)-(\d)-(\d)(?:-(\d))?/);
+  if (match) return match[0];
+  // Look for "morgens" / "abends" patterns
+  const lower = dosing.toLowerCase();
+  if (lower.includes("morgens") && !lower.includes("abends")) return "1-0-0";
+  if (lower.includes("abends") && !lower.includes("morgens")) return "0-0-1";
+  if (lower.includes("morgens") && lower.includes("abends")) return "1-0-1";
+  return "";
+}
+
 export default function Support() {
   const [items, setItems] = useState<SupportItem[]>([]);
   const [catalog, setCatalog] = useState<RegimenCatalog[]>([]);
@@ -25,6 +38,9 @@ export default function Support() {
   const [printDate, setPrintDate] = useState(new Date().toLocaleDateString("de-DE"));
   const [printRegimen, setPrintRegimen] = useState("");
   const [printPhys, setPrintPhys] = useState("");
+  // Rezeptblock: per-item overrides for pack size and dosing scheme
+  const [packSizes, setPackSizes] = useState<Record<string, string>>({});
+  const [dosingSchemes, setDosingSchemes] = useState<Record<string, string>>({});
 
   useEffect(() => {
     (async () => {
@@ -82,9 +98,12 @@ export default function Support() {
     byClass.get(key)!.push(it);
   }
 
+  const getPackSize = (id: string) => packSizes[id] ?? "N2";
+  const getDosingScheme = (id: string, dosing: string) => dosingSchemes[id] ?? extractDosingScheme(dosing);
+
   return (
     <div className="max-w-[1400px] mx-auto px-4 sm:px-6 py-6">
-      <div className="mb-4">
+      <div className="mb-4 no-print">
         <h1 className="text-2xl font-bold">Supportivtherapie</h1>
         <p className="text-sm text-muted-foreground">{items.length} Einträge · {catalog.length} Regime · {selection.size} ausgewählt</p>
       </div>
@@ -167,41 +186,112 @@ export default function Support() {
           </div>
         </section>
 
-        {/* Preview */}
-        <section className="bg-card border rounded-xl p-5">
-          <h2 className="font-semibold text-lg mb-3">Druckvorschau</h2>
-          <div className="grid grid-cols-2 gap-3 mb-4 no-print">
-            <Input placeholder="Titel" value={printTitle} onChange={e => setPrintTitle(e.target.value)} />
-            <Input placeholder="Datum" value={printDate} onChange={e => setPrintDate(e.target.value)} />
-            <Input placeholder="Geplante Therapie" className="col-span-2" value={printRegimen} onChange={e => setPrintRegimen(e.target.value)} />
-            <Input placeholder="Ärztin/Arzt" value={printPhys} onChange={e => setPrintPhys(e.target.value)} />
-          </div>
-          <p className="text-xs text-muted-foreground mb-4 no-print">Hinweis: Die Angaben ersetzen nicht die ärztliche Rücksprache.</p>
+        {/* Preview & Rezeptblock */}
+        <section className="space-y-6">
+          {/* Print Preview */}
+          <div className="bg-card border rounded-xl p-5">
+            <h2 className="font-semibold text-lg mb-3 no-print">Druckvorschau</h2>
+            <div className="grid grid-cols-2 gap-3 mb-4 no-print">
+              <Input placeholder="Titel" value={printTitle} onChange={e => setPrintTitle(e.target.value)} />
+              <Input placeholder="Datum" value={printDate} onChange={e => setPrintDate(e.target.value)} />
+              <Input placeholder="Geplante Therapie" className="col-span-2" value={printRegimen} onChange={e => setPrintRegimen(e.target.value)} />
+              <Input placeholder="Ärztin/Arzt" value={printPhys} onChange={e => setPrintPhys(e.target.value)} />
+            </div>
+            <p className="text-xs text-muted-foreground mb-4 no-print">Hinweis: Die Angaben ersetzen nicht die ärztliche Rücksprache.</p>
 
-          {selected.length === 0 ? (
-            <p className="text-sm text-muted-foreground">Noch keine Auswahl.</p>
-          ) : (
-            <div className="space-y-4">
-              {[...byClass.entries()].sort((a, b) => a[0].localeCompare(b[0], "de")).map(([clsName, arr]) => (
-                <div key={clsName}>
-                  <h3 className="font-semibold text-sm border-b pb-1 mb-2">{clsName}</h3>
-                  <div className="space-y-2">
-                    {arr.map(x => (
-                      <div key={x.id} className="border rounded-lg p-3 text-sm">
-                        <div className="font-semibold">{x.name}</div>
-                        <div className="text-muted-foreground text-xs mt-1 space-y-0.5">
-                          <div><span className="font-medium">Substanz:</span> {x.substance || "—"}</div>
-                          <div><span className="font-medium">Indikation:</span> {x.indication || "—"}</div>
-                          <div><span className="font-medium">Dosierung:</span> {x.dosing || "—"}</div>
-                          <div><span className="font-medium">Tageshöchstdosis:</span> {x.max_daily || "—"}</div>
-                          <div><span className="font-medium">Nebenwirkungen:</span> {x.side_effects || "—"}</div>
-                          <div><span className="font-medium">Warnhinweise:</span> {x.warnings || "—"}</div>
+            {/* Print header - only visible in print */}
+            <div className="hidden print-header">
+              <div className="flex justify-between items-start mb-2">
+                <div>
+                  <h1 className="text-base font-bold">{printTitle}</h1>
+                  {printRegimen && <p className="text-xs">Therapie: {printRegimen}</p>}
+                </div>
+                <div className="text-right text-xs">
+                  <div>{printDate}</div>
+                  {printPhys && <div>{printPhys}</div>}
+                </div>
+              </div>
+              <p className="text-[9px] text-gray-500 mb-3 border-b pb-2">
+                Patienteninformation – Die Angaben ersetzen nicht die ärztliche Rücksprache. Individuelle Anpassungen möglich.
+              </p>
+            </div>
+
+            {selected.length === 0 ? (
+              <p className="text-sm text-muted-foreground no-print">Noch keine Auswahl.</p>
+            ) : (
+              <div className="space-y-3 print-content">
+                {[...byClass.entries()].sort((a, b) => a[0].localeCompare(b[0], "de")).map(([clsName, arr]) => (
+                  <div key={clsName} className="print-block">
+                    <h3 className="font-semibold text-sm border-b pb-1 mb-2 print:text-xs print:font-bold">{clsName}</h3>
+                    <div className="space-y-2 print:space-y-1">
+                      {arr.map(x => (
+                        <div key={x.id} className="border rounded-lg p-3 print:p-2 print:border-gray-300 text-sm print:text-[10px]">
+                          <div className="font-semibold print:text-xs">{x.name}</div>
+                          <div className="text-muted-foreground mt-1 space-y-0.5 print:text-[10px] print:text-gray-800">
+                            {/* Priority fields: Dosierung & Indikation first and prominent */}
+                            <div className="print:font-medium"><span className="font-medium">Einnahme:</span> {x.dosing || "—"}</div>
+                            <div><span className="font-medium">Indikation:</span> {x.indication || "—"}</div>
+                            {/* Secondary fields: smaller in print */}
+                            <div className="print:text-[9px] print:text-gray-500"><span className="font-medium">Substanz:</span> {x.substance || "—"}</div>
+                            <div className="print:text-[9px] print:text-gray-500"><span className="font-medium">Max. Tagesdosis:</span> {x.max_daily || "—"}</div>
+                            <div className="print:text-[9px] print:text-gray-500"><span className="font-medium">Nebenwirkungen:</span> {x.side_effects || "—"}</div>
+                            <div className="print:text-[9px] print:text-gray-500"><span className="font-medium">Warnhinweise:</span> {x.warnings || "—"}</div>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            )}
+          </div>
+
+          {/* Rezeptblock Preview */}
+          {selected.length > 0 && (
+            <div className="bg-card border rounded-xl p-5 no-print">
+              <h2 className="font-semibold text-lg mb-3">Rezeptblock-Vorschau</h2>
+              <p className="text-xs text-muted-foreground mb-3">Packungsgröße und Einnahmeschema können pro Medikament angepasst werden.</p>
+              <div className="space-y-2">
+                {selected.map(x => {
+                  const scheme = getDosingScheme(x.id, x.dosing);
+                  const packSize = getPackSize(x.id);
+                  return (
+                    <div key={x.id} className="border rounded-lg p-3 bg-background">
+                      <div className="flex items-center justify-between gap-4">
+                        <div className="min-w-0 flex-1">
+                          <div className="font-mono font-semibold text-sm">
+                            {x.substance || x.name}
+                          </div>
+                          <div className="font-mono text-xs text-muted-foreground mt-0.5">
+                            {packSize}{scheme ? ` · ${scheme}` : ""}
+                          </div>
+                        </div>
+                        <div className="flex gap-2 items-center shrink-0">
+                          <Select
+                            value={packSize}
+                            onValueChange={(v) => setPackSizes(prev => ({ ...prev, [x.id]: v }))}
+                          >
+                            <SelectTrigger className="w-20 h-8 text-xs">
+                              <SelectValue />
+                            </SelectTrigger>
+                            <SelectContent>
+                              <SelectItem value="N1">N1</SelectItem>
+                              <SelectItem value="N2">N2</SelectItem>
+                              <SelectItem value="N3">N3</SelectItem>
+                            </SelectContent>
+                          </Select>
+                          <Input
+                            className="w-24 h-8 text-xs font-mono"
+                            placeholder="1-0-0"
+                            value={scheme}
+                            onChange={e => setDosingSchemes(prev => ({ ...prev, [x.id]: e.target.value }))}
+                          />
                         </div>
                       </div>
-                    ))}
-                  </div>
-                </div>
-              ))}
+                    </div>
+                  );
+                })}
+              </div>
             </div>
           )}
         </section>
