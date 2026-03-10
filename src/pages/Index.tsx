@@ -1,8 +1,6 @@
 import { Link } from "react-router-dom";
-import { useState, useEffect } from "react";
 import uksBuildingImg from "@/assets/uks-building.png";
-import { Newspaper, Pill, Phone, FileText, FolderOpen, FlaskConical, ChevronRight } from "lucide-react";
-import { Badge } from "@/components/ui/badge";
+import { Newspaper, Pill, Phone, FileText, FolderOpen, FlaskConical } from "lucide-react";
 
 interface Study {
   id: string;
