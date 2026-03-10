@@ -14,6 +14,28 @@ interface SupportItem {
   regimen_category: string; specialty: string; disease: string; regimens: string[];
 }
 
+/** Map regimen_category to patient-friendly German labels */
+const PATIENT_LABELS: Record<string, string> = {
+  "Antiemetika": "Übelkeit & Erbrechen",
+  "Antiresorptiva": "Knochenschutz",
+  "Wachstumsfaktor": "Blutbildung & Abwehrstärkung",
+  "Steroid": "Entzündungshemmung & Kortison",
+  "Magen-/Säurehemmung": "Magenschutz",
+  "Antibiotika": "Infektionsbehandlung (Bakterien)",
+  "Antimykotika": "Pilzinfektionen",
+  "Analgetika": "Schmerzbehandlung",
+  "Antidiarrhoika": "Durchfall",
+  "Supportiv sonstiges": "Weitere Unterstützung",
+  "Schlafmittel": "Schlafstörungen",
+  "Antidepressiva": "Stimmung & Angst",
+  "Koanalgetika": "Nervenschmerzen",
+  "Supportivtherapie": "Allgemeine Begleittherapie",
+};
+
+function getPatientLabel(category: string): string {
+  return PATIENT_LABELS[category] || category || "Sonstige";
+}
+
 /** Try to extract a simple dosing scheme like "1-0-0-0" from free text */
 function extractDosingScheme(dosing: string): string {
   // Look for patterns like "1-0-0", "1-0-1", "1-0-0-0", also with spaces around dashes
@@ -100,11 +122,11 @@ export default function Support() {
   };
 
   const selected = items.filter(x => selection.has(x.id));
-  const byClass = new Map<string, SupportItem[]>();
+  const byCategory = new Map<string, SupportItem[]>();
   for (const it of selected) {
-    const key = it.class || "Sonstige";
-    if (!byClass.has(key)) byClass.set(key, []);
-    byClass.get(key)!.push(it);
+    const key = getPatientLabel(it.regimen_category);
+    if (!byCategory.has(key)) byCategory.set(key, []);
+    byCategory.get(key)!.push(it);
   }
 
   const getPackSize = (id: string) => packSizes[id] ?? "N2";
@@ -232,9 +254,9 @@ export default function Support() {
               <p className="text-sm text-muted-foreground no-print">Noch keine Auswahl.</p>
             ) : (
               <div className="print-content">
-                {[...byClass.entries()].sort((a, b) => a[0].localeCompare(b[0], "de")).map(([clsName, arr]) => (
-                  <div key={clsName} className="print-block">
-                    <h3 className="print-class-heading">{clsName}</h3>
+                {[...byCategory.entries()].sort((a, b) => a[0].localeCompare(b[0], "de")).map(([categoryName, arr]) => (
+                  <div key={categoryName} className="print-block">
+                    <h3 className="print-class-heading">{categoryName}</h3>
                     <div className="print-items">
                       {arr.map(x => (
                         <div key={x.id} className="print-item">
