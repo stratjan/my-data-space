@@ -3,51 +3,37 @@ import { Input } from "@/components/ui/input";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Search, Copy, Phone, Plus, Pencil, Trash2, Save, X, RotateCcw } from "lucide-react";
+import { Search, Copy, Plus, Pencil, Trash2, Save, X, RotateCcw, Loader2 } from "lucide-react";
 import {
   Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogFooter,
 } from "@/components/ui/dialog";
 import { toast } from "sonner";
-
-const STORAGE_KEY = "directory-overrides";
+import { supabase } from "@/integrations/supabase/client";
 
 interface Contact {
+  id: string;
+  salutation: string;
+  first_name: string;
+  last_name: string;
+  full_name: string;
+  department1: string;
+  department2: string;
+  position: string;
+  phone_work: string;
+  phone_work2: string;
+  mobile: string;
+  fax: string;
+  phone_other: string;
+  pager: string;
+  email_display: string;
+}
+
+// Legacy JSON shape for import
+interface LegacyContact {
   salutation: string; firstName: string; lastName: string; fullName: string;
   department1: string; department2: string; position: string;
   phoneWork: string; phoneWork2: string; mobile: string; fax: string;
   phoneOther: string; pager: string; emailDisplay: string;
-  _custom?: boolean; // marks user-added contacts
-}
-
-type Overrides = {
-  edits: Record<string, Partial<Contact>>; // key = fullName+phoneWork original
-  added: Contact[];
-  deleted: string[]; // keys of deleted originals
-};
-
-function contactKey(c: Contact) {
-  return `${c.fullName}||${c.phoneWork}||${c.department1}`;
-}
-
-function loadOverrides(): Overrides {
-  try {
-    const raw = localStorage.getItem(STORAGE_KEY);
-    if (raw) return JSON.parse(raw);
-  } catch { /* ignore */ }
-  return { edits: {}, added: [], deleted: [] };
-}
-
-function saveOverrides(o: Overrides) {
-  localStorage.setItem(STORAGE_KEY, JSON.stringify(o));
-}
-
-function emptyContact(): Contact {
-  return {
-    salutation: "", firstName: "", lastName: "", fullName: "",
-    department1: "", department2: "", position: "",
-    phoneWork: "", phoneWork2: "", mobile: "", fax: "",
-    phoneOther: "", pager: "", emailDisplay: "", _custom: true,
-  };
 }
 
 function PhoneLink({ label, value }: { label: string; value: string }) {
@@ -61,53 +47,105 @@ function PhoneLink({ label, value }: { label: string; value: string }) {
   );
 }
 
-/* ── Inline edit fields ── */
 const EDIT_FIELDS: { key: keyof Contact; label: string; half?: boolean }[] = [
-  { key: "fullName", label: "Name" },
+  { key: "full_name", label: "Name" },
   { key: "position", label: "Position" },
   { key: "department1", label: "Abteilung 1", half: true },
   { key: "department2", label: "Abteilung 2", half: true },
-  { key: "phoneWork", label: "Telefon", half: true },
-  { key: "phoneWork2", label: "Telefon 2", half: true },
+  { key: "phone_work", label: "Telefon", half: true },
+  { key: "phone_work2", label: "Telefon 2", half: true },
   { key: "mobile", label: "Mobil", half: true },
   { key: "fax", label: "Fax", half: true },
   { key: "pager", label: "Pager", half: true },
-  { key: "emailDisplay", label: "E-Mail", half: true },
+  { key: "email_display", label: "E-Mail", half: true },
 ];
 
+function emptyContact(): Omit<Contact, "id"> {
+  return {
+    salutation: "", first_name: "", last_name: "", full_name: "",
+    department1: "", department2: "", position: "",
+    phone_work: "", phone_work2: "", mobile: "", fax: "",
+    phone_other: "", pager: "", email_display: "",
+  };
+}
+
 export default function Directory() {
-  const [baseContacts, setBaseContacts] = useState<Contact[]>([]);
-  const [overrides, setOverrides] = useState<Overrides>(loadOverrides);
+  const [contacts, setContacts] = useState<Contact[]>([]);
+  const [loading, setLoading] = useState(true);
   const [query, setQuery] = useState("");
   const [team, setTeam] = useState("all");
   const [copied, setCopied] = useState(false);
 
-  // editing
-  const [editKey, setEditKey] = useState<string | null>(null);
-  const [editData, setEditData] = useState<Contact>(emptyContact());
+  const [editId, setEditId] = useState<string | null>(null);
+  const [editData, setEditData] = useState<Omit<Contact, "id">>(emptyContact());
   const [addOpen, setAddOpen] = useState(false);
-  const [addData, setAddData] = useState<Contact>(emptyContact());
+  const [addData, setAddData] = useState<Omit<Contact, "id">>(emptyContact());
+  const [saving, setSaving] = useState(false);
+
+  const fetchContacts = useCallback(async () => {
+    const { data, error } = await supabase
+      .from("contacts")
+      .select("*")
+      .order("full_name");
+    if (error) {
+      console.error("Fetch error:", error);
+      return;
+    }
+    setContacts(data || []);
+    setLoading(false);
+  }, []);
+
+  // Seed from JSON if DB is empty
+  const seedFromJson = useCallback(async () => {
+    try {
+      const res = await fetch("/directory/contacts.example.json", { cache: "no-store" });
+      const legacy: LegacyContact[] = await res.json();
+      if (!Array.isArray(legacy) || legacy.length === 0) return;
+
+      // Insert in batches of 50
+      const rows = legacy.map((c) => ({
+        salutation: c.salutation || "",
+        first_name: c.firstName || "",
+        last_name: c.lastName || "",
+        full_name: c.fullName || "",
+        department1: c.department1 || "",
+        department2: c.department2 || "",
+        position: c.position || "",
+        phone_work: c.phoneWork || "",
+        phone_work2: c.phoneWork2 || "",
+        mobile: c.mobile || "",
+        fax: c.fax || "",
+        phone_other: c.phoneOther || "",
+        pager: c.pager || "",
+        email_display: c.emailDisplay || "",
+      }));
+
+      const batchSize = 50;
+      for (let i = 0; i < rows.length; i += batchSize) {
+        const batch = rows.slice(i, i + batchSize);
+        const { error } = await supabase.from("contacts").insert(batch);
+        if (error) {
+          console.error("Seed batch error:", error);
+          break;
+        }
+      }
+      await fetchContacts();
+      toast.success(`${rows.length} Kontakte importiert`);
+    } catch (e) {
+      console.error("Seed error:", e);
+    }
+  }, [fetchContacts]);
 
   useEffect(() => {
     (async () => {
-      try {
-        const res = await fetch("/directory/contacts.example.json", { cache: "no-store" });
-        const data = await res.json();
-        setBaseContacts(Array.isArray(data) ? data : []);
-      } catch { /* ignore */ }
+      const { count } = await supabase.from("contacts").select("*", { count: "exact", head: true });
+      if (count === 0) {
+        await seedFromJson();
+      } else {
+        await fetchContacts();
+      }
     })();
-  }, []);
-
-  // Merge base + overrides
-  const contacts = useMemo(() => {
-    let arr = baseContacts
-      .filter(c => !overrides.deleted.includes(contactKey(c)))
-      .map(c => {
-        const k = contactKey(c);
-        return overrides.edits[k] ? { ...c, ...overrides.edits[k] } : c;
-      });
-    return [...arr, ...overrides.added];
-  }, [baseContacts, overrides]);
+  }, [fetchContacts, seedFromJson]);
 
   const teams = useMemo(() =>
     [...new Set(contacts.map(c => c.department1).filter(Boolean))].sort((a, b) => a.localeCompare(b, "de")),
@@ -122,79 +160,68 @@ export default function Directory() {
       const starts: Contact[] = [];
       const rest: Contact[] = [];
       arr.forEach(c => {
-        const hay = [c.fullName, c.firstName, c.lastName, c.department1, c.department2, c.position, c.phoneWork].join(" ").toLowerCase();
+        const hay = [c.full_name, c.first_name, c.last_name, c.department1, c.department2, c.position, c.phone_work].join(" ").toLowerCase();
         if (!hay.includes(q)) return;
-        if ((c.fullName || "").toLowerCase().startsWith(q)) starts.push(c); else rest.push(c);
+        if ((c.full_name || "").toLowerCase().startsWith(q)) starts.push(c); else rest.push(c);
       });
       arr = [...starts, ...rest];
     }
     return arr;
   }, [contacts, query, team]);
 
-  const persist = useCallback((next: Overrides) => {
-    setOverrides(next);
-    saveOverrides(next);
-  }, []);
-
   /* ── Actions ── */
   const startEdit = (c: Contact) => {
-    setEditKey(contactKey(c));
-    setEditData({ ...c });
+    setEditId(c.id);
+    const { id, ...rest } = c;
+    setEditData(rest as Omit<Contact, "id">);
   };
 
-  const cancelEdit = () => { setEditKey(null); };
+  const cancelEdit = () => setEditId(null);
 
-  const saveEdit = () => {
-    if (!editKey) return;
-    const next = { ...overrides };
-
-    // Check if it's a custom-added contact
-    const addedIdx = next.added.findIndex(a => contactKey(a) === editKey);
-    if (addedIdx >= 0) {
-      next.added = [...next.added];
-      next.added[addedIdx] = { ...editData, _custom: true };
-    } else {
-      next.edits = { ...next.edits, [editKey]: { ...editData } };
+  const saveEdit = async () => {
+    if (!editId) return;
+    setSaving(true);
+    const { error } = await supabase.from("contacts").update(editData).eq("id", editId);
+    setSaving(false);
+    if (error) {
+      toast.error("Fehler beim Speichern");
+      return;
     }
-    persist(next);
-    setEditKey(null);
     toast.success("Kontakt gespeichert");
+    setEditId(null);
+    fetchContacts();
   };
 
-  const deleteContact = (c: Contact) => {
-    const k = contactKey(c);
-    const next = { ...overrides };
-    if (c._custom) {
-      next.added = next.added.filter(a => contactKey(a) !== k);
-    } else {
-      next.deleted = [...next.deleted, k];
+  const deleteContact = async (c: Contact) => {
+    const { error } = await supabase.from("contacts").delete().eq("id", c.id);
+    if (error) {
+      toast.error("Fehler beim Löschen");
+      return;
     }
-    persist(next);
-    if (editKey === k) setEditKey(null);
-    toast("Kontakt entfernt", { description: "Änderung kann zurückgesetzt werden." });
+    toast("Kontakt gelöscht");
+    fetchContacts();
   };
 
-  const addContact = () => {
-    if (!addData.fullName.trim()) {
+  const addContact = async () => {
+    if (!addData.full_name.trim()) {
       toast.error("Name ist erforderlich");
       return;
     }
-    const next = { ...overrides, added: [...overrides.added, { ...addData, _custom: true }] };
-    persist(next);
+    setSaving(true);
+    const { error } = await supabase.from("contacts").insert(addData);
+    setSaving(false);
+    if (error) {
+      toast.error("Fehler beim Hinzufügen");
+      return;
+    }
+    toast.success("Kontakt hinzugefügt");
     setAddOpen(false);
     setAddData(emptyContact());
-    toast.success("Kontakt hinzugefügt");
+    fetchContacts();
   };
-
-  const resetAll = () => {
-    persist({ edits: {}, added: [], deleted: [] });
-    toast.success("Alle lokalen Änderungen zurückgesetzt");
-  };
-
-  const hasOverrides = Object.keys(overrides.edits).length > 0 || overrides.added.length > 0 || overrides.deleted.length > 0;
 
   const copyAll = async () => {
-    const nums = filtered.map(c => c.phoneWork).filter(Boolean).join(", ");
+    const nums = filtered.map(c => c.phone_work).filter(Boolean).join(", ");
     await navigator.clipboard.writeText(nums);
     setCopied(true);
     setTimeout(() => setCopied(false), 1500);
@@ -208,6 +235,15 @@ export default function Directory() {
     setAddData(prev => ({ ...prev, [key]: value }));
   };
 
+  if (loading) {
+    return (
+      <div className="flex items-center justify-center py-20">
+        <Loader2 className="h-6 w-6 animate-spin text-muted-foreground" />
+        <span className="ml-2 text-muted-foreground">Lade Kontakte…</span>
+      </div>
+    );
+  }
+
   return (
     <div className="max-w-5xl mx-auto px-4 sm:px-6 py-6">
       <div className="mb-6 flex items-start justify-between gap-4">
@@ -215,16 +251,9 @@ export default function Directory() {
           <h1 className="text-2xl font-bold">Telefonverzeichnis</h1>
           <p className="text-sm text-muted-foreground">{filtered.length} Treffer</p>
         </div>
-        <div className="flex gap-2 shrink-0">
-          {hasOverrides && (
-            <Button variant="ghost" size="sm" onClick={resetAll} className="gap-1.5 text-muted-foreground">
-              <RotateCcw className="h-3.5 w-3.5" /> Zurücksetzen
-            </Button>
-          )}
-          <Button size="sm" onClick={() => setAddOpen(true)} className="gap-1.5">
-            <Plus className="h-3.5 w-3.5" /> Neuer Kontakt
-          </Button>
-        </div>
+        <Button size="sm" onClick={() => setAddOpen(true)} className="gap-1.5 shrink-0">
+          <Plus className="h-3.5 w-3.5" /> Neuer Kontakt
+        </Button>
       </div>
 
       <div className="sticky top-16 z-30 bg-background/95 backdrop-blur border-b pb-4 mb-6 flex flex-wrap gap-3 items-center">
@@ -246,20 +275,18 @@ export default function Directory() {
 
       <div className="bg-card border rounded-xl divide-y divide-border">
         {filtered.length === 0 && <div className="p-6 text-center text-muted-foreground">Keine Treffer.</div>}
-        {filtered.map((c, i) => {
-          const k = contactKey(c);
-          const isEditing = editKey === k;
-          const isModified = !!overrides.edits[k];
+        {filtered.map((c) => {
+          const isEditing = editId === c.id;
 
           if (isEditing) {
             return (
-              <div key={k + i} className="p-4 bg-muted/30 space-y-3">
+              <div key={c.id} className="p-4 bg-muted/30 space-y-3">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                   {EDIT_FIELDS.map(f => (
                     <div key={f.key} className={f.half ? "" : "sm:col-span-2"}>
                       <label className="text-xs text-muted-foreground mb-1 block">{f.label}</label>
                       <Input
-                        value={(editData[f.key] as string) || ""}
+                        value={(editData[f.key as keyof typeof editData] as string) || ""}
                         onChange={e => updateEditField(f.key, e.target.value)}
                         className="h-8 text-sm"
                       />
@@ -267,11 +294,11 @@ export default function Directory() {
                   ))}
                 </div>
                 <div className="flex gap-2 justify-end">
-                  <Button variant="ghost" size="sm" onClick={cancelEdit} className="gap-1">
+                  <Button variant="ghost" size="sm" onClick={cancelEdit} className="gap-1" disabled={saving}>
                     <X className="h-3.5 w-3.5" /> Abbrechen
                   </Button>
-                  <Button size="sm" onClick={saveEdit} className="gap-1">
-                    <Save className="h-3.5 w-3.5" /> Speichern
+                  <Button size="sm" onClick={saveEdit} className="gap-1" disabled={saving}>
+                    {saving ? <Loader2 className="h-3.5 w-3.5 animate-spin" /> : <Save className="h-3.5 w-3.5" />} Speichern
                   </Button>
                 </div>
               </div>
@@ -279,13 +306,11 @@ export default function Directory() {
           }
 
           return (
-            <div key={k + i} className="group flex items-start justify-between gap-4 p-3 hover:bg-muted/50 transition-colors">
+            <div key={c.id} className="group flex items-start justify-between gap-4 p-3 hover:bg-muted/50 transition-colors">
               <div className="min-w-0 flex-1">
                 <div className="font-medium text-sm truncate">
-                  {c.fullName || "—"}
+                  {c.full_name || "—"}
                   {c.position && <span className="text-muted-foreground font-normal"> · {c.position}</span>}
-                  {c._custom && <Badge variant="outline" className="ml-2 text-[10px] px-1.5 py-0">Neu</Badge>}
-                  {isModified && <Badge variant="outline" className="ml-2 text-[10px] px-1.5 py-0">Bearbeitet</Badge>}
                 </div>
                 {(c.department1 || c.department2) && (
                   <div className="flex gap-1.5 mt-1 flex-wrap">
@@ -295,14 +320,14 @@ export default function Directory() {
                 )}
               </div>
               <div className="text-right shrink-0 space-y-0.5">
-                <PhoneLink label="Tel" value={c.phoneWork} />
-                <PhoneLink label="Tel2" value={c.phoneWork2} />
+                <PhoneLink label="Tel" value={c.phone_work} />
+                <PhoneLink label="Tel2" value={c.phone_work2} />
                 <PhoneLink label="Mobil" value={c.mobile} />
                 <PhoneLink label="Fax" value={c.fax} />
                 <PhoneLink label="Pager" value={c.pager} />
-                {c.emailDisplay && (
+                {c.email_display && (
                   <div className="text-sm">
-                    <a href={`mailto:${c.emailDisplay}`} className="text-primary hover:underline">{c.emailDisplay}</a>
+                    <a href={`mailto:${c.email_display}`} className="text-primary hover:underline">{c.email_display}</a>
                   </div>
                 )}
               </div>
@@ -324,14 +349,14 @@ export default function Directory() {
         <DialogContent className="max-w-lg">
           <DialogHeader>
             <DialogTitle>Neuer Kontakt</DialogTitle>
-            <DialogDescription>Kontakt wird lokal im Browser gespeichert.</DialogDescription>
+            <DialogDescription>Kontakt wird dauerhaft in der Datenbank gespeichert.</DialogDescription>
           </DialogHeader>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 py-2">
             {EDIT_FIELDS.map(f => (
               <div key={f.key} className={f.half ? "" : "sm:col-span-2"}>
                 <label className="text-xs text-muted-foreground mb-1 block">{f.label}</label>
                 <Input
-                  value={(addData[f.key] as string) || ""}
+                  value={(addData[f.key as keyof typeof addData] as string) || ""}
                   onChange={e => updateAddField(f.key, e.target.value)}
                   className="h-8 text-sm"
                 />
@@ -340,7 +365,10 @@ export default function Directory() {
           </div>
           <DialogFooter>
             <Button variant="outline" onClick={() => setAddOpen(false)}>Abbrechen</Button>
-            <Button onClick={addContact}>Hinzufügen</Button>
+            <Button onClick={addContact} disabled={saving}>
+              {saving && <Loader2 className="h-3.5 w-3.5 animate-spin mr-1" />}
+              Hinzufügen
+            </Button>
           </DialogFooter>
         </DialogContent>
       </Dialog>
