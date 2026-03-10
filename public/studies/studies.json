@@ -67,5 +67,56 @@
       "Komorbidität als absolute Kontraindikation für Kortikosteroidbehandlung",
       "Jede andere Erkrankung, die nach Einschätzung des Prüfarztes die sichere Teilnahme, die Bewertung des Studienmedikaments oder die Interpretation der Ergebnisse beeinträchtigen könnte"
     ]
+  },
+  {
+    "id": "artemide-lung02",
+    "name": "ARTEMIDE-Lung02",
+    "phase": "Phase III",
+    "status": "Rekrutierung",
+    "population": "Randomisierte, doppelblinde Phase-III-Studie in der First-Line-Therapie von metastasiertem Plattenepithel-NSCLC mit PD-L1-Expression (TC ≥1 %)",
+    "nctId": "",
+    "inclusion": [
+      "Alter ≥18 Jahre zum Zeitpunkt der Einwilligung",
+      "Histologisch oder zytologisch dokumentiertes Plattenepithel-NSCLC. Tumoren mit gemischter adeno-squamöser Histologie sind geeignet, wenn sie nach Einschätzung des Prüfarztes als Plattenepithelkarzinom behandelt werden sollten.",
+      "Stadium IV metastasiertes NSCLC (AJCC Edition 8), nicht für kurative Behandlung geeignet",
+      "Keine dokumentierten Tumormutationen in anderen therapierbaren Onkogenen, für die lokal zugelassene Erstlinientherapien existieren",
+      "WHO/ECOG Performance Status 0 oder 1, ohne Verschlechterung in den letzten 2 Wochen vor Baseline",
+      "Mindestlebenserwartung von 12 Wochen",
+      "Bereitstellung einer Tumorprobe zur Bestätigung der PD-L1-Expression TC ≥1 % mittels VENTANA PD-L1 (SP263) Assay durch ein zentrales Labor vor Randomisierung. Patienten mit unbekanntem PD-L1-Status oder TC <1 % sind nicht geeignet.",
+      "Mindestens eine nicht zuvor bestrahlte Läsion, die als RECIST 1.1 Zielläsion qualifiziert (≥10 mm im längsten Durchmesser, Lymphknoten ≥15 mm kurze Achse)",
+      "Adäquate Organ- und Knochenmarkfunktion: Hb ≥9,0 g/dL, ANC ≥1,5×10⁹/L, Thrombozyten ≥100×10⁹/L, Gesamtbilirubin ≤1,5×ULN (Gilbert: ≤3×ULN), ALT/AST ≤3×ULN (Lebermetastasen: ≤5×ULN), Kreatinin-Clearance ≥45 mL/min (modifizierte Cockcroft-Gault)",
+      "Mindestgewicht 30 kg",
+      "Einhaltung der Kontrazeptionsanforderungen gemäß lokaler Vorschriften",
+      "Negativer Schwangerschaftstest bei Frauen im gebärfähigen Alter beim Screening und vor jeder Studienintervention",
+      "Einwilligung nach Aufklärung (Informed Consent)",
+      "Einwilligung zur optionalen genetischen Forschung (Genomic Initiative)"
+    ],
+    "exclusion": [
+      "Schwere oder unkontrollierte systemische Erkrankungen (z.B. unkontrollierte Hypertonie, aktive Blutungen, aktive Infektionen, ILD jeglichen Grades, schwere GI-Erkrankungen, aktive nicht-infektiöse Hauterkrankungen, psychiatrische Erkrankungen, signifikante kardiale Erkrankungen)",
+      "Organtransplantation in der Vorgeschichte",
+      "Aktive oder dokumentierte Autoimmun-/Entzündungserkrankungen mit chronischer Steroid- oder immunsuppressiver Behandlung",
+      "Weitere Malignome in der Vorgeschichte, außer kurativ behandelt ohne aktive Erkrankung ≥2 Jahre und geringes Rezidivrisiko",
+      "Vorhandensein von kleinzelliger oder neuroendokriner Histologie",
+      "Persistierende Toxizitäten (CTCAE Grad ≥2) durch vorherige Krebstherapie (außer Alopezie und bestimmte stabile Grad-2-Toxizitäten)",
+      "Rückenmarkskompression",
+      "Hirnmetastasen, es sei denn asymptomatisch, stabil und ohne Steroide/Antikonvulsiva seit ≥4 Wochen. Mindestens 2 Wochen Abstand nach Hirnbestrahlung.",
+      "Aktive primäre Immundefizienz oder aktive Infektionskrankheiten (Hepatitis A/B/C, HIV – mit definierten Ausnahmen bei kontrollierter Viruslast)",
+      "Aktive Tuberkulose",
+      "Klinisch signifikante Arrhythmie, Kardiomyopathie, symptomatische Herzinsuffizienz (NYHA ≥3), Myokardinfarkt innerhalb der letzten 6 Monate",
+      "Medizinische Kontraindikation gegen platinbasierte Doublet-Chemotherapie",
+      "Begleitmedikation mit bekanntem Risiko für Torsades de Pointes",
+      "Vorherige systemische Therapie für fortgeschrittenes/metastasiertes NSCLC (neoadjuvant/adjuvant erlaubt bei Rezidiv >12 Monate nach Therapieende)",
+      "Vorherige Exposition gegenüber Anti-TIGIT-Therapie oder anderen immunregulatorischen Therapien",
+      "Vorherige Behandlung mit Anti-PD-1 oder Anti-PD-L1",
+      "Gleichzeitige Chemo-, Radio-, Immun-, Prüf- oder biologische/hormonelle Krebstherapie außer den Studienmedikamenten",
+      "Palliative Bestrahlung (limitiertes Feld) innerhalb 2 Wochen oder breites Feld/≥30% Knochenmark innerhalb 4 Wochen vor erster Dosis",
+      "Große chirurgische Eingriffe innerhalb 4 Wochen vor erster Dosis oder geplant während der Studie",
+      "Immunsuppressive Medikation innerhalb 14 Tagen vor erster Dosis (Ausnahmen: topische/inhalative Steroide, Prämedikation, physiologische Dosen ≤10 mg Prednison/Tag)",
+      "Pflanzliche/natürliche Krebspräparate, die die Studienintervention beeinflussen könnten",
+      "Lebendimpfstoff innerhalb 30 Tagen vor erster Dosis",
+      "Teilnahme an anderer interventioneller klinischer Studie in den letzten 12 Monaten",
+      "Bekannte Überempfindlichkeit gegen Studienmedikamente oder deren Bestandteile",
+      "Schwangerschaft, Stillzeit oder geplante Schwangerschaft"
+    ]
   }
 ]
