@@ -67,8 +67,8 @@ export default function Snippets() {
   useEffect(() => {
     (async () => {
       try {
-        let r = await fetch("/snippets/snippets.json", { cache: "no-store" });
-        if (!r.ok) r = await fetch("/snippets/snippets.example.json", { cache: "no-store" });
+        const r = await fetch("/snippets/snippets.json", { cache: "no-store" });
+        if (!r.ok) throw new Error("not found");
         const data = await r.json();
         setItems(Array.isArray(data) ? data : data.items || []);
       } catch { /* ignore */ }
