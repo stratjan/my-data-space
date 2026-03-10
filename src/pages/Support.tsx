@@ -210,41 +210,53 @@ export default function Support() {
 
             {/* Print header - only visible in print */}
             <div className="hidden print-header">
-              <div className="flex justify-between items-start mb-2">
-                <div>
-                  <h1 className="text-base font-bold">{printTitle}</h1>
-                  {printRegimen && <p className="text-xs">Therapie: {printRegimen}</p>}
+              <div className="print-header-bar">
+                <div className="print-header-left">
+                  <img src={logoOwl} alt="" className="print-logo" />
+                  <div>
+                    <div className="print-title">{printTitle}</div>
+                    {printRegimen && <div className="print-subtitle">Therapie: {printRegimen}</div>}
+                  </div>
                 </div>
-                <div className="text-right text-xs">
-                  <div>{printDate}</div>
-                  {printPhys && <div>{printPhys}</div>}
+                <div className="print-header-right">
+                  <div className="print-date">{printDate}</div>
+                  {printPhys && <div className="print-physician">{printPhys}</div>}
                 </div>
               </div>
-              <p className="text-[9px] text-gray-500 mb-3 border-b pb-2">
+              <div className="print-disclaimer">
                 Patienteninformation – Die Angaben ersetzen nicht die ärztliche Rücksprache. Individuelle Anpassungen möglich.
-              </p>
+              </div>
             </div>
 
             {selected.length === 0 ? (
               <p className="text-sm text-muted-foreground no-print">Noch keine Auswahl.</p>
             ) : (
-              <div className="space-y-3 print-content">
+              <div className="print-content">
                 {[...byClass.entries()].sort((a, b) => a[0].localeCompare(b[0], "de")).map(([clsName, arr]) => (
                   <div key={clsName} className="print-block">
-                    <h3 className="font-semibold text-sm border-b pb-1 mb-2 print:text-xs print:font-bold">{clsName}</h3>
-                    <div className="space-y-2 print:space-y-1">
+                    <h3 className="print-class-heading">{clsName}</h3>
+                    <div className="print-items">
                       {arr.map(x => (
-                        <div key={x.id} className="border rounded-lg p-3 print:p-2 print:border-gray-300 text-sm print:text-[10px]">
-                          <div className="font-semibold print:text-xs">{x.name}</div>
-                          <div className="text-muted-foreground mt-1 space-y-0.5 print:text-[10px] print:text-gray-800">
-                            {/* Priority fields: Dosierung & Indikation first and prominent */}
-                            <div className="print:font-medium"><span className="font-medium">Einnahme:</span> {x.dosing || "—"}</div>
-                            <div><span className="font-medium">Indikation:</span> {x.indication || "—"}</div>
-                            {/* Secondary fields: smaller in print */}
-                            <div className="print:text-[9px] print:text-gray-500"><span className="font-medium">Substanz:</span> {x.substance || "—"}</div>
-                            <div className="print:text-[9px] print:text-gray-500"><span className="font-medium">Max. Tagesdosis:</span> {x.max_daily || "—"}</div>
-                            <div className="print:text-[9px] print:text-gray-500"><span className="font-medium">Nebenwirkungen:</span> {x.side_effects || "—"}</div>
-                            <div className="print:text-[9px] print:text-gray-500"><span className="font-medium">Warnhinweise:</span> {x.warnings || "—"}</div>
+                        <div key={x.id} className="print-item">
+                          <div className="print-item-name">{x.name}</div>
+                          <div className="print-item-details">
+                            <div className="print-item-primary">
+                              <span className="print-label">Einnahme:</span> {x.dosing || "—"}
+                            </div>
+                            <div className="print-item-primary">
+                              <span className="print-label">Indikation:</span> {x.indication || "—"}
+                            </div>
+                            <div className="print-item-secondary">
+                              <span className="print-label">Substanz:</span> {x.substance || "—"} · <span className="print-label">Max.:</span> {x.max_daily || "—"}
+                            </div>
+                            <div className="print-item-secondary">
+                              <span className="print-label">NW:</span> {x.side_effects || "—"}
+                            </div>
+                            {x.warnings && (
+                              <div className="print-item-warning">
+                                ⚠ {x.warnings}
+                              </div>
+                            )}
                           </div>
                         </div>
                       ))}
