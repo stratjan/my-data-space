@@ -83,15 +83,25 @@ export default function Directory() {
   const [saving, setSaving] = useState(false);
 
   const fetchContacts = useCallback(async () => {
-    const { data, error } = await supabase
-      .from("contacts")
-      .select("*")
-      .order("full_name");
-    if (error) {
-      console.error("Fetch error:", error);
-      return;
+    let allData: Contact[] = [];
+    let from = 0;
+    const pageSize = 1000;
+    while (true) {
+      const { data, error } = await supabase
+        .from("contacts")
+        .select("*")
+        .order("full_name")
+        .range(from, from + pageSize - 1);
+      if (error) {
+        console.error("Fetch error:", error);
+        break;
+      }
+      if (!data || data.length === 0) break;
+      allData = [...allData, ...data];
+      if (data.length < pageSize) break;
+      from += pageSize;
     }
-    setContacts(data || []);
+    setContacts(allData);
     setLoading(false);
   }, []);
 
