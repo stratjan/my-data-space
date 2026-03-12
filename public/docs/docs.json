@@ -129,5 +129,19 @@
     "url": "https://www.embryotox.de",
     "tags": ["Schwangerschaft", "Arzneimittel", "Embryotox"],
     "description": "Informationen zur Arzneimittelsicherheit in Schwangerschaft und Stillzeit."
+  },
+  {
+    "id": "11",
+    "title": "PET-CT Konferenz – EBM-Indikationen",
+    "category": "Diagnostik",
+    "type": "Dokument",
+    "source": "Intern",
+    "owner": "",
+    "created": "2026-03-01",
+    "updated": "2026-03-01",
+    "url": "/docs/files/PET-CT_Konferenz.docx",
+    "tags": ["PET-CT", "EBM", "Bronchialkarzinom", "Mesotheliom", "Indikation", "g-BA"],
+    "description": "Indikationsgruppen für PET-CT beim Bronchialkarzinom und Mesotheliom gemäß g-BA-Beschluss (Stand 03/2026). Umfasst NSCLC-Staging, Rezidiv, Rundherd, SCLC und Mesotheliom.",
+    "mime": "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
   }
 ]
