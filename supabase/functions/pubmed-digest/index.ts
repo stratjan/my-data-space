@@ -280,9 +280,21 @@ async function buildDigest(supabase: any) {
     if (i + 180 < uniquePmids.length) await new Promise((r) => setTimeout(r, 350));
   }
 
-  console.log(`[digest] ${items.length} items fetched`);
+  // 4. Parallel Unpaywall lookups (batches of 10)
+  const doisToLookup = items.filter((x) => x.doi).map((x, i) => ({ idx: i, doi: x.doi }));
+  console.log(`[digest] ${doisToLookup.length} DOIs for Unpaywall`);
+  for (let i = 0; i < doisToLookup.length; i += 10) {
+    const batch = doisToLookup.slice(i, i + 10);
+    const results = await Promise.all(batch.map((b) => unpaywall(b.doi)));
+    for (let j = 0; j < batch.length; j++) {
+      const item = items[batch[j].idx];
+      item.is_oa = results[j].is_oa;
+      item.oa_url = results[j].oa_url;
+    }
+  }
+  console.log(`[digest] Unpaywall done`);
 
-  // 4. Fetch abstracts
+  // 5. Fetch abstracts
   if (INCLUDE_ABSTRACTS && items.length) {
     const absMap = await efetchAbstracts(items.map((x) => x.pmid));
     for (const item of items) {
