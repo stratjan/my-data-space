@@ -74,6 +74,102 @@ export type Database = {
         }
         Relationships: []
       }
+      journal_metrics: {
+        Row: {
+          journal_lower: string
+          journal_name: string
+          sjr_value: number
+        }
+        Insert: {
+          journal_lower: string
+          journal_name: string
+          sjr_value: number
+        }
+        Update: {
+          journal_lower?: string
+          journal_name?: string
+          sjr_value?: number
+        }
+        Relationships: []
+      }
+      news_items: {
+        Row: {
+          abstract: string | null
+          created_at: string
+          doi: string | null
+          entity: string | null
+          is_oa: boolean | null
+          journal: string | null
+          metric_name: string | null
+          metric_value: number | null
+          oa_url: string | null
+          pmid: string
+          pubdate: string | null
+          pubtypes: Json | null
+          study_class: string | null
+          title: string
+          trial_type: string | null
+          url_doi: string | null
+          url_pubmed: string | null
+        }
+        Insert: {
+          abstract?: string | null
+          created_at?: string
+          doi?: string | null
+          entity?: string | null
+          is_oa?: boolean | null
+          journal?: string | null
+          metric_name?: string | null
+          metric_value?: number | null
+          oa_url?: string | null
+          pmid: string
+          pubdate?: string | null
+          pubtypes?: Json | null
+          study_class?: string | null
+          title: string
+          trial_type?: string | null
+          url_doi?: string | null
+          url_pubmed?: string | null
+        }
+        Update: {
+          abstract?: string | null
+          created_at?: string
+          doi?: string | null
+          entity?: string | null
+          is_oa?: boolean | null
+          journal?: string | null
+          metric_name?: string | null
+          metric_value?: number | null
+          oa_url?: string | null
+          pmid?: string
+          pubdate?: string | null
+          pubtypes?: Json | null
+          study_class?: string | null
+          title?: string
+          trial_type?: string | null
+          url_doi?: string | null
+          url_pubmed?: string | null
+        }
+        Relationships: []
+      }
+      news_meta: {
+        Row: {
+          key: string
+          updated_at: string
+          value: string
+        }
+        Insert: {
+          key: string
+          updated_at?: string
+          value: string
+        }
+        Update: {
+          key?: string
+          updated_at?: string
+          value?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
