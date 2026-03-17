@@ -204,13 +204,27 @@ async function buildDigest(supabase: any) {
     return { count: 0 };
   }
 
-  // 2. Load SJR metrics from DB
-  const { data: metricsData } = await supabase
-    .from("journal_metrics")
-    .select("journal_lower, sjr_value");
+  // 2. Load SJR metrics from storage CSV
   const metricMap: Record<string, number> = {};
-  for (const m of metricsData || []) {
-    metricMap[m.journal_lower] = Number(m.sjr_value);
+  try {
+    const csvUrl = `${Deno.env.get("SUPABASE_URL")}/storage/v1/object/public/data-files/journals_sjr.csv`;
+    const csvRes = await fetch(csvUrl);
+    const csvText = await csvRes.text();
+    const lines = csvText.split("\n");
+    for (let i = 1; i < lines.length; i++) {
+      const line = lines[i].trim();
+      if (!line) continue;
+      // Handle CSV: last field is the number, everything before is the journal name
+      const lastComma = line.lastIndexOf(",");
+      if (lastComma === -1) continue;
+      const name = line.slice(0, lastComma).replace(/^"|"$/g, "").trim();
+      const val = parseFloat(line.slice(lastComma + 1));
+      if (name && !isNaN(val)) {
+        metricMap[name.toLowerCase()] = val;
+      }
+    }
+  } catch (e) {
+    console.error("[digest] Failed to load SJR CSV:", e);
   }
   console.log(`[digest] ${Object.keys(metricMap).length} journal metrics loaded`);
 
