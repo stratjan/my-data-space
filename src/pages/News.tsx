@@ -1,11 +1,13 @@
 import { useState, useEffect, useMemo, useCallback } from "react";
+import { supabase } from "@/integrations/supabase/client";
 import { Input } from "@/components/ui/input";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Search, Download, RefreshCw, Star, ChevronDown, ChevronUp, ExternalLink } from "lucide-react";
+import NewsCard from "@/components/news/NewsCard";
 
-interface NewsItem {
+export interface NewsItem {
   pmid: string;
   doi: string | null;
   title: string;
@@ -24,92 +26,6 @@ interface NewsItem {
   abstract: string | null;
 }
 
-const STUDY_COLORS: Record<string, string> = {
-  Prospective: "border-l-clinical-green bg-clinical-green-light/50 text-clinical-green",
-  Review: "border-l-info-blue bg-info-blue-light/50 text-info-blue",
-  Guideline: "border-l-warm-amber bg-warm-amber-light/50 text-warm-amber",
-  Preclinical: "border-l-[hsl(var(--purple))] bg-[hsl(var(--purple-light))]/50 text-[hsl(var(--purple))]",
-  Other: "border-l-border bg-muted/50 text-muted-foreground",
-};
-
-function StudyBadge({ study }: { study: string }) {
-  const cls = STUDY_COLORS[study] || STUDY_COLORS.Other;
-  return <Badge variant="outline" className={`${cls} border-0 text-xs`}>{study}</Badge>;
-}
-
-function NewsCard({ item, isNew }: { item: NewsItem; isNew: boolean }) {
-  const [showAbstract, setShowAbstract] = useState(false);
-  const study = item.study_class || "Other";
-  const borderColor = study === "Prospective" ? "border-l-clinical-green"
-    : study === "Review" ? "border-l-info-blue"
-    : study === "Guideline" ? "border-l-warm-amber"
-    : study === "Preclinical" ? "border-l-[hsl(var(--purple))]"
-    : "border-l-border";
-
-  return (
-    <article
-      className={`bg-card border rounded-lg p-4 shadow-sm border-l-4 ${borderColor} animate-fade-in cursor-pointer`}
-      onClick={(e) => {
-        if ((e.target as HTMLElement).closest("a")) return;
-        if (item.abstract) setShowAbstract(!showAbstract);
-      }}
-    >
-      <div className="flex justify-between items-start gap-3">
-        <div className="min-w-0 flex-1">
-          <div className="flex items-start gap-2">
-            {isNew && <Star className="h-4 w-4 text-warm-amber shrink-0 mt-1 fill-warm-amber" />}
-            <h3 className="font-semibold text-card-foreground leading-snug">{item.title}</h3>
-          </div>
-          <p className="text-sm text-muted-foreground mt-1">
-            <span className="font-medium">{item.journal}</span>
-            {" · "}
-            {item.pubdate ? new Date(item.pubdate).toLocaleDateString("de-DE") : "—"}
-            {item.is_oa === true && <span className="ml-1 text-clinical-green font-medium">· OA</span>}
-          </p>
-          <div className="mt-2 flex gap-1.5 flex-wrap">
-            <StudyBadge study={study} />
-            {item.entity && <Badge variant="secondary" className="text-xs">{item.entity}</Badge>}
-            {item.trial_type && <Badge variant="secondary" className="text-xs">{item.trial_type}</Badge>}
-          </div>
-        </div>
-        <div className="text-sm text-muted-foreground whitespace-nowrap shrink-0">
-          {item.metric_value != null ? `${item.metric_name}: ${item.metric_value}` : "—"}
-        </div>
-      </div>
-
-      {/* Links */}
-      <div className="mt-3 flex gap-3 text-sm">
-        <a href={item.url_pubmed} target="_blank" rel="noopener" className="text-primary hover:underline inline-flex items-center gap-1">
-          PubMed <ExternalLink className="h-3 w-3" />
-        </a>
-        {item.url_doi && (
-          <a href={item.url_doi} target="_blank" rel="noopener" className="text-primary hover:underline inline-flex items-center gap-1">
-            DOI <ExternalLink className="h-3 w-3" />
-          </a>
-        )}
-        {item.oa_url && (
-          <a href={item.oa_url} target="_blank" rel="noopener" className="text-clinical-green hover:underline inline-flex items-center gap-1">
-            Volltext <ExternalLink className="h-3 w-3" />
-          </a>
-        )}
-        {item.abstract && (
-          <button className="text-muted-foreground hover:text-foreground inline-flex items-center gap-1 ml-auto">
-            {showAbstract ? <ChevronUp className="h-3 w-3" /> : <ChevronDown className="h-3 w-3" />}
-            Abstract
-          </button>
-        )}
-      </div>
-
-      {/* Abstract */}
-      {showAbstract && item.abstract && (
-        <div className="mt-3 bg-muted rounded-lg p-4 text-sm leading-relaxed whitespace-pre-wrap">
-          {item.abstract}
-        </div>
-      )}
-    </article>
-  );
-}
-
 export default function News() {
   const [items, setItems] = useState<NewsItem[]>([]);
   const [generated, setGenerated] = useState("");
@@ -122,20 +38,49 @@ export default function News() {
     catch { return new Set<string>(); }
   });
 
-  const loadData = useCallback(async (bust = false) => {
+  const loadData = useCallback(async () => {
     setLoading(true);
     try {
-      const url = bust ? `/data.json?t=${Date.now()}` : "/data.json";
-      const res = await fetch(url, { cache: "no-store" });
-      const data = await res.json();
-      setGenerated(data.generated);
-      setItems(data.items || []);
-      // Mark as seen
-      const pmids = (data.items || []).map((x: NewsItem) => x.pmid);
-      pmids.forEach((p: string) => seenPmids.add(p));
-      localStorage.setItem("digestSeenPMIDs", JSON.stringify([...seenPmids]));
+      // Try loading from database first
+      const { data: metaData } = await supabase
+        .from("news_meta")
+        .select("value")
+        .eq("key", "generated")
+        .single();
+
+      const { data: newsData } = await supabase
+        .from("news_items")
+        .select("*")
+        .order("metric_value", { ascending: false, nullsFirst: false });
+
+      if (newsData && newsData.length > 0) {
+        setGenerated(metaData?.value || "");
+        const mapped: NewsItem[] = newsData.map((row: any) => ({
+          ...row,
+          pubtypes: Array.isArray(row.pubtypes) ? row.pubtypes : [],
+        }));
+        setItems(mapped);
+        const pmids = mapped.map((x) => x.pmid);
+        pmids.forEach((p) => seenPmids.add(p));
+        localStorage.setItem("digestSeenPMIDs", JSON.stringify([...seenPmids]));
+      } else {
+        // Fallback to static data.json
+        const res = await fetch("/data.json", { cache: "no-store" });
+        const data = await res.json();
+        setGenerated(data.generated);
+        setItems(data.items || []);
+        const pmids = (data.items || []).map((x: NewsItem) => x.pmid);
+        pmids.forEach((p: string) => seenPmids.add(p));
+        localStorage.setItem("digestSeenPMIDs", JSON.stringify([...seenPmids]));
+      }
     } catch {
-      // ignore
+      // Fallback to static file
+      try {
+        const res = await fetch("/data.json", { cache: "no-store" });
+        const data = await res.json();
+        setGenerated(data.generated);
+        setItems(data.items || []);
+      } catch { /* ignore */ }
     }
     setLoading(false);
   }, [seenPmids]);
@@ -205,7 +150,7 @@ export default function News() {
               <SelectItem value="date">Datum ↓</SelectItem>
             </SelectContent>
           </Select>
-          <Button variant="outline" size="sm" onClick={() => loadData(true)} className="gap-1.5">
+          <Button variant="outline" size="sm" onClick={() => loadData()} className="gap-1.5">
             <RefreshCw className="h-3.5 w-3.5" /> Aktualisieren
           </Button>
           <Button variant="outline" size="sm" onClick={exportCsv} className="gap-1.5">
