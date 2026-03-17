@@ -42,13 +42,13 @@ export default function News() {
     setLoading(true);
     try {
       // Try loading from database first
-      const { data: metaData } = await supabase
+      const { data: metaData } = await (supabase as any)
         .from("news_meta")
         .select("value")
         .eq("key", "generated")
         .single();
 
-      const { data: newsData } = await supabase
+      const { data: newsData } = await (supabase as any)
         .from("news_items")
         .select("*")
         .order("metric_value", { ascending: false, nullsFirst: false });
