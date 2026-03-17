@@ -228,7 +228,7 @@ async function buildDigest(supabase: any) {
   }
   console.log(`[digest] ${Object.keys(metricMap).length} journal metrics loaded`);
 
-  // 3. Fetch article metadata in chunks
+  // 3. Fetch article metadata in chunks (without Unpaywall yet)
   const items: any[] = [];
   for (let i = 0; i < uniquePmids.length; i += 180) {
     const chunk = uniquePmids.slice(i, i + 180);
@@ -252,8 +252,6 @@ async function buildDigest(supabase: any) {
       }
 
       const doi = (it.articleids || []).find((a: any) => a.idtype === "doi")?.value || null;
-      const { is_oa, oa_url } = await unpaywall(doi);
-
       const entity = classifyEntity(title);
       const trialType = classifyTrial(pubtypes, title);
       const studyClass = classifyStudyClass(pubtypes, title, trialType);
@@ -270,8 +268,8 @@ async function buildDigest(supabase: any) {
         entity,
         trial_type: trialType,
         study_class: studyClass,
-        is_oa,
-        oa_url,
+        is_oa: null as boolean | null,
+        oa_url: null as string | null,
         metric_name: mval !== null ? METRIC_NAME : null,
         metric_value: mval,
         url_pubmed: `https://pubmed.ncbi.nlm.nih.gov/${uid}/`,
