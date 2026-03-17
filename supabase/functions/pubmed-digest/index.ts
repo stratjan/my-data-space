@@ -280,33 +280,11 @@ async function buildDigest(supabase: any) {
     if (i + 180 < uniquePmids.length) await new Promise((r) => setTimeout(r, 350));
   }
 
-  // 4. Parallel Unpaywall lookups (batches of 10)
-  const doisToLookup = items.filter((x) => x.doi).map((x, i) => ({ idx: i, doi: x.doi }));
-  console.log(`[digest] ${doisToLookup.length} DOIs for Unpaywall`);
-  for (let i = 0; i < doisToLookup.length; i += 10) {
-    const batch = doisToLookup.slice(i, i + 10);
-    const results = await Promise.all(batch.map((b) => unpaywall(b.doi)));
-    for (let j = 0; j < batch.length; j++) {
-      const item = items[batch[j].idx];
-      item.is_oa = results[j].is_oa;
-      item.oa_url = results[j].oa_url;
-    }
-  }
-  console.log(`[digest] Unpaywall done`);
+  console.log(`[digest] ${items.length} items fetched from NCBI`);
 
-  // 5. Fetch abstracts
-  if (INCLUDE_ABSTRACTS && items.length) {
-    const absMap = await efetchAbstracts(items.map((x) => x.pmid));
-    for (const item of items) {
-      if (absMap[item.pmid]) item.abstract = absMap[item.pmid];
-    }
-    console.log(`[digest] ${Object.keys(absMap).length} abstracts fetched`);
-  }
-
-  // 5. Filter by date & deduplicate
+  // 4. Filter by date & deduplicate FIRST (before expensive API calls)
   const seen = new Set<string>();
   const filtered: any[] = [];
-  // Sort by metric desc, then date desc
   items.sort((a, b) => {
     const dm = (b.metric_value ?? -1) - (a.metric_value ?? -1);
     if (dm !== 0) return dm;
@@ -319,8 +297,29 @@ async function buildDigest(supabase: any) {
     if (x.pubdate && !withinDays(x.pubdate)) continue;
     filtered.push(x);
   }
-
   console.log(`[digest] ${filtered.length} items after dedup & date filter`);
+
+  // 5. Parallel Unpaywall lookups on filtered items only (batches of 10)
+  const doisToLookup = filtered.map((x, i) => ({ idx: i, doi: x.doi })).filter((x) => x.doi);
+  console.log(`[digest] ${doisToLookup.length} DOIs for Unpaywall`);
+  for (let i = 0; i < doisToLookup.length; i += 10) {
+    const batch = doisToLookup.slice(i, i + 10);
+    const results = await Promise.all(batch.map((b) => unpaywall(b.doi)));
+    for (let j = 0; j < batch.length; j++) {
+      filtered[batch[j].idx].is_oa = results[j].is_oa;
+      filtered[batch[j].idx].oa_url = results[j].oa_url;
+    }
+  }
+  console.log(`[digest] Unpaywall done`);
+
+  // 6. Fetch abstracts for filtered items only
+  if (INCLUDE_ABSTRACTS && filtered.length) {
+    const absMap = await efetchAbstracts(filtered.map((x) => x.pmid));
+    for (const item of filtered) {
+      if (absMap[item.pmid]) item.abstract = absMap[item.pmid];
+    }
+    console.log(`[digest] ${Object.keys(absMap).length} abstracts fetched`);
+  }
 
   // 6. Upsert into DB
   // First delete old items
