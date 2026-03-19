@@ -33,10 +33,24 @@ export default function News() {
   const [query, setQuery] = useState("");
   const [entity, setEntity] = useState("all");
   const [sort, setSort] = useState("metric");
-  const [seenPmids] = useState<Set<string>>(() => {
-    try { return new Set(JSON.parse(localStorage.getItem("digestSeenPMIDs") || "[]")); }
-    catch { return new Set<string>(); }
+  const today = new Date().toISOString().slice(0, 10);
+  const [viewedToday, setViewedToday] = useState<Set<string>>(() => {
+    try {
+      const stored = JSON.parse(localStorage.getItem("digestViewedToday") || "{}");
+      if (stored.date === today) return new Set(stored.pmids || []);
+      return new Set<string>();
+    } catch { return new Set<string>(); }
   });
+
+  const markViewed = useCallback((pmid: string) => {
+    setViewedToday(prev => {
+      if (prev.has(pmid)) return prev;
+      const next = new Set(prev);
+      next.add(pmid);
+      localStorage.setItem("digestViewedToday", JSON.stringify({ date: today, pmids: [...next] }));
+      return next;
+    });
+  }, [today]);
 
   const loadData = useCallback(async () => {
     setLoading(true);
