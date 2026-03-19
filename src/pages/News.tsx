@@ -186,7 +186,7 @@ export default function News() {
       ) : (
         <div className="space-y-3">
           {filtered.map((item) => (
-            <NewsCard key={item.pmid} item={item} isNew={!seenPmids.has(item.pmid)} />
+            <NewsCard key={item.pmid} item={item} isNew={!viewedToday.has(item.pmid)} onView={markViewed} />
           ))}
         </div>
       )}
