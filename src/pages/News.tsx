@@ -93,7 +93,7 @@ export default function News() {
       } catch { /* ignore */ }
     }
     setLoading(false);
-  }, [seenPmids]);
+  }, []);
 
   useEffect(() => { loadData(); }, [loadData]);
 
