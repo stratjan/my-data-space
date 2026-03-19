@@ -81,9 +81,7 @@ export default function News() {
         const data = await res.json();
         setGenerated(data.generated);
         setItems(data.items || []);
-        const pmids = (data.items || []).map((x: NewsItem) => x.pmid);
-        pmids.forEach((p: string) => seenPmids.add(p));
-        localStorage.setItem("digestSeenPMIDs", JSON.stringify([...seenPmids]));
+        // data loaded
       }
     } catch {
       // Fallback to static file
