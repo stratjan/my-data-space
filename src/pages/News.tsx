@@ -74,9 +74,7 @@ export default function News() {
           pubtypes: Array.isArray(row.pubtypes) ? row.pubtypes : [],
         }));
         setItems(mapped);
-        const pmids = mapped.map((x) => x.pmid);
-        pmids.forEach((p) => seenPmids.add(p));
-        localStorage.setItem("digestSeenPMIDs", JSON.stringify([...seenPmids]));
+        // data loaded
       } else {
         // Fallback to static data.json
         const res = await fetch("/data.json", { cache: "no-store" });
