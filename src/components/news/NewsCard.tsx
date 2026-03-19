@@ -16,7 +16,7 @@ function StudyBadge({ study }: { study: string }) {
   return <Badge variant="outline" className={`${cls} border-0 text-xs`}>{study}</Badge>;
 }
 
-export default function NewsCard({ item, isNew }: { item: NewsItem; isNew: boolean }) {
+export default function NewsCard({ item, isNew, onView }: { item: NewsItem; isNew: boolean; onView?: (pmid: string) => void }) {
   const [showAbstract, setShowAbstract] = useState(false);
   const study = item.study_class || "Other";
   const borderColor = study === "Prospective" ? "border-l-clinical-green"
@@ -30,6 +30,7 @@ export default function NewsCard({ item, isNew }: { item: NewsItem; isNew: boole
       className={`bg-card border rounded-lg p-4 shadow-sm border-l-4 ${borderColor} animate-fade-in cursor-pointer`}
       onClick={(e) => {
         if ((e.target as HTMLElement).closest("a")) return;
+        onView?.(item.pmid);
         if (item.abstract) setShowAbstract(!showAbstract);
       }}
     >

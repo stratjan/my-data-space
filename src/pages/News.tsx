@@ -33,10 +33,24 @@ export default function News() {
   const [query, setQuery] = useState("");
   const [entity, setEntity] = useState("all");
   const [sort, setSort] = useState("metric");
-  const [seenPmids] = useState<Set<string>>(() => {
-    try { return new Set(JSON.parse(localStorage.getItem("digestSeenPMIDs") || "[]")); }
-    catch { return new Set<string>(); }
+  const today = new Date().toISOString().slice(0, 10);
+  const [viewedToday, setViewedToday] = useState<Set<string>>(() => {
+    try {
+      const stored = JSON.parse(localStorage.getItem("digestViewedToday") || "{}");
+      if (stored.date === today) return new Set(stored.pmids || []);
+      return new Set<string>();
+    } catch { return new Set<string>(); }
   });
+
+  const markViewed = useCallback((pmid: string) => {
+    setViewedToday(prev => {
+      if (prev.has(pmid)) return prev;
+      const next = new Set(prev);
+      next.add(pmid);
+      localStorage.setItem("digestViewedToday", JSON.stringify({ date: today, pmids: [...next] }));
+      return next;
+    });
+  }, [today]);
 
   const loadData = useCallback(async () => {
     setLoading(true);
@@ -60,18 +74,14 @@ export default function News() {
           pubtypes: Array.isArray(row.pubtypes) ? row.pubtypes : [],
         }));
         setItems(mapped);
-        const pmids = mapped.map((x) => x.pmid);
-        pmids.forEach((p) => seenPmids.add(p));
-        localStorage.setItem("digestSeenPMIDs", JSON.stringify([...seenPmids]));
+        // data loaded
       } else {
         // Fallback to static data.json
         const res = await fetch("/data.json", { cache: "no-store" });
         const data = await res.json();
         setGenerated(data.generated);
         setItems(data.items || []);
-        const pmids = (data.items || []).map((x: NewsItem) => x.pmid);
-        pmids.forEach((p: string) => seenPmids.add(p));
-        localStorage.setItem("digestSeenPMIDs", JSON.stringify([...seenPmids]));
+        // data loaded
       }
     } catch {
       // Fallback to static file
@@ -83,7 +93,7 @@ export default function News() {
       } catch { /* ignore */ }
     }
     setLoading(false);
-  }, [seenPmids]);
+  }, []);
 
   useEffect(() => { loadData(); }, [loadData]);
 
@@ -176,7 +186,7 @@ export default function News() {
       ) : (
         <div className="space-y-3">
           {filtered.map((item) => (
-            <NewsCard key={item.pmid} item={item} isNew={!seenPmids.has(item.pmid)} />
+            <NewsCard key={item.pmid} item={item} isNew={!viewedToday.has(item.pmid)} onView={markViewed} />
           ))}
         </div>
       )}
