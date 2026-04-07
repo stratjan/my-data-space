@@ -234,5 +234,19 @@
     "url": "https://www.onkopedia.com/de/onkopedia/guidelines/lungenkarzinom-nicht-kleinzellig-nsclc/@@guideline/html/index.html",
     "tags": ["Leitlinie", "NSCLC"],
     "description": "Aktuelle Onkopedia-Leitlinie zum NSCLC."
+  },
+  {
+    "id": "doc-0501",
+    "title": "SOP – Vorstellung ZPM / nNGM Task Force 5",
+    "category": "Organisation",
+    "type": "Dokument",
+    "source": "Intern",
+    "owner": "Innere Medizin V",
+    "created": "2026-04-07",
+    "updated": "2026-04-07",
+    "url": "/docs/files/SOP_ZPM.docx",
+    "tags": ["SOP", "ZPM", "nNGM", "Task Force 5", "Thoraxonkologie", "Keimbahnanalytik"],
+    "description": "SOP zur Vorstellung von Patienten mit thoraxonkologischen Tumoren im Zentrum für personalisierte Onkologie (ZPM) Mainz und nNGM Task Force 5 (Keimbahnanalytik). Enthält Indikationen, Ablauf und Einschlusskriterien.",
+    "mime": "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
   }
 ]
