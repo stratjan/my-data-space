@@ -248,5 +248,19 @@
     "tags": ["SOP", "ZPM", "nNGM", "Task Force 5", "Thoraxonkologie", "Keimbahnanalytik"],
     "description": "SOP zur Vorstellung von Patienten mit thoraxonkologischen Tumoren im Zentrum für personalisierte Onkologie (ZPM) Mainz und nNGM Task Force 5 (Keimbahnanalytik). Enthält Indikationen, Ablauf und Einschlusskriterien.",
     "mime": "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+  },
+  {
+    "id": "doc-0601",
+    "title": "Anforderung Muster 10",
+    "category": "Organisation",
+    "type": "Dokument",
+    "source": "Intern",
+    "owner": "",
+    "created": "2026-05-06",
+    "updated": "2026-05-06",
+    "url": "/docs/files/Anforderung_Muster_10.docx",
+    "tags": ["Muster 10", "Anforderung", "Labor"],
+    "description": "Anforderungsschein Muster 10 für Laboruntersuchungen.",
+    "mime": "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
   }
 ]
