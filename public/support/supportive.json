@@ -925,7 +925,9 @@
       "regimen_category": "Steroid",
       "specialty": "Onkologie",
       "disease": "NSCLC, SCLC, Mesotheliom, Thymustumoren, Lungen-NET",
-      "regimens": []
+      "regimens": [
+        "krascendo02-studie"
+      ]
     },
     {
       "id": "sup-budeo",
@@ -955,7 +957,9 @@
       "regimen_category": "Steroid",
       "specialty": "Onkologie",
       "disease": "NSCLC, SCLC, Mesotheliom, Thymustumoren, Lungen-NET",
-      "regimens": []
+      "regimens": [
+        "amivantamab"
+      ]
     },
     {
       "id": "sup-defla",
@@ -970,7 +974,9 @@
       "regimen_category": "Steroid",
       "specialty": "Onkologie",
       "disease": "NSCLC, SCLC, Mesotheliom, Thymustumoren, Lungen-NET",
-      "regimens": []
+      "regimens": [
+        "amivantamab"
+      ]
     },
     {
       "id": "sup-panto",
@@ -1122,7 +1128,9 @@
       "regimen_category": "Antibiotika",
       "specialty": "Onkologie",
       "disease": "NSCLC, SCLC, Mesotheliom, Thymustumoren, Lungen-NET",
-      "regimens": []
+      "regimens": [
+        "amivantamab"
+      ]
     },
     {
       "id": "sup-mino",
@@ -1892,7 +1900,8 @@
       "disease": "NSCLC, SCLC, Mesotheliom, Thymustumoren, Lungen-NET",
       "regimens": [
         "basismedikation",
-        "basismedikation"
+        "basismedikation",
+        "amivantamab"
       ]
     },
     {
@@ -1908,7 +1917,128 @@
       "regimen_category": "Supportivtherapie",
       "specialty": "Onkologie",
       "disease": "NSCLC, SCLC, Mesotheliom, Thymustumoren, Lungen-NET",
-      "regimens": []
+      "regimens": [
+        "amivantamab"
+      ]
+    },
+    {
+      "id": "sup-skin-base",
+      "name": "Allgemeine Hautpflegebasismaßnahmen",
+      "substance": "Hautpflege / Sonnenschutz / Verhaltensmaßnahmen",
+      "class": "Supportive Hautpflege",
+      "indication": "Prävention und Reduktion therapieassoziierter Hauttoxizität, Xerosis, Irritationen, Fissuren, periungualer Beschwerden und mukosaler Beschwerden",
+      "dosing": "Sonne meiden; Sonnenschutz mindestens LSF 30; täglich nicht-komedogene Urea-haltige Lotion; keine fettigen Grundlagen, bevorzugt Lotionen oder Cremes; lauwarmes Wasser; Duschen statt Baden <10 Minuten; milde Shampoos; kein Färben; Föhnen vermeiden; kein Make-up; keine Seifen; bei Mundschmerzen Eiswürfel lutschen, Lippen eincremen, Spülung mit lauwarmem Kamillentee; Handschuhe bei Gartenarbeit; weiche, nicht enge Kleidung; Wohnräume nicht stark heizen; Maniküre, Pediküre und Manipulation der Nagelhaut vermeiden.",
+      "max_daily": "Nicht zutreffend",
+      "side_effects": "In der Regel keine; möglich: Brennen/Stechen bei Urea auf stark irritierter oder fissurierter Haut",
+      "warnings": "Nicht auf offene Wunden, erosive Schleimhäute oder florid entzündete Areale auftragen; bei Superinfektion, Blutung, Fieber, progredienter Hauttoxizität oder starken Schmerzen ärztliche Kontrolle",
+      "regimen_category": "Hauttoxizität / Basispflege",
+      "specialty": "Onkologie / Dermatologie",
+      "disease": "NSCLC, SCLC, Mesotheliom, Thymustumoren, Lungen-NET",
+      "regimens": [
+        "amivantamab"
+      ]
+    },
+    {
+      "id": "sup-urea-care",
+      "name": "Urea-haltige Basispflege",
+      "substance": "Harnstoff / Urea",
+      "class": "Urea-haltiges Externum",
+      "indication": "Xerosis, raue oder schuppende Haut, Spannungsgefühl und Juckreiz unter onkologischer Therapie",
+      "dosing": "1–2× täglich dünn bis mäßig auf trockene Hautareale auftragen; bevorzugt nach dem Duschen; Präparatebeispiele: Eucerin UreaRepair Plus 5–10% Lotion, Basodexan Softcreme, EUBOS Urea Intensive Care 5–10% Lotion/Creme.",
+      "max_daily": "Nicht zutreffend",
+      "side_effects": "Brennen, Stechen oder Irritation auf fissurierter, erosiver oder stark entzündeter Haut möglich",
+      "warnings": "Nicht auf offene Wunden oder Schleimhäute; bei akuter Dermatitis ggf. niedrigere Urea-Konzentration oder urea-freie Pflege wählen",
+      "regimen_category": "Hauttoxizität / Basispflege",
+      "specialty": "Onkologie / Dermatologie",
+      "disease": "NSCLC, SCLC, Mesotheliom, Thymustumoren, Lungen-NET",
+      "regimens": [
+        "amivantamab"
+      ]
+    },
+    {
+      "id": "sup-urea-clean",
+      "name": "Milde Urea-haltige Reinigung",
+      "substance": "Urea Waschlotion",
+      "class": "Milde Reinigung / Syndet",
+      "indication": "Schonende Reinigung bei trockener, irritierter oder therapiebedingt empfindlicher Haut",
+      "dosing": "Beim Duschen statt Seife verwenden; lauwarm abspülen; Duschdauer <10 Minuten; anschließend Haut trocken tupfen und eincremen; Präparatebeispiele: Eucerin UreaRepair 5% Urea Waschfluid bzw. Sanftes Duschgel, EUBOS Urea Waschlotion.",
+      "max_daily": "Nicht zutreffend",
+      "side_effects": "Lokale Irritation oder Brennen bei stark entzündeter oder erosiver Haut möglich",
+      "warnings": "Keine aggressiven Seifen, Peelings, Bürsten, alkoholhaltigen Tonics oder stark entfettenden Reinigungsprodukte",
+      "regimen_category": "Hauttoxizität / Reinigung",
+      "specialty": "Onkologie / Dermatologie",
+      "disease": "NSCLC, SCLC, Mesotheliom, Thymustumoren, Lungen-NET",
+      "regimens": [
+        "amivantamab"
+      ]
+    },
+    {
+      "id": "sup-chx-nails",
+      "name": "Chlorhexidin 4% Waschung Hände/Füße",
+      "substance": "Chlorhexidin 4%",
+      "class": "Antiseptikum / antimikrobielle Waschlotion",
+      "indication": "Supportive Maßnahme bei periungualer Irritation, Paronychie-Risiko oder erhöhter bakterieller Kolonisationsgefahr an Händen und Füßen",
+      "dosing": "Hände und Füße 1× täglich mit 4%iger Chlorhexidin-Waschlotion waschen; kurz einwirken lassen; gründlich abspülen und sorgfältig abtrocknen; Präparatebeispiel: primasept wash.",
+      "max_daily": "1× täglich, sofern nicht anders ärztlich festgelegt",
+      "side_effects": "Hauttrockenheit, Irritation, Kontaktdermatitis; selten Überempfindlichkeitsreaktionen",
+      "warnings": "Nicht in Augen, Gehörgang oder tiefe Wunden einbringen; bei Irritation pausieren; keine Daueranwendung ohne Reevaluation",
+      "regimen_category": "Nageltoxizität / Paronychie-Prophylaxe",
+      "specialty": "Onkologie / Dermatologie",
+      "disease": "NSCLC, SCLC, Mesotheliom, Thymustumoren, Lungen-NET",
+      "regimens": [
+        "amivantamab"
+      ]
+    },
+    {
+      "id": "sup-octenisept-nails",
+      "name": "Octenisept lokal bei periungualen Läsionen",
+      "substance": "Octenidin / Phenoxyethanol",
+      "class": "Wund- und Schleimhautantiseptikum",
+      "indication": "Alternative oder ergänzende lokale antiseptische Maßnahme bei periungualen Läsionen, kleinen Rhagaden oder irritierter Nagelumgebung",
+      "dosing": "Bei Bedarf lokal auf betroffene periunguale Areale aufsprühen oder auftragen; kurz einwirken lassen; lufttrocknen lassen.",
+      "max_daily": "Nach Bedarf, zeitlich begrenzt",
+      "side_effects": "Brennen, lokale Irritation, selten Kontaktreaktionen",
+      "warnings": "Nicht unter Druck in Gewebe einbringen; nicht in geschlossenen Wundhöhlen anwenden; bei Eiter, zunehmender Rötung, pochendem Schmerz oder Fieber ärztliche Kontrolle",
+      "regimen_category": "Nageltoxizität / Paronychie-Prophylaxe",
+      "specialty": "Onkologie / Dermatologie",
+      "disease": "NSCLC, SCLC, Mesotheliom, Thymustumoren, Lungen-NET",
+      "regimens": [
+        "amivantamab"
+      ]
+    },
+    {
+      "id": "sup-sililevo",
+      "name": "Sililevo Nagellack",
+      "substance": "Silicium / Methylsulfonylmethan / Hydroxypropylchitosan",
+      "class": "Medizinischer Nagellack / Nagelstabilisierung",
+      "indication": "Supportive Pflege bei brüchigen, weichen, spröden oder therapiebedingt geschädigten Nägeln",
+      "dosing": "1× täglich, bevorzugt abends, dünn auf saubere und trockene Nägel auftragen; trocknen lassen; morgens ggf. Reste mit Wasser abwaschen; kein Nagellackentferner erforderlich.",
+      "max_daily": "1× täglich",
+      "side_effects": "In der Regel gut verträglich; selten lokale Irritation",
+      "warnings": "Keine Maniküre, Pediküre oder Manipulation der Nagelhaut; bei Onycholyse, Paronychie, Eiter oder zunehmendem Schmerz ärztliche Kontrolle",
+      "regimen_category": "Nageltoxizität / Nagelpflege",
+      "specialty": "Onkologie / Dermatologie",
+      "disease": "NSCLC, SCLC, Mesotheliom, Thymustumoren, Lungen-NET",
+      "regimens": [
+        "amivantamab"
+      ]
+    },
+    {
+      "id": "sup-clinda-scalp",
+      "name": "Clindamycin 1% Lotion Kopfhaut",
+      "substance": "Clindamycin 1%",
+      "class": "Topisches Antibiotikum",
+      "indication": "Entzündliche oder pustulöse follikulitische Kopfhautveränderungen; supportive Therapie bei akneiformen/folliculitischen Läsionen",
+      "dosing": "Nach dem Duschen 1× täglich dünn auf betroffene Kopfhautareale auftragen; Kontakt mit Augen und Schleimhäuten vermeiden; Anwendung zeitlich begrenzen und klinisch reevaluieren.",
+      "max_daily": "1× täglich lokal",
+      "side_effects": "Hauttrockenheit, Brennen, Juckreiz, Irritation; selten Kontaktdermatitis; sehr selten antibiotikaassoziierte Diarrhö/Kolitis",
+      "warnings": "Nicht als reine Dauer-Prophylaxe ohne entzündliche Läsionen; Antibiotika-Stewardship beachten; bei Diarrhö, schwerer Irritation oder fehlendem Ansprechen absetzen und ärztlich prüfen",
+      "regimen_category": "Hauttoxizität / Follikulitis / Kopfhaut",
+      "specialty": "Onkologie / Dermatologie",
+      "disease": "NSCLC, SCLC, Mesotheliom, Thymustumoren, Lungen-NET",
+      "regimens": [
+        "amivantamab"
+      ]
     }
   ]
 }
