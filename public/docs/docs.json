@@ -263,4 +263,19 @@
     "description": "Anforderungsschein Muster 10 für Laboruntersuchungen.",
     "mime": "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
   }
+  ,
+  {
+    "id": "doc-0701",
+    "title": "SOP – Supportivmedikation bei Hauttoxizität",
+    "category": "Supportivtherapie",
+    "type": "Dokument",
+    "source": "Intern",
+    "owner": "",
+    "created": "2026-06-08",
+    "updated": "2026-06-08",
+    "url": "/docs/files/SOP_Supportivmedikation_Hauttoxizitaet.docx",
+    "tags": ["SOP", "Supportivtherapie", "Hauttoxizität", "Nebenwirkungsmanagement"],
+    "description": "SOP zur Supportivmedikation bei Hauttoxizität unter onkologischer Therapie.",
+    "mime": "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+  }
 ]
