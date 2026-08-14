@@ -179,7 +179,10 @@
     "population": "Blindstudie zur Ausbildung von Tumorschnüffelhunden zum Screening und zur Differenzialdiagnostik von Lungentumoren auf Basis von Atemproben",
     "nctId": "",
     "documents": [
-      { "label": "Aufklärungsbogen", "url": "/studies/Schnueffelhunde_Aufklaerung.pdf" }
+      {
+        "label": "Aufklärungsbogen",
+        "url": "/studies/Schnueffelhunde_Aufklaerung.pdf"
+      }
     ],
     "inclusion": [
       "Signed Informed Consent – Aufklärungsbogen (1) aushändigen, Zustimmung einholen",
@@ -248,6 +251,37 @@
       "Phase 2a SC-Kohorte spezifisch: EGFR-sensitivierende Mutation und/oder ALK-Translokation",
       "Phase 2a SC-Kohorte spezifisch: Vorherige Therapie mit Anti-PD-1, Anti-PD-L1, Anti-PD-L2, Anti-CD137 oder Anti-CTLA-4 Antikörpern (inkl. Ipilimumab oder anderen T-Zell-Kostimulations-/Checkpoint-gerichteten Substanzen)",
       "Phase 2a SC-Kohorte spezifisch: Vorherige systemische zytotoxische Chemotherapie, biologische Therapie oder größere OP innerhalb 3 Wochen vor erster Studiendosis; Lungenbestrahlung >30 Gy innerhalb 6 Monaten (Ausnahme uveales Melanom: Tebentafusp und/oder lebergerichtete Therapie erlaubt)"
+    ]
+  },
+  {
+    "id": "biobank-stammzellen",
+    "name": "Biobank Stammzellbiologie der Lunge (EK 21/26)",
+    "phase": "Biobank",
+    "status": "Rekrutierung",
+    "population": "Sammlung von BAL, Bürstenbiopsien (bronchial/nasal), OP-Resektaten und Endothelzellen aus Rechtsherzkatheter zur Erforschung der Stammzellbiologie der Lunge (COPD, Asthma, Infektionen, Lungenkrebs, ARDS, pulmonale Hypertonie). Leitung: Prof. Dr. Dr. R. Bals, Klinik für Innere Medizin V.",
+    "documents": [
+      {
+        "label": "Information & Aufklärung (PDF)",
+        "url": "/studies/Biobank_Stammzellen_Aufklaerung.pdf"
+      }
+    ],
+    "inclusion": [
+      "Aufklärung: Patient aufklären – 1 Version für den Patienten, 1 Version in die Endoskopie (geht anschließend in die Forschung)",
+      "Es geht ausschließlich um die Untersuchung von BAL-Material und Bürstenbiopsien",
+      "Schriftliche Einwilligung des Patienten vor Probenentnahme",
+      "Durchführung möglichst vor 17 Uhr",
+      "Bei Zustimmung: BAL und Bürstenbiopsien im Rahmen der klinisch indizierten Bronchoskopie durchführen",
+      "Aus der BAL werden zunächst die üblichen klinischen Proben versandt",
+      "BAL: mindestens (5–)10 ml in ein separates Röhrchen – möglichst viel, d.h. alles, was nicht für die klinische Untersuchung benötigt wird",
+      "Bürstenbiopsie: 2–3 Bürsten in 15-ml-Röhrchen, Bürsten abschneiden und im Röhrchen belassen (Röhrchen liegen im Kühlschrank)",
+      "Labor kontaktieren – 15868: Frau Honecker, Dr. Ritzmann",
+      "Labor kontaktieren – 15867: Dr. Herr",
+      "Labor kontaktieren – 15889: Frau Brand"
+    ],
+    "exclusion": [
+      "Fehlende oder widerrufene Einwilligung (Widerruf jederzeit möglich: Dr. Christian Herr, christian.herr@uks.eu)",
+      "Keine klinisch indizierte Bronchoskopie bzw. kein Restmaterial verfügbar",
+      "Material vollständig für die klinische Diagnostik benötigt"
     ]
   }
 ]
