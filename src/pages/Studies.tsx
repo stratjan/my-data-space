@@ -181,6 +181,60 @@ function StudyCard({ study }: { study: Study }) {
   );
 }
 
+function StudyOverview() {
+  const [open, setOpen] = useState(true);
+  const slides = [
+    { img: overviewMeta.url, alt: "Studienübersicht: metastasierte Stadien" },
+    { img: overviewFrueh.url, alt: "Studienübersicht: frühe Stadien" },
+  ];
+
+  return (
+    <div className="rounded-xl bg-card border border-border shadow-sm overflow-hidden mb-6">
+      <button
+        type="button"
+        onClick={() => setOpen(!open)}
+        className="w-full text-left p-5 flex items-center gap-3 cursor-pointer"
+      >
+        <div className="inline-flex p-2 rounded-lg bg-primary/10 text-primary shrink-0">
+          <LayoutGrid className="h-5 w-5" />
+        </div>
+        <div className="flex-1 min-w-0">
+          <span className="font-semibold text-card-foreground text-lg">Studienübersicht</span>
+          <p className="text-sm text-muted-foreground mt-0.5">
+            Aktuelle Studien nach Stadium, Population und Therapielinie
+          </p>
+        </div>
+        <a
+          href={overviewPptx.url}
+          download="Studienuebersicht_aktuell.pptx"
+          onClick={(e) => e.stopPropagation()}
+          className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-primary/10 text-primary text-xs font-medium hover:bg-primary/20 transition-colors shrink-0"
+        >
+          <FileDown className="h-3.5 w-3.5" />
+          PowerPoint
+        </a>
+        <div className="shrink-0 text-muted-foreground">
+          {open ? <ChevronUp className="h-5 w-5" /> : <ChevronDown className="h-5 w-5" />}
+        </div>
+      </button>
+      {open && (
+        <div className="border-t p-4 space-y-4 animate-fade-in">
+          {slides.map((s, i) => (
+            <a key={i} href={s.img} target="_blank" rel="noopener" className="block">
+              <img
+                src={s.img}
+                alt={s.alt}
+                className="w-full rounded-lg border border-border hover:shadow-md transition-shadow"
+                loading="lazy"
+              />
+            </a>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+}
+
 export default function Studies() {
   const [studies, setStudies] = useState<Study[]>([]);
 
