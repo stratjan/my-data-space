@@ -2,9 +2,10 @@ import { useState, useEffect } from "react";
 import { Badge } from "@/components/ui/badge";
 import { Checkbox } from "@/components/ui/checkbox";
 import { FlaskConical, ChevronDown, ChevronUp, CheckCircle2, XCircle, FileDown, LayoutGrid } from "lucide-react";
-import overviewMeta from "@/assets/studienuebersicht-metastasiert.jpg.asset.json";
-import overviewFrueh from "@/assets/studienuebersicht-frueh.jpg.asset.json";
 import overviewPptx from "@/assets/studienuebersicht-pptx.asset.json";
+
+const overviewMeta = { url: "/studies/studienuebersicht-metastasiert.jpg" };
+const overviewFrueh = { url: "/studies/studienuebersicht-frueh.jpg" };
 
 interface StudyDocument {
   label: string;
