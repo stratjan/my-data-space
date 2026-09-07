@@ -277,5 +277,18 @@
     "tags": ["SOP", "Supportivtherapie", "Hauttoxizität", "Nebenwirkungsmanagement"],
     "description": "SOP zur Supportivmedikation bei Hauttoxizität unter onkologischer Therapie.",
     "mime": "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+  },
+  {
+    "id": "doc-0801",
+    "title": "Basisscreening – Broad Consent",
+    "category": "Studien",
+    "type": "Dokument",
+    "source": "Intern",
+    "owner": "",
+    "created": "2026-09-07",
+    "updated": "2026-09-07",
+    "url": "/docs/files/Basisscreening_broad_consent.pdf",
+    "tags": ["Basisscreening", "Broad Consent", "Einwilligung", "Biobank", "Studie"],
+    "description": "Basisscreening und Broad-Consent-Unterlagen (Einwilligungserklärung) für Studien- und Biobankprojekte."
   }
 ]
