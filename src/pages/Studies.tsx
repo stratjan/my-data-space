@@ -259,6 +259,8 @@ export default function Studies() {
         </p>
       </div>
 
+      <StudyOverview />
+
       <div className="space-y-4">
         {studies.map((s) => (
           <StudyCard key={s.id} study={s} />
