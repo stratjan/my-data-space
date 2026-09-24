@@ -303,5 +303,19 @@
     "url": "/docs/files/Basis_Screening_20251031.pdf",
     "tags": ["Basisscreening", "Einwilligung", "Biobank", "Studie"],
     "description": "Aktualisierte Basisscreening-Unterlage vom 31.10.2025 als separates Dokument."
+  },
+  {
+    "id": "doc-0901",
+    "title": "Musterantrag PET-CT/CMR nach 2 Jahren",
+    "category": "Diagnostik",
+    "type": "Dokument",
+    "source": "Intern",
+    "owner": "Innere Medizin V",
+    "created": "2026-09-24",
+    "updated": "2026-09-24",
+    "url": "/docs/files/Musterantrag_PET_CT_CMR_nach_2_Jahren.doc",
+    "tags": ["PET-CT", "FDG-PET/CT", "Kostenübernahme", "Immuncheckpoint-Inhibition", "Deeskalation", "Musterantrag"],
+    "description": "Musterantrag zur Kostenübernahme einer Ganzkörper-FDG-PET/CT zur Therapieentscheidung (Beendigung der Immuncheckpoint-Inhibition) bei Langzeitansprechen nach 2 Jahren.",
+    "mime": "application/msword"
   }
 ]
